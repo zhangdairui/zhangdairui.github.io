@@ -1,3 +1,115 @@
+/* 通用全体css */
+
+@font-face {
+  font-family: bigjkjp;
+  src: url('/font/bigjkjp.ttf');
+}
+@font-face {
+  font-family: jkjp;
+  src: url('/font/jkjp.ttf');
+}
+
 body{
-  background-color: wheat;
+  background-color: #ececec;
+  text-align: center;
+}
+
+header{
+  width: auto;
+  height: auto;
+  text-align: center;
+
+}
+.indoor{
+  cursor:pointer;
+}
+
+h1{
+  font-family: bigjkjp;
+  font-size: 22px;
+  font-weight: lighter;
+  letter-spacing: 3px;
+
+}
+
+
+/*~~~~~~导航样式~~~~~~~~~~~~~~~~~*/
+nav ul li a{
+    text-decoration: none;
+    color: #1D1E20;
+    border: 2px solid rgba(100,100,100,0);
+    padding: 5px;
+}
+
+nav #menu{
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0;
+    transform: scale(1, 0.9);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+
+}
+
+nav ul li{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    color: #004986;
+}
+
+
+/*~~~~~~导航动效~~~~~~~~~~~~~~~~~*/
+nav ul li a:hover{
+  border: 2px solid black;
+  transition: 0.5s;
+}
+
+/*~~~~~~主页文章列表~~~~~~~~~~~~~~~~~*/
+.homepage_post_list{
+  overflow:scroll;
+  height:200px;
+  width:400px;
+  border: solid 1px black;
+  margin: 0 auto;
+}
+::-webkit-scrollbar {
+		  width: 6px;
+	} /* 这是针对缺省样式 (必须的) */
+当CS
+::-webkit-scrollbar-track {
+		  background-color: #ECECEC;
+	} /* 滚动条的滑轨背景颜色 */
+
+	::-webkit-scrollbar-thumb {
+		  background-color: rgb(34, 34, 34);
+	} /* 滑块颜色 */
+
+	::-webkit-scrollbar-button {
+		  background-color: transparent;
+	} /* 滑轨两头的监听按钮颜色 */
+
+	::-webkit-scrollbar-corner {
+		  background-color: rgb(34, 34, 34);
+	} /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+
+.homepage_post_title{
+  color: black;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+/*~~~~~~页脚样式~~~~~~~~~~~~~~~~~*/
+footer{
+  font-family: "Courier New";
+  font-size: 8px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  height:50px;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  text-align:center;
 }
