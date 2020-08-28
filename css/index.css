@@ -113,3 +113,33 @@ footer{
   width:100%;
   text-align:center;
 }
+/*~~~~~~“文字“页面中文章列表的样式~~~~~~~~~~~~~~~~*/
+
+.scroll-article{
+  overflow:scroll;
+  height:200px;
+  width:400px;
+  border: solid 1px black;
+  margin: 0 auto;
+
+}
+
+/*~~~~~~每篇文章的样式~~~~~~~~~~~~~~~~*/
+.post_info{
+  font-size: 10px;
+  color: black;
+}
+.article-tag{
+  color: black;
+}
+.article_content{
+  overflow:scroll;
+  height:200px;
+  width:400px;
+  border: solid 1px black;
+  margin: 0 auto;
+  text-align: left;
+  font-family: SimSun;
+  font-size: 12px;
+  color: black;
+}
