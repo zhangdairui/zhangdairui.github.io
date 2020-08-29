@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anywheredoor</title>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+
+<body>
+  <style>
+    #welcome{text-align: center;font-size: 10px;background-color: black;color: white;}
+    .down{
+      position: absolute;
+      top: 590px;
+      left: 790px;
+    }
+
+  </style>
+      <p id="welcome">欢迎在下方输入昵称留言：）你的留言会显示在下方（小窗向下滑哦）</p>
+      <img class="down" src="/pic/down.png" width="20px">
+      <div id="vcomments"></div>
+      <script>
+          new Valine({
+              visitor: true,
+              meta: false,
+              recordIP: false,
+              avatar:'hide', // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+              el: '#vcomments',
+              appId: 'NLPDKEo9lOeofmocU9BxeXlC-gzGzoHsz',
+              appKey: 'J94d60PM6Px752PGws3W8tlj'
+
+            })
+      </script>
+
+</body>
+</html>
