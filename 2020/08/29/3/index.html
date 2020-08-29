@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/index.css"/>
+    </script>
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+      
+
+<div class="hello">
+  <h1>どこでもドア</h1>
+</div>
+
+<section>
+  <div class="door">
+    <a  class="indoor" href="" > <img src="/pic/door/door1.png" width="100px" /></a>
+  </div>
+</section>
+
+<nav>
+        
+
+<ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item">
+        <a href="/" class="menu-item-link">主页</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="/about" class="menu-item-link">关于</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="/tags" class="menu-item-link">分类</a>
+    </li>
+    
+
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+
+</ul>
+
+</nav>
+
+
+      <div class="container">
+
+          
+            <section class="main">
+          
+
+          
+<div class="post_info">
+    <div class="post_auther_date">
+      <span id="post-author">@emo</span>
+      <span id="post-date">2020-08-29 19:39:12</span>
+    </div>
+
+    <div class="article-tag">
+      #
+      <a class="tag-link-link" href="/zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
+    </div>
+
+</div>
+
+<div class="article_content">
+    <p>这几天正式开始基于hexo框架制作自己的博客。就统一在这篇日志中记录一下遇到的问题和解决方式。</p>
+<p>问题1：虽然部署到github之后的页面没有任何问题，但是localhost本地预览时无法解析css，无法正确读取图片字体等资源的路径。导致本地开发没办法实时预览。</p>
+<p>解决：在保证路径正确的情况下，浏览器没有任何问题的情况下，在尝试过所有网上的方式如果还是不好使的话：</p>
+<p>应该是hexo-server自身的问题，可以根据本地还是远程部署每次手动修改一下hexo自带config配置文件中的url和root内容。如：我的博客地址为【zhangdairui.github.io】，那么我的配置文件为：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># URL</span></span><br><span class="line"><span class="section"># If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="section"># 发布时用下面的组合</span></span><br><span class="line"><span class="section"># url: https://zhangdairui.github.io</span></span><br><span class="line"><span class="section"># root: /zhangdairui.github.io/</span></span><br><span class="line"></span><br><span class="line"><span class="section">#本地开发用下面的组合</span></span><br><span class="line">url: https://localhost:4000</span><br><span class="line">root: /zhangdairui.github.io/</span><br></pre></td></tr></table></figure>
+<p>本地开发完成后，再修改成正式发布时的组合。这样虽然麻烦一点点，但是能够保证本地和远程的网页显示都是正确的。</p>
+
+</div>
+
+          </section>
+      </div>
+</body>
+
+
+<footer>
+  <div class="footer">
+    Copyright &copy; 2020 emo
+  </div>
+</footer>
+
