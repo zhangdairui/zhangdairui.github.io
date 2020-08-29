@@ -2,173 +2,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Anywheredoor</title>
+    <link rel="stylesheet" href="/css/index.css"/>
+    
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+      
+
+<div class="hello">
+  <h1>どこでもドア</h1>
+</div>
+
+<section>
+  <div class="door">
+    <a  class="indoor" href="" > <img src="/pic/door/door1.png" width="100px" /></a>
+  </div>
+</section>
+
+<nav>
+        
+
+<ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item">
+        <a href="/" class="menu-item-link">主页</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="/about" class="menu-item-link">关于</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="/tags" class="menu-item-link">分类</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="/comment" class="menu-item-link">留言板</a>
+    </li>
+    
+
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+
+</ul>
+
+</nav>
+
+      <div class="aline"></div>
+      <div class="container">
+
+          
+            <section class="main slideDownMin">
+          
+
+          <!-- 每页文章 -->
+<div class="post_info">
+    <span id="post-title">留言板</span>
+    <div class="post_auther_date">
+      <span id="post-author">@emo</span>
+      <span id="post-date">2020-08-30 02:41:50</span>
+    </div>
+
+    <div class="article-tag">
+      #
+      
+    </div>
+
+</div>
+
+<div class="article_content">
+    
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anywheredoor</title>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 </head>
 
-<header>
-  <div class="hello">
-    <h1>どこでもドア</h1>
-  </div>
-  <section>
-    <div class="door">
-      <a  class="indoor" href="<%- theme.menus[0]%>" > <img src="/pic/door/door1.png" width="100px" /></a>
-    </div>
-  </section>
-  <nav>
-    <ul id="menu">
-        <!-- 内部链接本页面直接跳转 -->
-        <% for ( menu in theme.menus ) { %>
-        <li class="menu-item">
-            <a href="<%- theme.menus[menu] %>" class="menu-item-link"><%- menu %></a>
-        </li>
-        <% } %>
-
-        <!-- 外部链接打开新的窗口跳转 -->
-        <% for ( link in theme.links ) { %>
-        <li class="menu-item">
-            <a href="<%- theme.links[link] %>" class="menu-item-link" target="_blank"><%- link %></a>
-        </li>
-        <% } %>
-
-    </ul>
-  </nav>
-</header>
-
-
 <body>
   <style>
-  /* 通用全体css */
-  @font-face {
-    font-family: bigjkjp;
-    src: url('/font/bigjkjp.ttf');
-  }
-  @font-face {
-    font-family: jkjp;
-    src: url('/font/jkjp.ttf');
-  }
-
-  body{
-    background-color: #ececec;
-    text-align: center;
-    padding-bottom:20px;
-    min-height:100%;
-    position:relative;
-  }
-
-  header{
-    width: auto;
-    height: auto;
-    text-align: center;
-
-  }
-  .indoor{
-    cursor:pointer;
-  }
-
-  h1{
-    font-family: bigjkjp;
-    font-size: 22px;
-    font-weight: lighter;
-    letter-spacing: 3px;
-
-  }
-
-  .container{
-    margin-top: 20px;
-  }
-
-  /*~~~~~~导航样式~~~~~~~~~~~~~~~~~*/
-  nav ul li a{
-      text-decoration: none;
-      color: #1D1E20;
-      border: 2px solid rgba(100,100,100,0);
-      padding: 5px;
-  }
-
-  nav #menu{
-      display: block;
-      text-align: center;
-      margin-bottom: 20px;
-      padding: 0;
-      transform: scale(1, 0.9);
-      letter-spacing: 1px;
-      font-family: sans-serif;
-
-  }
-
-  nav ul li{
-      text-decoration: none;
-      list-style: none;
-      display: inline-block;
-      color: #004986;
-  }
-  .aline {
-      background-color: #413C3B;
-
-      height:1px;
-
-  }
-
-  /*~~~~~~导航动效~~~~~~~~~~~~~~~~~*/
-  nav ul li a:hover{
-    border: 2px solid black;
-    transition: 0.5s;
-  }
-
-  /*~~~~~~主页文章列表~~~~~~~~~~~~~~~~~*/
-  .homepage_post_list{
-    font-size: 12px;
-    overflow:scroll;
-    height:200px;
-    width:400px;
-    border: solid 1px black;
-    margin: 0 auto;
-  }
-  ::-webkit-scrollbar {
-  		  width: 6px;
-  	} /* 这是针对缺省样式 (必须的) */
-  当CS
-  ::-webkit-scrollbar-track {
-  		  background-color: #ECECEC;
-  	} /* 滚动条的滑轨背景颜色 */
-
-  	::-webkit-scrollbar-thumb {
-  		  background-color: rgb(34, 34, 34);
-  	} /* 滑块颜色 */
-
-  	::-webkit-scrollbar-button {
-  		  background-color: transparent;
-  	} /* 滑轨两头的监听按钮颜色 */
-
-  	::-webkit-scrollbar-corner {
-  		  background-color: rgb(34, 34, 34);
-  	} /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
-
-  .homepage_post_title{
-    color: black;
-    letter-spacing: 1px;
-    line-height: 20px;
-  }
-
-  /*~~~~~~页脚样式~~~~~~~~~~~~~~~~~*/
-  footer{
-    font-family: "Courier New";
-    font-size: 8px;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    height:50px;
-    left:0px;
-    bottom:0px;
-    width:100%;
-    text-align:center;
-    position:absolute;
-
-  }
-  .footerbox{
-    margin-top: 20px;
-  }
-
-
     #welcome{text-align: center;font-size: 10px;background-color: black;color: white;}
     .down{
       position: absolute;
@@ -177,27 +90,37 @@
     }
 
   </style>
+      <p id="welcome">欢迎在下方输入昵称留言：）你的留言会显示在下方（小窗向下滑哦）</p>
+      <img class="down" src="/pic/down.png" width="20px">
+      <div id="vcomments"></div>
+      <script>
+          new Valine({
+              visitor: true,
+              meta: false,
+              recordIP: false,
+              avatar:'hide', // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+              el: '#vcomments',
+              appId: 'NLPDKEo9lOeofmocU9BxeXlC-gzGzoHsz',
+              appKey: 'J94d60PM6Px752PGws3W8tlj'
 
-  <div class="aline"></div>
-  <div class="container">
-
-    <p id="welcome">欢迎在下方输入昵称留言：）你的留言会显示在下方（小窗向下滑哦）</p>
-    <img class="down" src="/pic/down.png" width="20px">
-    <div id="vcomments"></div>
-    <script>
-        new Valine({
-            visitor: true,
-            meta: false,
-            recordIP: false,
-            avatar:'hide', // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
-            el: '#vcomments',
-            appId: 'NLPDKEo9lOeofmocU9BxeXlC-gzGzoHsz',
-            appKey: 'J94d60PM6Px752PGws3W8tlj'
-
-          })
-    </script>
-  </div>
-
+            })
+      </script>
 
 </body>
 </html>
+
+</div>
+
+          </section>
+      </div>
+
+</body>
+
+<div class="footerbox">
+  <footer>
+  <div class="footer">
+    Copyright &copy; 2020 emo
+  </div>
+</footer>
+
+</div>
