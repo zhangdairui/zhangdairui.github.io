@@ -167,7 +167,7 @@ footer{
   text-align: justify;
 }
 .article_content img{
-  
+  display: block;
   max-width: 100%;
   text-align: center;
   margin: 0 auto;
