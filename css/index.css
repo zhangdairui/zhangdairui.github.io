@@ -119,6 +119,7 @@ nav ul li a:hover{
   left:0px;
   bottom:0px;
   width:100%;
+  position:absolute;
 }
 .footerejs{
   font-family: "Courier New";
