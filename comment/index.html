@@ -58,15 +58,14 @@
 
           <!-- 每页文章 -->
 <div class="post_info">
-    <span id="post-title">留言板</span>
-    <div class="post_auther_date">
-      <span id="post-author">@emo</span>
-      <span id="post-date">2020-08-30 02:41:50</span>
+    <div class="post_title">
+      <span>留言板</span>
     </div>
 
-    <div class="article-tag">
+    <div class="post_auther_date_tag">
+      <span id="post-author">@emo</span>
+      <span id="post-date">2020-08-30 16:00:18</span>
       #
-      
     </div>
 
 </div>
@@ -86,12 +85,16 @@
     .down{
       position: absolute;
       top: 590px;
-      left: 790px;
+      left: 850px;
     }
 
   </style>
+
       <p id="welcome">欢迎在下方输入昵称留言：）你的留言会显示在下方（小窗向下滑哦）</p>
-      <img class="down" src="/pic/down.png" width="20px">
+      <div class="down">
+            <img src="/pic/down.png" width="20px">
+      </div>
+
       <div id="vcomments"></div>
       <script>
           new Valine({

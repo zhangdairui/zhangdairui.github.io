@@ -58,28 +58,45 @@
 
           <!-- 每页文章 -->
 <div class="post_info">
-    <span id="post-title">博客开发过程中遇到的问题和解决</span>
-    <div class="post_auther_date">
-      <span id="post-author">@emo</span>
-      <span id="post-date">2020-08-29 19:39:12</span>
+    <div class="post_title">
+      <span>博客开发过程中遇到的问题和解决</span>
     </div>
 
-    <div class="article-tag">
-      #
-      <a class="tag-link-link" href="/zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
+    <div class="post_auther_date_tag">
+      <span id="post-author">@emo</span>
+      <span id="post-date">2020-08-29 19:39:12</span>
+      #<a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
     </div>
 
 </div>
 
 <div class="article_content">
     <p>这几天正式开始基于hexo框架制作自己的博客。就统一在这篇日志中记录一下遇到的问题和解决方式。</p>
-<p>问题1：虽然部署到github之后的页面没有任何问题，但是localhost本地预览时无法解析css，<br>无法正确读取图片字体等资源的路径。导致本地开发没办法实时预览。</p>
-<p>解决：在保证路径正确的情况下，浏览器没有任何问题的情况下，在尝试过所有网上的方式如果还是不好使的话：</p>
-<p>应该是hexo-server自身的问题，可以根据本地还是远程部署每次手动修改一下<br>hexo自带config配置文件中的url和root内容。<br>如：我的博客地址为【zhangdairui.github.io】，那么我的配置文件（_config.yml）为：</p>
+<p>#问题1：<br>问题：虽然部署到github之后的页面没有任何问题，但是localhost本地预览时无法解析css，<br>无法正确读取图片字体等资源的路径。导致本地开发没办法实时预览。</p>
+<p>解决：在保证路径正确的情况下，浏览器没有任何问题的情况下，在尝试过所有网上的方式如果还是不好使的话：<br>第一步<br>应该是hexo-server自身的问题，可以根据本地还是远程部署每次手动修改一下<br>hexo自带config配置文件中的url和root内容。<br>如：我的博客地址为【zhangdairui.github.io】，那么我的配置文件（_config.yml）为：</p>
 <font size=1>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">发布时用下面的组合</span><br><span class="line">url: https:&#x2F;&#x2F;zhangdairui.github.io</span><br><span class="line">root: &#x2F;zhangdairui.github.io&#x2F;</span><br><span class="line"></span><br><span class="line">本地开发用下面的组合</span><br><span class="line">url: https:&#x2F;&#x2F;localhost:4000</span><br><span class="line">root: &#x2F;zhangdairui.github.io&#x2F;</span><br><span class="line">(或者一个&#x2F;，哪个好使用哪个)</span><br></pre></td></tr></table></figure>
 </font>
-本地开发完成后，再修改成正式发布时的组合。这样虽然麻烦一点点，但是能够保证本地和远程的网页显示都是正确的。
+第二步
+把CNAME文件中的内容清楚。
+
+<p>这样每次本地开发完成后，都要再修改成正式发布时的设置。这样虽然麻烦一点点，但是能够保证本地和远程的网页显示都是正确的。</p>
+<p>#问题2：<br>问题：部署之后跳转连接404。</p>
+<p>解决：在其他问题都没有的情况下，CNAME文件中输入自己博客的地址。</p>
+<p>#问题3：<br>问题：如何在主题layout下渲染一个自定义的界面，如”留言板“（comment）页面？<br>解决：<br>第一步<br>在主题config配置文件中新增留言板配置，如：<br><font size=1></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">留言板: &#x2F;comment</span><br></pre></td></tr></table></figure>
+</font>
+这样就可以将导航和页面跳转对应起来。
+第二步
+在hexo的source文件夹下新建comment文件夹，内部新建一个index.md
+
+<p>第三步<br>将index.md的内容如下写：<br><font size=1></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 留言板</span><br><span class="line">layout: true</span><br><span class="line">---</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	【正常写想渲染的内容就可以】</span><br><span class="line">    【我这里也就是留言板的评论区的内容】</span><br><span class="line">    【我这里使用了valine评论系统】</span><br><span class="line">    【也可以将css样式写在这里】</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+</font>
+第四步
+将index.md重命名成index.html
+
+<p>以上都做完了hexo g就可以，注意不要在hexo的config文件中，使用skip跳过渲染。因为最后需要渲染模板layout（也就是header和导航那些东西）</p>
 
 </div>
 

@@ -11,7 +11,7 @@
 body{
   background-color: #ececec;
   text-align: center;
-  padding-bottom:20px;
+  padding-bottom:30px;
   min-height:100%;
   position:relative;
 }
@@ -158,6 +158,9 @@ footer{
   font-family: SimSun;
   font-size: 12px;
   color: black;
+}
+.post_auther_date_tag{
+  display: inline-block;
 }
 /*~~~~~~分类页样式~~~~~~~~~~~~~~~~*/
 .all_tags{
