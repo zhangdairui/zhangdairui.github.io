@@ -3,7 +3,8 @@
     <meta charset="UTF-8">
     <title>Anywheredoor</title>
     <link rel="stylesheet" href="/css/index.css"/>
-    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 <meta name="generator" content="Hexo 5.1.1"></head>
 
 <body>
@@ -93,9 +94,8 @@
 <p>第三步<br>将index.md的内容如下写：<br><font size=1></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 留言板</span><br><span class="line">layout: true</span><br><span class="line">---</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	【正常写想渲染的内容就可以】</span><br><span class="line">    【我这里也就是留言板的评论区的内容】</span><br><span class="line">    【我这里使用了valine评论系统】</span><br><span class="line">    【也可以将css样式写在这里】</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 </font>
-第四步
-将index.md重命名成index.html
 
+<p>第四步<br>将index.md重命名成index.html</p>
 <p>以上都做完了hexo g就可以，注意不要在hexo的config文件中，使用skip跳过渲染。因为最后需要渲染模板layout（也就是header和导航那些东西）</p>
 
 </div>
@@ -106,10 +106,21 @@
 </body>
 
 <div class="footerbox">
-  <footer>
+  <div class="footerejs">
+    <footer>
   <div class="footer">
     Copyright &copy; 2020 emo
   </div>
+
+  <div class="count">
+
+  </div>
 </footer>
 
+  </div>
+  <div class="count">
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  </div>
+
 </div>
+</html>
