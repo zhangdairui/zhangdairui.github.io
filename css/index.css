@@ -115,16 +115,20 @@ nav ul li a:hover{
 .footerbox{
   float: left;
   text-align:center;
+  height:20px;
+  left:0px;
+  bottom:0px;
+  width:100%;
 }
 .footerejs{
   font-family: "Courier New";
   font-size: 7px;
   font-weight: lighter;
   letter-spacing: 1px;
-  height:20px;
+  /* height:20px;
   left:0px;
   bottom:0px;
-  width:100%;
+  width:100%; */
   /* text-align:center; */
   /* position:absolute; */
 
@@ -135,10 +139,7 @@ nav ul li a:hover{
   font-size: 7px;
   font-weight: lighter;
   letter-spacing: 1px;
-  height:20px;
-  left:0px;
-  bottom:0px;
-  width:100%;
+
   /* text-align:center; */
   /* position:absolute; */
   color: #BBBBBD;
