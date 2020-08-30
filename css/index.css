@@ -1,4 +1,9 @@
 /* 通用全体css */
+*{
+ margin: 0;
+ padding: 0;
+}
+
 @font-face {
   font-family: bigjkjp;
   src: url('/font/bigjkjp.ttf');
@@ -8,19 +13,28 @@
   src: url('/font/jkjp.ttf');
 }
 
+/* @font-face {
+  font-family: wdfs;
+  src: url('/font/wdfs.TTF');
+} */
+
 body{
   background-color: #ececec;
   text-align: center;
   padding-bottom:30px;
   min-height:100%;
   position:relative;
+
 }
 
 header{
   width: auto;
   height: auto;
   text-align: center;
+}
 
+.door img{
+  width: 100px;
 }
 .indoor{
   cursor:pointer;
@@ -35,6 +49,7 @@ h1{
 }
 
 .container{
+  font-family: Hiragino Sans GB;
   margin-top: 20px;
 }
 
@@ -84,6 +99,11 @@ nav ul li a:hover{
   width:400px;
   border: solid 1px black;
   margin: 0 auto;
+  font-family: wdfs;
+}
+/*~~~~~~主页文章列表间距~~~~~~~~~~~~~~~~~*/
+.homepage_post_list div{
+  margin-top: 25px;
 }
 ::-webkit-scrollbar {
 		  width: 6px;
@@ -123,7 +143,7 @@ nav ul li a:hover{
 }
 .footerejs{
   font-family: "Courier New";
-  font-size: 7px;
+  font-size: 8px;
   font-weight: lighter;
   letter-spacing: 1px;
   /* height:20px;
@@ -147,7 +167,7 @@ nav ul li a:hover{
 
 }
 
-/*~~~~~~“文字“页面中文章列表的样式~~~~~~*/
+/*~~~~~~“分类“页面中文章列表的样式~~~~~~*/
 
 .scroll-article{
   overflow:scroll;
@@ -155,6 +175,18 @@ nav ul li a:hover{
   width:400px;
   border: solid 1px black;
   margin: 0 auto;
+
+}
+.scroll-article div{
+  margin-top: 25px;
+}
+
+/*~~~~~~分类页样式~~~~~~~~~~~~~~~~*/
+.all_tags{
+  font-size: 12px;
+}
+.scroll-article{
+  font-size: 12px;
 
 }
 
@@ -173,11 +205,9 @@ nav ul li a:hover{
   width:400px;
   border: solid 1px black;
   margin: 0 auto;
-  font-family: SimSun;
+  font-family: wdfs;
   font-size: 12px;
   color: black;
-
-
 }
 .post_auther_date_tag{
   display: inline-block;
@@ -194,15 +224,7 @@ nav ul li a:hover{
 }
 
 
-/*~~~~~~分类页样式~~~~~~~~~~~~~~~~*/
-.all_tags{
-  font-size: 12px;
-}
-.scroll-article{
-  font-size: 12px;
-
-}
-/*~~~~~~文章评论区样式~~~~~~~~~~~~~~~~*/
+/*~~~~~~如果要给每篇文章加评论的话，这是评论区样式~~~~~~~~~~~~~~~~*/
 /* .comment{
   width: 400px;
   margin:0 auto;
@@ -214,3 +236,48 @@ nav ul li a:hover{
   width:400px;
   color: black;
 } */
+
+/* 手机响应布局 */
+@media  screen and (max-width: 980px) {
+body{
+  width: auto;
+  background-color: #DDDDDD;
+  -webkit-overflow-scrolling: auto;
+}
+h1{
+  margin-top: 5vw;
+  font-size: 5vw;
+}
+.door img{
+  width: 30vw;
+}
+
+nav #menu{
+  font-size: 4vw;
+  padding: 2vw;
+
+}
+nav ul li a{
+  margin:0 3vw;
+  padding: 2vw 2vw;
+  letter-spacing: 1vw;
+}
+.homepage_post_list, .article_content, .scroll-article{
+  width: 90vw;
+  height: 70vw;
+  font-size: 3vw;
+  overflow-y: scroll;
+  overflow-y: auto;
+  font-family: wdfs;
+}
+.post_info, .all_tags{
+  font-size: 3vw;
+}
+.footerbox{
+  position:fixed;
+  margin-bottom: 5vw;
+}
+.footerejs, #busuanzi_container_site_pv{
+  font-size: 2vw;
+}
+}

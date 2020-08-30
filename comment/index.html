@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Anywheredoor</title>
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
     <link rel="stylesheet" href="/css/index.css"/>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -16,7 +17,7 @@
 
 <section>
   <div class="door">
-    <a  class="indoor" href="" > <img src="/pic/door/door1.png" width="100px" /></a>
+    <a  class="indoor" href="" > <img src="/pic/door/door1.png" /></a>
   </div>
 </section>
 
@@ -65,7 +66,7 @@
 
     <div class="post_auther_date_tag">
       <span id="post-author">@emo</span>
-      <span id="post-date">2020-08-30 21:24:48</span>
+      <span id="post-date">2020-08-31 01:59:58</span>
       #
     </div>
 
@@ -85,7 +86,27 @@
     #welcome{text-align: center;font-size: 10px;background-color: black;color: white;}
     .down{
       text-align:center;
-
+      margin:0 auto;
+    }
+    /* 手机响应布局 */
+    @media  screen and (max-width: 980px) {
+      #welcome{
+        font-size: 2.5vw;
+        padding:1.5vw 0;
+}       background-color: #4A4A4A;
+    }
+    .down{
+      text-align:center;
+      margin:1vw auto;
+    }
+    .vwrap{
+      font-size:40px;
+    }
+    #veditor{
+      height:100px;
+    }
+    .v[data-class=v] .vrow .vcol.vcol-70{
+      font-size: 50px;
     }
 
   </style>
@@ -98,7 +119,7 @@
       </div>
 
 
-      <div id="vcomments"></div>
+      <div id="vcomments">
       <script>
           new Valine({
               visitor: true,
@@ -111,7 +132,7 @@
 
             })
       </script>
-
+      </div>
 </body>
 
 </html>
