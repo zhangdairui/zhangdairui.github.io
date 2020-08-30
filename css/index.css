@@ -123,12 +123,22 @@ nav ul li a:hover{
   width:100%;
   text-align:center;
   position:absolute;
-  float: left;
 
 }
 
 #busuanzi_container_site_pv{
+  font-family: "Courier New";
+  font-size: 7px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  height:20px;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  text-align:center;
+  position:absolute;
   color: #BBBBBD;
+
 }
 
 /*~~~~~~“文字“页面中文章列表的样式~~~~~~*/
