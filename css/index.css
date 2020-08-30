@@ -100,6 +100,7 @@ nav ul li a:hover{
   border: solid 1px black;
   margin: 0 auto;
   font-family: wdfs;
+  padding: 5px;
 }
 /*~~~~~~主页文章列表间距~~~~~~~~~~~~~~~~~*/
 .homepage_post_list div{
@@ -208,6 +209,9 @@ nav ul li a:hover{
   font-family: wdfs;
   font-size: 12px;
   color: black;
+  padding: 10px;
+  letter-spacing: 0.8px;
+  line-height: 25px;
 }
 .post_auther_date_tag{
   display: inline-block;
@@ -265,11 +269,16 @@ nav ul li a{
 .homepage_post_list, .article_content, .scroll-article{
   width: 90vw;
   height: 70vw;
-  font-size: 3vw;
+  font-size: 3.5vw;
   overflow-y: scroll;
   overflow-y: auto;
   font-family: wdfs;
+  letter-spacing: 0.8px;
+  line-height: 8vw;
+  color:#37393D;
+  padding: 20px;
 }
+
 .post_info, .all_tags{
   font-size: 3vw;
 }
@@ -280,4 +289,5 @@ nav ul li a{
 .footerejs, #busuanzi_container_site_pv{
   font-size: 2vw;
 }
+
 }
