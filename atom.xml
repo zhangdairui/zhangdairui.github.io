@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Anywheredoor</title>
+  
+  
+  <link href="https://zhangdairui.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://zhangdairui.github.io/"/>
+  <updated>2020-08-31T12:16:30.229Z</updated>
+  <id>https://zhangdairui.github.io/</id>
+  
+  <author>
+    <name>emo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css实现博客手机响应布局</title>
+    <link href="https://zhangdairui.github.io/2020/08/31/css%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%89%8B%E6%9C%BA%E5%93%8D%E5%BA%94%E5%B8%83%E5%B1%80/"/>
+    <id>https://zhangdairui.github.io/2020/08/31/css%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%89%8B%E6%9C%BA%E5%93%8D%E5%BA%94%E5%B8%83%E5%B1%80/</id>
+    <published>2020-08-31T07:38:15.000Z</published>
+    <updated>2020-08-31T12:16:30.229Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天使用css的【@media  screen and (max-width: 980px){}】把手机端的页面也做了适配。<br>其中，用vw代替px这个单位，会对更多手机机型适配的更好一些。<br>在适配的过程中，直接用chromeF12自带的响应式布局浏览进行。在字体上不太准确。还好手边有手机可以实际上测试。<br>（打开hexo server，手机和电脑接入同一wifi，然后把手机浏览器的地址输入：ip地址:4000，就可以在手机上实际调试页面）</p><p>遇到的无法解决的问题是ios下safari的滚动条总是默认隐藏的，目前在网上搜到的所有方法没有能够解决这个问题。我还挺想要一个滚动条做装饰的。<br>:(</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天使用css的【@media  screen and (max-width: 980px){}】把手机端的页面也做了适配。&lt;br&gt;其中，用vw代替px这个单位，会对更多手机机型适配的更好一些。&lt;br&gt;在适配的过程中，直接用chromeF12自带的响应式布局浏览进行。在字体</summary>
+      
+    
+    
+    
+    
+    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>upic+SMMS+ImageOptim搭建博客图床</title>
+    <link href="https://zhangdairui.github.io/2020/08/30/20200830/"/>
+    <id>https://zhangdairui.github.io/2020/08/30/20200830/</id>
+    <published>2020-08-30T09:46:52.000Z</published>
+    <updated>2020-08-30T12:26:19.419Z</updated>
+    
+    <content type="html"><![CDATA[<p>图床：SM.MS<br>ImageOptim：压缩图片<br>upic：图床上传</p><p>—–以下是测试—–</p><p>测试图片：<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>大图片（自适应窗口大小）：<br><img src="https://i.loli.net/2020/08/30/strAJFCPUSagv92.jpg" alt="strAJFCPUSagv92"></p><p>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>小图片（就这么小）：<br><img src="https://i.loli.net/2020/08/30/xhinESAaFmydT5s.png" alt="xhinESAaFmydT5s"><br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;图床：SM.MS&lt;br&gt;ImageOptim：压缩图片&lt;br&gt;upic：图床上传&lt;/p&gt;
+&lt;p&gt;—–以下是测试—–&lt;/p&gt;
+&lt;p&gt;测试图片：&lt;br&gt;多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图</summary>
+      
+    
+    
+    
+    
+    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客开发过程中遇到的问题和解决</title>
+    <link href="https://zhangdairui.github.io/2020/08/29/3/"/>
+    <id>https://zhangdairui.github.io/2020/08/29/3/</id>
+    <published>2020-08-29T11:39:12.000Z</published>
+    <updated>2020-08-31T11:55:40.021Z</updated>
+    
+    <content type="html"><![CDATA[<p>这几天正式开始基于hexo框架制作自己的博客。就统一在这篇日志中记录一下遇到的问题和解决方式。</p><p>【问题1】<br>问题：虽然部署到github之后的页面没有任何问题，但是localhost本地预览时无法解析css，<br>无法正确读取图片字体等资源的路径。导致本地开发没办法实时预览。</p><p>解决：在保证路径正确的情况下，浏览器没有任何问题的情况下，在尝试过所有网上的方式如果还是不好使的话：<br>第一步<br>应该是hexo-server自身的问题，可以根据本地还是远程部署每次手动修改一下<br>hexo自带config配置文件中的url和root内容。<br>如：我的博客地址为【zhangdairui.github.io】，那么我的配置文件（_config.yml）为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">发布时用下面的组合</span><br><span class="line">url: https:&#x2F;&#x2F;zhangdairui.github.io</span><br><span class="line">root: &#x2F;zhangdairui.github.io&#x2F;</span><br><span class="line"></span><br><span class="line">本地开发用下面的组合</span><br><span class="line">url: https:&#x2F;&#x2F;localhost:4000</span><br><span class="line">root: &#x2F;zhangdairui.github.io&#x2F;</span><br><span class="line">(或者一个&#x2F;，哪个好使用哪个)</span><br></pre></td></tr></table></figure><p>第二步<br>把CNAME文件中的内容清楚。</p><p>这样每次本地开发完成后，都要再修改成正式发布时的设置。这样虽然麻烦一点点，但是能够保证本地和远程的网页显示都是正确的。</p><p>【问题2】<br>问题：部署之后跳转连接404。</p><p>解决：在其他问题都没有的情况下，CNAME文件中输入自己博客的地址。</p><p>【问题3】<br>问题：如何在主题layout下渲染一个自定义的界面，如”留言板“（comment）页面？<br>解决：<br>第一步<br>在主题config配置文件中新增留言板配置，如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">留言板: &#x2F;comment</span><br></pre></td></tr></table></figure><p>这样就可以将导航和页面跳转对应起来。<br>第二步<br>在hexo的source文件夹下新建comment文件夹，内部新建一个index.md</p><p>第三步<br>将index.md的内容如下写：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 留言板</span><br><span class="line">layout: true</span><br><span class="line">---</span><br><span class="line">&lt;html&gt;</span><br><span class="line">【正常写想渲染的内容就可以】</span><br><span class="line">    【我这里也就是留言板的评论区的内容】</span><br><span class="line">    【我这里使用了valine评论系统】</span><br><span class="line">    【也可以将css样式写在这里】</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure><p>第四步<br>将index.md重命名成index.html</p><p>以上都做完了hexo g就可以，注意不要在hexo的config文件中，使用skip跳过渲染。因为最后需要渲染模板layout（也就是header和导航那些东西）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这几天正式开始基于hexo框架制作自己的博客。就统一在这篇日志中记录一下遇到的问题和解决方式。&lt;/p&gt;
+&lt;p&gt;【问题1】&lt;br&gt;问题：虽然部署到github之后的页面没有任何问题，但是localhost本地预览时无法解析css，&lt;br&gt;无法正确读取图片字体等资源的路径。导致</summary>
+      
+    
+    
+    
+    
+    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>blog建设计划</title>
+    <link href="https://zhangdairui.github.io/2019/10/05/2/"/>
+    <id>https://zhangdairui.github.io/2019/10/05/2/</id>
+    <published>2019-10-05T13:17:13.000Z</published>
+    <updated>2020-08-30T18:40:15.529Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.分类/点赞/留言功能添加。 //已添加。点赞功能没什么用所以放弃（202008）<br>2.图床搭建。 //已搭建 SM.MS图床（202008）<br>3.画个搞笑大方心态阳光的logo和头像。 //好像用不到了2333就用一扇门的插画吧（202008）<br>4.如果有空有心情的话：SEO设置 //除此之外还有很多想做的不重要的功能：日志内目录，面包导航，RSS订阅等等（202008）<br>5.不知道什么时候才能实现-&gt;自己写theme。 //竟然第一个实现的是这个。惊呆（202008）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1.分类/点赞/留言功能添加。 //已添加。点赞功能没什么用所以放弃（202008）&lt;br&gt;2.图床搭建。 //已搭建 SM.MS图床（202008）&lt;br&gt;3.画个搞笑大方心态阳光的logo和头像。 //好像用不到了2333就用一扇门的插画吧（202008）&lt;br&gt;4.如</summary>
+      
+    
+    
+    
+    
+    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>blog报道</title>
+    <link href="https://zhangdairui.github.io/2018/11/06/1/"/>
+    <id>https://zhangdairui.github.io/2018/11/06/1/</id>
+    <published>2018-11-06T13:17:13.000Z</published>
+    <updated>2020-08-29T11:36:33.311Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是我写下的第一篇博客，选择了一个古早的方式。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这是我写下的第一篇博客，选择了一个古早的方式。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+</feed>
