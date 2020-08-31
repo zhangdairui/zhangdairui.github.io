@@ -21,8 +21,7 @@
 body{
   background-color: #ececec;
   text-align: center;
-  padding-bottom:30px;
-  min-height:100%;
+  height:100%;
   position:relative;
 
 }
@@ -136,7 +135,7 @@ nav ul li a:hover{
 .footerbox{
   float: left;
   text-align:center;
-  height:20px;
+  height:30px;
   left:0px;
   bottom:0px;
   width:100%;
