@@ -136,7 +136,7 @@ nav ul li a:hover{
 .footerbox{
   float: left;
   text-align:center;
-  height:30px;
+  height:25px;
   left:0px;
   bottom:0px;
   width:100%;
@@ -144,7 +144,7 @@ nav ul li a:hover{
 }
 .footerejs{
   font-family: "Courier New";
-  font-size: 8px;
+  font-size: 6px;
   font-weight: lighter;
   letter-spacing: 1px;
   /* height:20px;
