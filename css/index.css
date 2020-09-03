@@ -202,7 +202,7 @@ nav ul li a:hover{
 .article_content{
   overflow:scroll;
   overflow-x: hidden;
-  height:330px;
+  height:300px;
   width:400px;
   border: solid 1px black;
   margin: 0 auto;
