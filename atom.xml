@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2020-08-31T13:46:51.358Z</updated>
+  <updated>2020-09-03T15:42:43.152Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开启websocket之后的无脑400失误</title>
+    <link href="https://anywheredoor.fun/2020/09/03/%E5%BC%80%E5%90%AFwebsocket%E4%B9%8B%E5%90%8E%E7%9A%84%E6%97%A0%E8%84%91400%E5%A4%B1%E8%AF%AF/"/>
+    <id>https://anywheredoor.fun/2020/09/03/%E5%BC%80%E5%90%AFwebsocket%E4%B9%8B%E5%90%8E%E7%9A%84%E6%97%A0%E8%84%91400%E5%A4%B1%E8%AF%AF/</id>
+    <published>2020-09-03T15:12:31.000Z</published>
+    <updated>2020-09-03T15:42:43.152Z</updated>
+    
+    <content type="html"><![CDATA[<p>项目终端开启node wsSever.js之后，<br>虽然提示端口号为3000（这句提示虽然也是自己设置的。。。。）<br>千万不要直接去浏览器localhos:3000。</p><p>因为无论是hexo-server还是nodemon bin/www之后，都是直接在浏览器输入localhost:端口号来进行网页的预览。<br>所以我养成了习惯。】</p><p>在node wsSever.js之后，直接localhos:3000，一直error400。<br>历经报错磨难的我老规矩开始百度，google。转了一圈发现，等等不对，我应该点开index.html啊！！！！</p><p>学习websocket做了一个粗糙的小幽默：<br><img src="https://i.loli.net/2020/09/03/RUPqy2ekZTJWhC9.jpg" alt="RUPqy2ekZTJWhC9"></p><p>这两天会完善这个小幽默。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;项目终端开启node wsSever.js之后，&lt;br&gt;虽然提示端口号为3000（这句提示虽然也是自己设置的。。。。）&lt;br&gt;千万不要直接去浏览器localhos:3000。&lt;/p&gt;
+&lt;p&gt;因为无论是hexo-server还是nodemon bin/www之后，都是直接在浏</summary>
+      
+    
+    
+    
+    
+    <category term="搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MAC下用nodemon实现express网站热更新</title>
+    <link href="https://anywheredoor.fun/2020/09/03/MAC%E4%B8%8B%E7%94%A8nodemon%E5%AE%9E%E7%8E%B0express%E7%BD%91%E7%AB%99%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
+    <id>https://anywheredoor.fun/2020/09/03/MAC%E4%B8%8B%E7%94%A8nodemon%E5%AE%9E%E7%8E%B0express%E7%BD%91%E7%AB%99%E7%83%AD%E6%9B%B4%E6%96%B0/</id>
+    <published>2020-09-03T15:10:58.000Z</published>
+    <updated>2020-09-03T15:49:43.029Z</updated>
+    
+    <content type="html"><![CDATA[<p>express项目总是不能够实时更新内容，需要关闭服务器再重新打开。<br>在网上搜了很多教程和报错解决，对我的电脑来说最有效的还是下面的方式：</p><p><a href="https://www.cnblogs.com/MainActivity/p/11169322.html">飞尽堂前燕-nodejs express+nodemon实现自动刷新（热更新）</a></p><p>本来想用gulp，但是gulp在install的过程中总是出现找不到命令的报错，又是一个天坑。</p><p>没想到最后nodemon只一下就完美解决。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;express项目总是不能够实时更新内容，需要关闭服务器再重新打开。&lt;br&gt;在网上搜了很多教程和报错解决，对我的电脑来说最有效的还是下面的方式：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/MainActivity/p/11169322.</summary>
+      
+    
+    
+    
+    
+    <category term="搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MAC搭建react-native安卓开发环境问题与解决</title>
+    <link href="https://anywheredoor.fun/2020/09/03/MAC%E6%90%AD%E5%BB%BA%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/"/>
+    <id>https://anywheredoor.fun/2020/09/03/MAC%E6%90%AD%E5%BB%BA%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/</id>
+    <published>2020-09-03T15:09:37.000Z</published>
+    <updated>2020-09-03T15:33:21.924Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>因为要使用react-native，<br>首先要老老实实乖乖巧巧按照<a href="https://reactnative.cn/docs/getting-started.html">react-native官方文档</a>进行。</p><h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>在安装Android Studio的时候，要有耐心，多次反复核对是否安装了需要的组件。SDK啊，特定的版本platform啊，安卓模拟器啊。</p><h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>重点来了！在运行AS里的安卓模拟器的时候，总是会出现一个⚠️unable to locate adb警告。</p><p>我试了所有的解决方案，最终明白这个警告是由于你的project没有gradle完成，你就点了模拟器的原因。如果你在墙外，基本上可以通过打开项目之后等一会来解决（下方会有提示正在gradle任务重），等完成再开模拟器就好了。如果在墙内，这个gradle任务仿佛是永远不会完成（会报错超时之类）。</p><p>在B站，有一名UP主给出了大家都说好的<a href="https://www.bilibili.com/video/av328564798/">办法</a>。大概就是修改build.gradle文件，添加国内镜像。但是这个办法对我也没用。</p><p>我很生气。这个办法我以为是最后的稻草。结果天无绝人之路，我又找到了<a href="https://blog.csdn.net/weixin_30268921/article/details/98357020?utm_medium=distribute.pc_relevant.none-task-blog-title-7&spm=1001.2101.3001.4242">另一位大神的指点</a>成功解决。<br>主要就是去官方下载自己需要的gradle包的源文件，直接把下载来的zip，暴力替换项目中gradle/wrapper/后面忘了有个乱码名文件夹中的内容。然后再重启AS，等了十多分钟就正常gradle结束，再运行模拟器也不会报错。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>谢谢网上总结经验的人！配置好了心情超级好！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h2&gt;&lt;p&gt;因为要使用react-native，&lt;br&gt;首先要老老实实乖乖巧巧按照&lt;a href=&quot;https://reactnative.cn</summary>
+      
+    
+    
+    
+    
+    <category term="搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
   
   <entry>
     <title>css实现博客手机响应布局</title>
