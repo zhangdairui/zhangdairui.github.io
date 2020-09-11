@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2020-09-03T15:42:43.152Z</updated>
+  <updated>2020-09-11T18:42:23.135Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -17,19 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一首很喜欢的歌</title>
+    <link href="https://anywheredoor.fun/2020/09/12/%E4%B8%80%E9%A6%96%E5%BE%88%E5%96%9C%E6%AC%A2%E7%9A%84%E6%AD%8C/"/>
+    <id>https://anywheredoor.fun/2020/09/12/%E4%B8%80%E9%A6%96%E5%BE%88%E5%96%9C%E6%AC%A2%E7%9A%84%E6%AD%8C/</id>
+    <published>2020-09-11T18:25:28.000Z</published>
+    <updated>2020-09-11T18:42:23.135Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-pwSWWjCY" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="7816628" data-server="kugou" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="普普通通的深夜" scheme="https://anywheredoor.fun/tags/%E6%99%AE%E6%99%AE%E9%80%9A%E9%80%9A%E7%9A%84%E6%B7%B1%E5%A4%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>开启websocket之后的无脑400失误</title>
     <link href="https://anywheredoor.fun/2020/09/03/%E5%BC%80%E5%90%AFwebsocket%E4%B9%8B%E5%90%8E%E7%9A%84%E6%97%A0%E8%84%91400%E5%A4%B1%E8%AF%AF/"/>
     <id>https://anywheredoor.fun/2020/09/03/%E5%BC%80%E5%90%AFwebsocket%E4%B9%8B%E5%90%8E%E7%9A%84%E6%97%A0%E8%84%91400%E5%A4%B1%E8%AF%AF/</id>
     <published>2020-09-03T15:12:31.000Z</published>
     <updated>2020-09-03T15:42:43.152Z</updated>
     
-    <content type="html"><![CDATA[<p>项目终端开启node wsSever.js之后，<br>虽然提示端口号为3000（这句提示虽然也是自己设置的。。。。）<br>千万不要直接去浏览器localhos:3000。</p><p>因为无论是hexo-server还是nodemon bin/www之后，都是直接在浏览器输入localhost:端口号来进行网页的预览。<br>所以我养成了习惯。】</p><p>在node wsSever.js之后，直接localhos:3000，一直error400。<br>历经报错磨难的我老规矩开始百度，google。转了一圈发现，等等不对，我应该点开index.html啊！！！！</p><p>学习websocket做了一个粗糙的小幽默：<br><img src="https://i.loli.net/2020/09/03/RUPqy2ekZTJWhC9.jpg" alt="RUPqy2ekZTJWhC9"></p><p>这两天会完善这个小幽默。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>项目终端开启node wsSever.js之后，<br>虽然提示端口号为3000（这句提示虽然也是自己设置的。。。。）<br>千万不要直接去浏览器localhos:3000。</p><p>因为无论是hexo-server还是nodemon bin/www之后，都是直接在浏览器输入localhost:端口号来进行网页的预览。<br>所以我养成了习惯。】</p><p>在node wsSever.js之后，直接localhos:3000，一直error400。<br>历经报错磨难的我老规矩开始百度，google。转了一圈发现，等等不对，我应该点开index.html啊！！！！</p><p>学习websocket做了一个粗糙的小幽默：<br><img src="https://i.loli.net/2020/09/03/RUPqy2ekZTJWhC9.jpg" alt="RUPqy2ekZTJWhC9"></p><p>这两天会完善这个小幽默。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;项目终端开启node wsSever.js之后，&lt;br&gt;虽然提示端口号为3000（这句提示虽然也是自己设置的。。。。）&lt;br&gt;千万不要直接去浏览器localhos:3000。&lt;/p&gt;
-&lt;p&gt;因为无论是hexo-server还是nodemon bin/www之后，都是直接在浏</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
       
     
     
@@ -46,13 +67,12 @@
     <published>2020-09-03T15:10:58.000Z</published>
     <updated>2020-09-03T15:49:43.029Z</updated>
     
-    <content type="html"><![CDATA[<p>express项目总是不能够实时更新内容，需要关闭服务器再重新打开。<br>在网上搜了很多教程和报错解决，对我的电脑来说最有效的还是下面的方式：</p><p><a href="https://www.cnblogs.com/MainActivity/p/11169322.html">飞尽堂前燕-nodejs express+nodemon实现自动刷新（热更新）</a></p><p>本来想用gulp，但是gulp在install的过程中总是出现找不到命令的报错，又是一个天坑。</p><p>没想到最后nodemon只一下就完美解决。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>express项目总是不能够实时更新内容，需要关闭服务器再重新打开。<br>在网上搜了很多教程和报错解决，对我的电脑来说最有效的还是下面的方式：</p><p><a href="https://www.cnblogs.com/MainActivity/p/11169322.html">飞尽堂前燕-nodejs express+nodemon实现自动刷新（热更新）</a></p><p>本来想用gulp，但是gulp在install的过程中总是出现找不到命令的报错，又是一个天坑。</p><p>没想到最后nodemon只一下就完美解决。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;express项目总是不能够实时更新内容，需要关闭服务器再重新打开。&lt;br&gt;在网上搜了很多教程和报错解决，对我的电脑来说最有效的还是下面的方式：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/MainActivity/p/11169322.</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
       
     
     
@@ -69,12 +89,12 @@
     <published>2020-09-03T15:09:37.000Z</published>
     <updated>2020-09-03T15:33:21.924Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>因为要使用react-native，<br>首先要老老实实乖乖巧巧按照<a href="https://reactnative.cn/docs/getting-started.html">react-native官方文档</a>进行。</p><h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>在安装Android Studio的时候，要有耐心，多次反复核对是否安装了需要的组件。SDK啊，特定的版本platform啊，安卓模拟器啊。</p><h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>重点来了！在运行AS里的安卓模拟器的时候，总是会出现一个⚠️unable to locate adb警告。</p><p>我试了所有的解决方案，最终明白这个警告是由于你的project没有gradle完成，你就点了模拟器的原因。如果你在墙外，基本上可以通过打开项目之后等一会来解决（下方会有提示正在gradle任务重），等完成再开模拟器就好了。如果在墙内，这个gradle任务仿佛是永远不会完成（会报错超时之类）。</p><p>在B站，有一名UP主给出了大家都说好的<a href="https://www.bilibili.com/video/av328564798/">办法</a>。大概就是修改build.gradle文件，添加国内镜像。但是这个办法对我也没用。</p><p>我很生气。这个办法我以为是最后的稻草。结果天无绝人之路，我又找到了<a href="https://blog.csdn.net/weixin_30268921/article/details/98357020?utm_medium=distribute.pc_relevant.none-task-blog-title-7&spm=1001.2101.3001.4242">另一位大神的指点</a>成功解决。<br>主要就是去官方下载自己需要的gradle包的源文件，直接把下载来的zip，暴力替换项目中gradle/wrapper/后面忘了有个乱码名文件夹中的内容。然后再重启AS，等了十多分钟就正常gradle结束，再运行模拟器也不会报错。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>谢谢网上总结经验的人！配置好了心情超级好！</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>因为要使用react-native，<br>首先要老老实实乖乖巧巧按照<a href="https://reactnative.cn/docs/getting-started.html">react-native官方文档</a>进行。</p><h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>在安装Android Studio的时候，要有耐心，多次反复核对是否安装了需要的组件。SDK啊，特定的版本platform啊，安卓模拟器啊。</p><h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>重点来了！在运行AS里的安卓模拟器的时候，总是会出现一个⚠️unable to locate adb警告。</p><p>我试了所有的解决方案，最终明白这个警告是由于你的project没有gradle完成，你就点了模拟器的原因。如果你在墙外，基本上可以通过打开项目之后等一会来解决（下方会有提示正在gradle任务重），等完成再开模拟器就好了。如果在墙内，这个gradle任务仿佛是永远不会完成（会报错超时之类）。</p><p>在B站，有一名UP主给出了大家都说好的<a href="https://www.bilibili.com/video/av328564798/">办法</a>。大概就是修改build.gradle文件，添加国内镜像。但是这个办法对我也没用。</p><p>我很生气。这个办法我以为是最后的稻草。结果天无绝人之路，我又找到了<a href="https://blog.csdn.net/weixin_30268921/article/details/98357020?utm_medium=distribute.pc_relevant.none-task-blog-title-7&spm=1001.2101.3001.4242">另一位大神的指点</a>成功解决。<br>主要就是去官方下载自己需要的gradle包的源文件，直接把下载来的zip，暴力替换项目中gradle/wrapper/后面忘了有个乱码名文件夹中的内容。然后再重启AS，等了十多分钟就正常gradle结束，再运行模拟器也不会报错。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>谢谢网上总结经验的人！配置好了心情超级好！</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h2&gt;&lt;p&gt;因为要使用react-native，&lt;br&gt;首先要老老实实乖乖巧巧按照&lt;a href=&quot;https://reactnative.cn</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
       
     
     
@@ -91,12 +111,12 @@
     <published>2020-08-31T07:38:15.000Z</published>
     <updated>2020-08-31T13:46:51.358Z</updated>
     
-    <content type="html"><![CDATA[<p>今天使用css的【@media  screen and (max-width: 980px){}】把手机端的页面也做了适配。<br>  整体主题效果如下：<br>  <img src="https://i.loli.net/2020/08/31/qhtC3DAiWE4o8KV.jpg" alt="qhtC3DAiWE4o8KV"><br>其中，用vw代替px这个单位，会对更多手机机型适配的更好一些。<br>在适配的过程中，直接用chromeF12自带的响应式布局浏览进行。在字体上不太准确。还好手边有手机可以实际上测试。<br>（打开hexo server，手机和电脑接入同一wifi，然后把手机浏览器的地址输入：ip地址:4000，就可以在手机上实际调试页面）</p><p>遇到的无法解决的问题是ios下safari的滚动条总是默认隐藏的，目前在网上搜到的所有方法没有能够解决这个问题。我还挺想要一个滚动条做装饰的。<br>:(</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>今天使用css的【@media  screen and (max-width: 980px){}】把手机端的页面也做了适配。<br>  整体主题效果如下：<br>  <img src="https://i.loli.net/2020/08/31/qhtC3DAiWE4o8KV.jpg" alt="qhtC3DAiWE4o8KV"><br>其中，用vw代替px这个单位，会对更多手机机型适配的更好一些。<br>在适配的过程中，直接用chromeF12自带的响应式布局浏览进行。在字体上不太准确。还好手边有手机可以实际上测试。<br>（打开hexo server，手机和电脑接入同一wifi，然后把手机浏览器的地址输入：ip地址:4000，就可以在手机上实际调试页面）</p><p>遇到的无法解决的问题是ios下safari的滚动条总是默认隐藏的，目前在网上搜到的所有方法没有能够解决这个问题。我还挺想要一个滚动条做装饰的。<br>:(</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;今天使用css的【@media  screen and (max-width: 980px){}】把手机端的页面也做了适配。&lt;br&gt;  整体主题效果如下：&lt;br&gt;  &lt;img src=&quot;https://i.loli.net/2020/08/31/qhtC3DAiWE4o8K</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
       
     
     
@@ -113,14 +133,12 @@
     <published>2020-08-30T09:46:52.000Z</published>
     <updated>2020-08-30T12:26:19.419Z</updated>
     
-    <content type="html"><![CDATA[<p>图床：SM.MS<br>ImageOptim：压缩图片<br>upic：图床上传</p><p>—–以下是测试—–</p><p>测试图片：<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>大图片（自适应窗口大小）：<br><img src="https://i.loli.net/2020/08/30/strAJFCPUSagv92.jpg" alt="strAJFCPUSagv92"></p><p>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>小图片（就这么小）：<br><img src="https://i.loli.net/2020/08/30/xhinESAaFmydT5s.png" alt="xhinESAaFmydT5s"><br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>图床：SM.MS<br>ImageOptim：压缩图片<br>upic：图床上传</p><p>—–以下是测试—–</p><p>测试图片：<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>大图片（自适应窗口大小）：<br><img src="https://i.loli.net/2020/08/30/strAJFCPUSagv92.jpg" alt="strAJFCPUSagv92"></p><p>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>小图片（就这么小）：<br><img src="https://i.loli.net/2020/08/30/xhinESAaFmydT5s.png" alt="xhinESAaFmydT5s"><br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;图床：SM.MS&lt;br&gt;ImageOptim：压缩图片&lt;br&gt;upic：图床上传&lt;/p&gt;
-&lt;p&gt;—–以下是测试—–&lt;/p&gt;
-&lt;p&gt;测试图片：&lt;br&gt;多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
       
     
     
@@ -137,13 +155,12 @@
     <published>2020-08-29T11:39:12.000Z</published>
     <updated>2020-08-31T11:55:40.021Z</updated>
     
-    <content type="html"><![CDATA[<p>这几天正式开始基于hexo框架制作自己的博客。就统一在这篇日志中记录一下遇到的问题和解决方式。</p><p>【问题1】<br>问题：虽然部署到github之后的页面没有任何问题，但是localhost本地预览时无法解析css，<br>无法正确读取图片字体等资源的路径。导致本地开发没办法实时预览。</p><p>解决：在保证路径正确的情况下，浏览器没有任何问题的情况下，在尝试过所有网上的方式如果还是不好使的话：<br>第一步<br>应该是hexo-server自身的问题，可以根据本地还是远程部署每次手动修改一下<br>hexo自带config配置文件中的url和root内容。<br>如：我的博客地址为【zhangdairui.github.io】，那么我的配置文件（_config.yml）为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">发布时用下面的组合</span><br><span class="line">url: https:&#x2F;&#x2F;zhangdairui.github.io</span><br><span class="line">root: &#x2F;zhangdairui.github.io&#x2F;</span><br><span class="line"></span><br><span class="line">本地开发用下面的组合</span><br><span class="line">url: https:&#x2F;&#x2F;localhost:4000</span><br><span class="line">root: &#x2F;zhangdairui.github.io&#x2F;</span><br><span class="line">(或者一个&#x2F;，哪个好使用哪个)</span><br></pre></td></tr></table></figure><p>第二步<br>把CNAME文件中的内容清楚。</p><p>这样每次本地开发完成后，都要再修改成正式发布时的设置。这样虽然麻烦一点点，但是能够保证本地和远程的网页显示都是正确的。</p><p>【问题2】<br>问题：部署之后跳转连接404。</p><p>解决：在其他问题都没有的情况下，CNAME文件中输入自己博客的地址。</p><p>【问题3】<br>问题：如何在主题layout下渲染一个自定义的界面，如”留言板“（comment）页面？<br>解决：<br>第一步<br>在主题config配置文件中新增留言板配置，如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">留言板: &#x2F;comment</span><br></pre></td></tr></table></figure><p>这样就可以将导航和页面跳转对应起来。<br>第二步<br>在hexo的source文件夹下新建comment文件夹，内部新建一个index.md</p><p>第三步<br>将index.md的内容如下写：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 留言板</span><br><span class="line">layout: true</span><br><span class="line">---</span><br><span class="line">&lt;html&gt;</span><br><span class="line">【正常写想渲染的内容就可以】</span><br><span class="line">    【我这里也就是留言板的评论区的内容】</span><br><span class="line">    【我这里使用了valine评论系统】</span><br><span class="line">    【也可以将css样式写在这里】</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure><p>第四步<br>将index.md重命名成index.html</p><p>以上都做完了hexo g就可以，注意不要在hexo的config文件中，使用skip跳过渲染。因为最后需要渲染模板layout（也就是header和导航那些东西）</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这几天正式开始基于hexo框架制作自己的博客。就统一在这篇日志中记录一下遇到的问题和解决方式。</p><p>【问题1】<br>问题：虽然部署到github之后的页面没有任何问题，但是localhost本地预览时无法解析css，<br>无法正确读取图片字体等资源的路径。导致本地开发没办法实时预览。</p><p>解决：在保证路径正确的情况下，浏览器没有任何问题的情况下，在尝试过所有网上的方式如果还是不好使的话：<br>第一步<br>应该是hexo-server自身的问题，可以根据本地还是远程部署每次手动修改一下<br>hexo自带config配置文件中的url和root内容。<br>如：我的博客地址为【zhangdairui.github.io】，那么我的配置文件（_config.yml）为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">发布时用下面的组合</span><br><span class="line">url: https:&#x2F;&#x2F;zhangdairui.github.io</span><br><span class="line">root: &#x2F;zhangdairui.github.io&#x2F;</span><br><span class="line"></span><br><span class="line">本地开发用下面的组合</span><br><span class="line">url: https:&#x2F;&#x2F;localhost:4000</span><br><span class="line">root: &#x2F;zhangdairui.github.io&#x2F;</span><br><span class="line">(或者一个&#x2F;，哪个好使用哪个)</span><br></pre></td></tr></table></figure><p>第二步<br>把CNAME文件中的内容清楚。</p><p>这样每次本地开发完成后，都要再修改成正式发布时的设置。这样虽然麻烦一点点，但是能够保证本地和远程的网页显示都是正确的。</p><p>【问题2】<br>问题：部署之后跳转连接404。</p><p>解决：在其他问题都没有的情况下，CNAME文件中输入自己博客的地址。</p><p>【问题3】<br>问题：如何在主题layout下渲染一个自定义的界面，如”留言板“（comment）页面？<br>解决：<br>第一步<br>在主题config配置文件中新增留言板配置，如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">留言板: &#x2F;comment</span><br></pre></td></tr></table></figure><p>这样就可以将导航和页面跳转对应起来。<br>第二步<br>在hexo的source文件夹下新建comment文件夹，内部新建一个index.md</p><p>第三步<br>将index.md的内容如下写：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 留言板</span><br><span class="line">layout: true</span><br><span class="line">---</span><br><span class="line">&lt;html&gt;</span><br><span class="line">【正常写想渲染的内容就可以】</span><br><span class="line">    【我这里也就是留言板的评论区的内容】</span><br><span class="line">    【我这里使用了valine评论系统】</span><br><span class="line">    【也可以将css样式写在这里】</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure><p>第四步<br>将index.md重命名成index.html</p><p>以上都做完了hexo g就可以，注意不要在hexo的config文件中，使用skip跳过渲染。因为最后需要渲染模板layout（也就是header和导航那些东西）</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;这几天正式开始基于hexo框架制作自己的博客。就统一在这篇日志中记录一下遇到的问题和解决方式。&lt;/p&gt;
-&lt;p&gt;【问题1】&lt;br&gt;问题：虽然部署到github之后的页面没有任何问题，但是localhost本地预览时无法解析css，&lt;br&gt;无法正确读取图片字体等资源的路径。导致</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
       
     
     
@@ -160,12 +177,12 @@
     <published>2019-10-05T13:17:13.000Z</published>
     <updated>2020-08-30T18:40:15.529Z</updated>
     
-    <content type="html"><![CDATA[<p>1.分类/点赞/留言功能添加。 //已添加。点赞功能没什么用所以放弃（202008）<br>2.图床搭建。 //已搭建 SM.MS图床（202008）<br>3.画个搞笑大方心态阳光的logo和头像。 //好像用不到了2333就用一扇门的插画吧（202008）<br>4.如果有空有心情的话：SEO设置 //除此之外还有很多想做的不重要的功能：日志内目录，面包导航，RSS订阅等等（202008）<br>5.不知道什么时候才能实现-&gt;自己写theme。 //竟然第一个实现的是这个。惊呆（202008）</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>1.分类/点赞/留言功能添加。 //已添加。点赞功能没什么用所以放弃（202008）<br>2.图床搭建。 //已搭建 SM.MS图床（202008）<br>3.画个搞笑大方心态阳光的logo和头像。 //好像用不到了2333就用一扇门的插画吧（202008）<br>4.如果有空有心情的话：SEO设置 //除此之外还有很多想做的不重要的功能：日志内目录，面包导航，RSS订阅等等（202008）<br>5.不知道什么时候才能实现-&gt;自己写theme。 //竟然第一个实现的是这个。惊呆（202008）</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;1.分类/点赞/留言功能添加。 //已添加。点赞功能没什么用所以放弃（202008）&lt;br&gt;2.图床搭建。 //已搭建 SM.MS图床（202008）&lt;br&gt;3.画个搞笑大方心态阳光的logo和头像。 //好像用不到了2333就用一扇门的插画吧（202008）&lt;br&gt;4.如</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
       
     
     
@@ -182,13 +199,12 @@
     <published>2018-11-06T13:17:13.000Z</published>
     <updated>2020-08-29T11:36:33.311Z</updated>
     
-    <content type="html"><![CDATA[<p>这是我写下的第一篇博客，选择了一个古早的方式。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这是我写下的第一篇博客，选择了一个古早的方式。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;这是我写下的第一篇博客，选择了一个古早的方式。&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
       
     
     
