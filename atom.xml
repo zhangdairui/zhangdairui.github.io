@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2020-09-11T18:48:58.290Z</updated>
+  <updated>2020-09-13T16:15:23.058Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>歌曲播放器实验</title>
+    <title>Aplayer试用/很喜欢的一首歌</title>
     <link href="https://anywheredoor.fun/2020/09/12/%E4%B8%80%E9%A6%96%E5%BE%88%E5%96%9C%E6%AC%A2%E7%9A%84%E6%AD%8C/"/>
     <id>https://anywheredoor.fun/2020/09/12/%E4%B8%80%E9%A6%96%E5%BE%88%E5%96%9C%E6%AC%A2%E7%9A%84%E6%AD%8C/</id>
     <published>2020-09-11T18:25:28.000Z</published>
-    <updated>2020-09-11T18:48:58.290Z</updated>
+    <updated>2020-09-13T16:15:23.058Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-JLvzfoqD" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="60198" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>一直都非常喜欢的一首歌。每当听到这首歌就能想起在日本的时候。</p>        <div id="aplayer-EYMrcXyl" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-EYMrcXyl"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "東京",              author: "手嶌葵",              url: "https://emodisk-1303075726.cos.ap-nanjing.myqcloud.com/MP3%E6%89%8B%E5%B6%8C%E8%91%B5-%E6%9D%B1%E4%BA%AC.mp3",              pic: "https://i.loli.net/2020/09/13/gXJltEPqpkArFcQ.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>東京 ビルの灯り</p><p>無数の 眠れない 理由が煌めいている</p><p>明日が 来る前に 片付けたい 仕事があると</p><p>あなたは 一人きりで 弱い自分と 戦っている</p><p>誰も見ていないとき</p><p>何をしているかを</p><p>神様はきっと見ていてくれる</p><p>ほら 東京 ビルの灯り</p><p>無数の 眠れない 理由が煌めいている</p><p>明日が 来る前に 直したい 気持ちがある</p><p>さみしさで 未来さえ</p><p>曇って見えない目も</p><p>涙ならそっと洗い流せる</p><p>ほら 東京 星は消えて</p><p>地上は 眩しい 想いが煌めいている</p><p>東京 ビルの灯り</p><p>無数の 眠れない 理由が煌めいて</p><p>静かに 明ける空の</p><p>向こうで 眩しい 明日が手招いている</p>]]></content>
     
     
       
