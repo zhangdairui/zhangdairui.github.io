@@ -60,69 +60,29 @@
             <section class="main">
           
 
-          <!-- 首页带滚动条的文章列表 -->
-<div class="homepage_post_list">
-  
-    <div>
-    <span>2020-09-16</span>
-    <a class="homepage_post_title" href="/2020/09/16/0916/">Nodejs连接mysql报错ERROR 1045 (28000)解决办法</a>
+          <!-- 每页文章 -->
+<div class="post_info">
+    <div class="post_title">
+      <span>Nodejs连接mysql报错ERROR 1045 (28000)解决办法</span>
+    </div>
+
+    <div class="post_auther_date_tag">
+      <span id="post-author">@emo</span>
+      <span id="post-date">2020-09-16 01:37:01</span>
+      #<a class="tag-link-link" href="/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/" rel="tag">搭建各种各样的环境</a>
+    </div>
+
 </div>
 
-  
-    <div>
-    <span>2020-09-12</span>
-    <a class="homepage_post_title" href="/2020/09/12/一首很喜欢的歌/">Aplayer试用/很喜欢的一首歌</a>
-</div>
+<div class="article_content">
+    <p>在MAC下，将node项目连接到本地mysql的时候，出现了下面的报错：</p>
+<p>ERROR 1045 (28000): Access denied for user ‘root’@’localhost’ (using password: YES)</p>
+<p>其实这个报错的最根本的意思其实就是密码不对。所以不要轻易去复制粘贴网上各种解决方案。<br>比如如下一个一传十十传百的解决方案：</p>
+<p>ALTER USER ‘root’@’localhost’ IDENTIFIED BY ‘你的新密码’;<br>（有一些教程还会把你的新密码那里填成password或者1111等等）</p>
+<p>这个时候如果不仔细看，直接按照步骤使用这个命令，很容易不小心又把密码更换错了，或者最后还是和你node项目里的app.js对不上</p>
+<p>正确做法是要先检查app.js中，const connection = mysql.createConnection这个地方传入的user以及password到底与自己mysql设置的密码是否一致。可以在mysql的终端里多次尝试密码。</p>
+<p>今晚也因为粗心大意踩了三个小时的坑，自从开始学编程，性格越来越沉稳了哈哈哈哈哈哈哈。</p>
 
-  
-    <div>
-    <span>2020-09-03</span>
-    <a class="homepage_post_title" href="/2020/09/03/开启websocket之后的无脑400失误/">开启websocket之后的无脑400失误</a>
-</div>
-
-  
-    <div>
-    <span>2020-09-03</span>
-    <a class="homepage_post_title" href="/2020/09/03/MAC下用nodemon实现express网站热更新/">MAC下用nodemon实现express网站热更新</a>
-</div>
-
-  
-    <div>
-    <span>2020-09-03</span>
-    <a class="homepage_post_title" href="/2020/09/03/MAC搭建安卓开发环境问题与解决/">MAC搭建react-native安卓开发环境问题与解决</a>
-</div>
-
-  
-    <div>
-    <span>2020-08-31</span>
-    <a class="homepage_post_title" href="/2020/08/31/css实现博客手机响应布局/">css实现博客手机响应布局</a>
-</div>
-
-  
-    <div>
-    <span>2020-08-30</span>
-    <a class="homepage_post_title" href="/2020/08/30/20200830/">upic+SMMS+ImageOptim搭建博客图床</a>
-</div>
-
-  
-    <div>
-    <span>2020-08-29</span>
-    <a class="homepage_post_title" href="/2020/08/29/3/">博客开发过程中遇到的问题和解决</a>
-</div>
-
-  
-    <div>
-    <span>2019-10-05</span>
-    <a class="homepage_post_title" href="/2019/10/05/2/">blog建设计划</a>
-</div>
-
-  
-    <div>
-    <span>2018-11-06</span>
-    <a class="homepage_post_title" href="/2018/11/06/1/">blog报道</a>
-</div>
-
-  
 </div>
 
           </section>
