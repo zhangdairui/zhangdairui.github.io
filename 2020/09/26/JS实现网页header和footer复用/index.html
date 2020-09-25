@@ -1,0 +1,127 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anywheredoor</title>
+    <link rel="icon" href="/pic/titleicon.png" sizes="32x32">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+    <link rel="stylesheet" href="/css/index.css"/>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+<body>
+      
+
+<div class="hello">
+  <h1>どこでもドア</h1>
+</div>
+
+<section>
+  <div class="door">
+    <a  class="indoor" href="" > <img src="/pic/door/door1.png" /></a>
+  </div>
+</section>
+
+<nav>
+        
+
+<ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item">
+        <a href="/" class="menu-item-link">主页</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="/about" class="menu-item-link">关于</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="/tags" class="menu-item-link">分类</a>
+    </li>
+    
+    <li class="menu-item">
+        <a href="/comment" class="menu-item-link">留言板</a>
+    </li>
+    
+
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+
+</ul>
+
+</nav>
+
+      <div class="aline"></div>
+      <div class="container">
+
+          
+            <section class="main">
+          
+
+          <!-- 每页文章 -->
+<div class="post_info">
+    <div class="post_title">
+      <span>JS实现网页header和footer复用</span>
+    </div>
+
+    <div class="post_auther_date_tag">
+      <span id="post-author">@emo</span>
+      <span id="post-date">2020-09-26 01:45:54</span>
+      #<a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
+    </div>
+
+</div>
+
+<div class="article_content">
+    <h2 id="JS实现网页header和footer复用"><a href="#JS实现网页header和footer复用" class="headerlink" title="JS实现网页header和footer复用"></a>JS实现网页header和footer复用</h2><h3 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h3><p>复用header和footer部分在一个网站的N个页面。（这里header部分包括了导航。搜索框等。footer部分只是一行字，copyright之类的。）</p>
+<h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><p>header部分：</p>
+<ol>
+<li><p>把需要复用的部分提取出来，复制到<a target="_blank" rel="noopener" href="http://tool.chinaz.com/Tools/Html_Js.aspx">HTML/JS转换站长工具</a>中，转换成js文件，保存到项目中，文件名为header.js。</p>
+</li>
+<li><p>在html中本应该是header的位置引入刚刚的js文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- Share Header! --&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;share-head&quot;&gt;&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;.&#x2F;js&#x2F;header.js&quot;&gt;&lt;&#x2F;script&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>footer部分：</p>
+<ol>
+<li><p>把需要复用的部分提取出来，保存为footer.html在项目中。</p>
+</li>
+<li><p>在index.html中本应是footer的部分写一个空div，di为share-footer。如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- Share Footer! --&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;share-footer&quot;&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在网页引用的main.js中使用load把footer.html引入到第二步的空div中：</p>
+</li>
+</ol>
+<p><code>//===== Share-footer
+    $(&quot;#share-footer&quot;).load(&quot;footer.html&quot;);</code></p>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>本来header也想用load方式解决，但是发现load之后，移动设备端的汉堡导航下拉菜单没有了动效。本来是三道杠变成×的动效。强迫症不能忍。应该是不知道什么原因导致css的transform没有效果？查了很久也没有发现类似的问题和解决方法，无奈选择了转换成js文件引入的方式。这种方式对SEO不太友好，但是我这个是一个作业而已，不涉及到SEO，就暂时这样了。footer的话就只有一行字，所以可以暴力load没有关系。</p>
+
+</div>
+
+          </section>
+      </div>
+
+</body>
+
+<div class="footerbox">
+  <div class="footerejs">
+    <footer>
+  <div class="footer">
+    Copyright &copy; 2020 emo
+  </div>
+
+  <div class="count">
+
+  </div>
+</footer>
+
+  </div>
+  <div class="count">
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  </div>
+
+</div>
+</html>
