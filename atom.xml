@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2020-10-13T14:18:39.549Z</updated>
+  <updated>2020-11-22T10:30:13.467Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MUI聊天app页面间传值</title>
+    <link href="https://anywheredoor.fun/2020/11/22/MUI%E8%81%8A%E5%A4%A9app%E9%A1%B5%E9%9D%A2%E9%97%B4%E4%BC%A0%E5%80%BC/"/>
+    <id>https://anywheredoor.fun/2020/11/22/MUI%E8%81%8A%E5%A4%A9app%E9%A1%B5%E9%9D%A2%E9%97%B4%E4%BC%A0%E5%80%BC/</id>
+    <published>2020-11-22T08:53:26.000Z</published>
+    <updated>2020-11-22T10:30:13.467Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>MUI框架写的聊天app，网上有很多教程，官方也有可以参考的案例。本该没什么可说的了，后来发现一般的教程和案例，在页面传值这一块都只做了昵称的，没有做头像的传值。以及我自己做的时候，还加入了好友名片和添加好友的页面，所以需要更多的去使用这个功能。</p><p>看似简单，在做的时候还是遇到了很多细节上的小问题。综合种种，终于完成，把代码记录一下。分别有以下三组传值：</p><ol><li>点击chatlist页面—跳转—&gt;私聊窗口页面，传值头像和昵称</li><li>点击通讯录中的好友—跳转—&gt;好友名片页面，传值头像和昵称</li><li>点击好友请求—跳转—&gt;好友名片页面，传值头像和昵称</li></ol><h2 id="以第一组chatlist跳转私聊传值为例"><a href="#以第一组chatlist跳转私聊传值为例" class="headerlink" title="以第一组chatlist跳转私聊传值为例"></a>以第一组chatlist跳转私聊传值为例</h2><h3 id="chats-js"><a href="#chats-js" class="headerlink" title="chats.js"></a>chats.js</h3><p><img src="https://i.loli.net/2020/11/22/nOsTailBUfhodVM.png" alt="nOsTailBUfhodVM"></p><h3 id="singlechat-html"><a href="#singlechat-html" class="headerlink" title="singlechat.html"></a>singlechat.html</h3><p><img src="https://i.loli.net/2020/11/22/ChO1NYoBPLjXxb7.png" alt="ChO1NYoBPLjXxb7"><br><img src="https://i.loli.net/2020/11/22/HVCbyIp9ku1thBF.png" alt="HVCbyIp9ku1thBF"></p><h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>写一句鼓励自己的话吧，无关代码，只是最近的感想。<br>受挫，焦虑，讨厌的人这三者，无论在任何地方做任何事，几乎都是不可避免的，而且就算再怎么做好心理准备，也不可能精准预料每一个细节。我最近在训练自己的是：</p><p>1.从受挫中重新建立信心。</p><p>2.在焦虑中保持平常心。</p><p>3.和不是特别喜欢的人（讨厌谈不上啦）沟通，共事。</p><p>因此每一次困难来的时候，不管多难，不管因为啥，我都想要努力当一个弹簧。压得越狠弹得越高。只有这样才能越走越远，要是有一天，你放弃了弹起来，那说明你已经走到了天花板，不会再有更大的进步了。不过我不是希望自己能拥有无限的天花板，我是希望有一天我到达天花板的时候，能心甘情愿心满意足就可以了。毕竟心态只要平衡，怎么都是好的。夏威夷的海风是好的，小区夏天晚上的凉风也是好的；米其林怀石是好的，街边烤冷面也是好的。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="前端" scheme="https://anywheredoor.fun/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>会自动计算的购物车</title>
@@ -111,7 +133,7 @@
     <published>2020-09-11T18:25:28.000Z</published>
     <updated>2020-09-14T17:11:11.900Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p><p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>        <div id="aplayer-qoXQmCMG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-qoXQmCMG"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "東京",              author: "手嶌葵",              url: "https://anywhereworld.fun/tokyo.mp3",              pic: "https://i.loli.net/2020/09/13/gXJltEPqpkArFcQ.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>（这个播放器在手机上看是很细的一条，我懒得调整了，能听就好 能听就好。）</p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 片付けたい 仕事があると<br><strong>因为还有想在明日来到之前完成的工作</strong></p><p>あなたは 一人きりで 弱い自分と 戦っている<br><strong>你独自一人和怯懦的自己战斗</strong></p><p>誰も見ていないとき<br><strong>在那些谁都不曾注视着我的日子里</strong></p><p>何をしているかを神様はきっと見ていてくれる<br><strong>神明一定在看着我的努力</strong></p><p>ほら 東京 ビルの灯り<br><strong>看 东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 直したい 気持ちがある<br><strong>因为还有想在明日来到之前调节好的心情</strong></p><p>さみしさで 未来さえ<br><strong>孤单冷清到 连未来都</strong></p><p>曇って見えない目も<br><strong>无法看清的双眼也</strong></p><p>涙ならそっと洗い流せる<br><strong>用眼泪悄悄洗净</strong></p><p>ほら 東京 星は消えて<br><strong>看 东京 星星消失了</strong></p><p>地上は 眩しい 想いが煌めいている<br><strong>但地面上正闪烁着耀眼的思念</strong></p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいて<br><strong>闪烁着无数失眠的理由</strong></p><p>静かに 明ける空の<br><strong>静静地向着黎明的方向</strong></p><p>向こうで 眩しい 明日が手招いている<br><strong>对璀璨的明天挥手</strong></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p><p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>        <div id="aplayer-hSWoFQqu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-hSWoFQqu"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "東京",              author: "手嶌葵",              url: "https://anywhereworld.fun/tokyo.mp3",              pic: "https://i.loli.net/2020/09/13/gXJltEPqpkArFcQ.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>（这个播放器在手机上看是很细的一条，我懒得调整了，能听就好 能听就好。）</p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 片付けたい 仕事があると<br><strong>因为还有想在明日来到之前完成的工作</strong></p><p>あなたは 一人きりで 弱い自分と 戦っている<br><strong>你独自一人和怯懦的自己战斗</strong></p><p>誰も見ていないとき<br><strong>在那些谁都不曾注视着我的日子里</strong></p><p>何をしているかを神様はきっと見ていてくれる<br><strong>神明一定在看着我的努力</strong></p><p>ほら 東京 ビルの灯り<br><strong>看 东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 直したい 気持ちがある<br><strong>因为还有想在明日来到之前调节好的心情</strong></p><p>さみしさで 未来さえ<br><strong>孤单冷清到 连未来都</strong></p><p>曇って見えない目も<br><strong>无法看清的双眼也</strong></p><p>涙ならそっと洗い流せる<br><strong>用眼泪悄悄洗净</strong></p><p>ほら 東京 星は消えて<br><strong>看 东京 星星消失了</strong></p><p>地上は 眩しい 想いが煌めいている<br><strong>但地面上正闪烁着耀眼的思念</strong></p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいて<br><strong>闪烁着无数失眠的理由</strong></p><p>静かに 明ける空の<br><strong>静静地向着黎明的方向</strong></p><p>向こうで 眩しい 明日が手招いている<br><strong>对璀璨的明天挥手</strong></p>]]></content>
     
     
       
