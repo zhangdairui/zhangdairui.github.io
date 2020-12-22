@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2020-11-22T10:30:13.467Z</updated>
+  <updated>2020-12-22T15:00:20.657Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用macbook+ubuntu开内网穿透</title>
+    <link href="https://anywheredoor.fun/2020/12/22/%E7%94%A8macbook-ubuntu%E5%BC%80%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    <id>https://anywheredoor.fun/2020/12/22/%E7%94%A8macbook-ubuntu%E5%BC%80%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
+    <published>2020-12-22T14:25:36.000Z</published>
+    <updated>2020-12-22T15:00:20.657Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="用macbook-ubuntu开内网穿透"><a href="#用macbook-ubuntu开内网穿透" class="headerlink" title="用macbook+ubuntu开内网穿透"></a>用macbook+ubuntu开内网穿透</h1><p>1.将 <a href="http://119.45.104.220:2949/down/NAYiOnUGQYIK">这个文件</a><br>放到ubuntu系统的电脑中。</p><p>2.运行<br><code>sudo tar xzvf frp_0.33.0_linux_amd64.tar.gz</code><br>解压</p><p>3.进入解压好的文件夹，修改frpc.ini配置文件，例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[common]</span><br><span class="line">server_addr &#x3D; 域名</span><br><span class="line">server_port &#x3D; 9000 &#x2F;&#x2F;设定一个端口号</span><br><span class="line">token &#x3D; GCP111111 &#x2F;&#x2F;令牌</span><br><span class="line"></span><br><span class="line">[manager] &#x2F;&#x2F;网站标识</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">local_ip &#x3D; localhost</span><br><span class="line">local_port &#x3D; 7000 &#x2F;&#x2F;设定端口号</span><br><span class="line">remote_port &#x3D; 7000</span><br></pre></td></tr></table></figure><p>4.在该文件夹下的终端运行<code>./frpc -c ./frpc.ini</code></p><p>5.记得把域名服务器开放相应的端口，具体教程可以看：<br><a href="https://www.iplaysoft.com/frp.html">https://www.iplaysoft.com/frp.html</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="其他" scheme="https://anywheredoor.fun/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>MUI聊天app页面间传值</title>
@@ -133,7 +155,7 @@
     <published>2020-09-11T18:25:28.000Z</published>
     <updated>2020-09-14T17:11:11.900Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p><p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>        <div id="aplayer-hSWoFQqu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-hSWoFQqu"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "東京",              author: "手嶌葵",              url: "https://anywhereworld.fun/tokyo.mp3",              pic: "https://i.loli.net/2020/09/13/gXJltEPqpkArFcQ.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>（这个播放器在手机上看是很细的一条，我懒得调整了，能听就好 能听就好。）</p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 片付けたい 仕事があると<br><strong>因为还有想在明日来到之前完成的工作</strong></p><p>あなたは 一人きりで 弱い自分と 戦っている<br><strong>你独自一人和怯懦的自己战斗</strong></p><p>誰も見ていないとき<br><strong>在那些谁都不曾注视着我的日子里</strong></p><p>何をしているかを神様はきっと見ていてくれる<br><strong>神明一定在看着我的努力</strong></p><p>ほら 東京 ビルの灯り<br><strong>看 东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 直したい 気持ちがある<br><strong>因为还有想在明日来到之前调节好的心情</strong></p><p>さみしさで 未来さえ<br><strong>孤单冷清到 连未来都</strong></p><p>曇って見えない目も<br><strong>无法看清的双眼也</strong></p><p>涙ならそっと洗い流せる<br><strong>用眼泪悄悄洗净</strong></p><p>ほら 東京 星は消えて<br><strong>看 东京 星星消失了</strong></p><p>地上は 眩しい 想いが煌めいている<br><strong>但地面上正闪烁着耀眼的思念</strong></p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいて<br><strong>闪烁着无数失眠的理由</strong></p><p>静かに 明ける空の<br><strong>静静地向着黎明的方向</strong></p><p>向こうで 眩しい 明日が手招いている<br><strong>对璀璨的明天挥手</strong></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p><p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>        <div id="aplayer-EmqGeeJs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-EmqGeeJs"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "東京",              author: "手嶌葵",              url: "https://anywhereworld.fun/tokyo.mp3",              pic: "https://i.loli.net/2020/09/13/gXJltEPqpkArFcQ.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>（这个播放器在手机上看是很细的一条，我懒得调整了，能听就好 能听就好。）</p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 片付けたい 仕事があると<br><strong>因为还有想在明日来到之前完成的工作</strong></p><p>あなたは 一人きりで 弱い自分と 戦っている<br><strong>你独自一人和怯懦的自己战斗</strong></p><p>誰も見ていないとき<br><strong>在那些谁都不曾注视着我的日子里</strong></p><p>何をしているかを神様はきっと見ていてくれる<br><strong>神明一定在看着我的努力</strong></p><p>ほら 東京 ビルの灯り<br><strong>看 东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 直したい 気持ちがある<br><strong>因为还有想在明日来到之前调节好的心情</strong></p><p>さみしさで 未来さえ<br><strong>孤单冷清到 连未来都</strong></p><p>曇って見えない目も<br><strong>无法看清的双眼也</strong></p><p>涙ならそっと洗い流せる<br><strong>用眼泪悄悄洗净</strong></p><p>ほら 東京 星は消えて<br><strong>看 东京 星星消失了</strong></p><p>地上は 眩しい 想いが煌めいている<br><strong>但地面上正闪烁着耀眼的思念</strong></p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいて<br><strong>闪烁着无数失眠的理由</strong></p><p>静かに 明ける空の<br><strong>静静地向着黎明的方向</strong></p><p>向こうで 眩しい 明日が手招いている<br><strong>对璀璨的明天挥手</strong></p>]]></content>
     
     
       
@@ -175,9 +197,9 @@
     <link href="https://anywheredoor.fun/2020/09/03/MAC%E4%B8%8B%E7%94%A8nodemon%E5%AE%9E%E7%8E%B0express%E7%BD%91%E7%AB%99%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
     <id>https://anywheredoor.fun/2020/09/03/MAC%E4%B8%8B%E7%94%A8nodemon%E5%AE%9E%E7%8E%B0express%E7%BD%91%E7%AB%99%E7%83%AD%E6%9B%B4%E6%96%B0/</id>
     <published>2020-09-03T15:10:58.000Z</published>
-    <updated>2020-09-03T15:49:43.029Z</updated>
+    <updated>2020-12-01T07:20:52.469Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>express项目总是不能够实时更新内容，需要关闭服务器再重新打开。<br>在网上搜了很多教程和报错解决，对我的电脑来说最有效的还是下面的方式：</p><p><a href="https://www.cnblogs.com/MainActivity/p/11169322.html">飞尽堂前燕-nodejs express+nodemon实现自动刷新（热更新）</a></p><p>本来想用gulp，但是gulp在install的过程中总是出现找不到命令的报错，又是一个天坑。</p><p>没想到最后nodemon只一下就完美解决。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>express项目总是不能够实时更新内容，需要关闭服务器再重新打开。<br>在网上搜了很多教程和报错解决，对我的电脑来说最有效的还是下面的两种方式：</p><h2 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h2><p><a href="https://www.cnblogs.com/MainActivity/p/11169322.html">飞尽堂前燕-nodejs express+nodemon实现自动刷新（热更新）</a></p><p>本来想用gulp，但是gulp在install的过程中总是出现找不到命令的报错，又是一个天坑。</p><p>没想到最后nodemon只一下就完美解决。</p><h2 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h2><p>不用nodemon，只需要Chrome浏览器的liveReload插件。<br>在项目文件夹终端运行node app.js开启localhost之后，把浏览器的liveReload插件置为ON，这样只要保存文件，浏览器就可以自动刷新看效果了。</p>]]></content>
     
     
       
