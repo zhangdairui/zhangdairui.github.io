@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2020-12-22T15:00:20.657Z</updated>
+  <updated>2021-01-30T14:12:03.545Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java利用递归进行数组的全排列</title>
+    <link href="https://anywheredoor.fun/2021/01/30/java%E5%88%A9%E7%94%A8%E9%80%92%E5%BD%92%E8%BF%9B%E8%A1%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97/"/>
+    <id>https://anywheredoor.fun/2021/01/30/java%E5%88%A9%E7%94%A8%E9%80%92%E5%BD%92%E8%BF%9B%E8%A1%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97/</id>
+    <published>2021-01-30T14:11:12.000Z</published>
+    <updated>2021-01-30T14:12:03.545Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">public class Permutation &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) </span><br><span class="line">&#123; </span><br><span class="line">int[] Array &#x3D; &#123;1,2,3&#125;;</span><br><span class="line">int n &#x3D; Array.length;</span><br><span class="line">Permutation permutation &#x3D; new Permutation();</span><br><span class="line">permutation.permute(Array, 0, n-1);</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">private void permute(int[] arr, int l, int r)  &#x2F;&#x2F;最开始l是0（起始位置），r是2，由main传入。</span><br><span class="line">&#123; </span><br><span class="line">if(l &#x3D;&#x3D; r) &#123; </span><br><span class="line">for(int k&#x3D;0;k&lt;arr.length;k++) &#123;</span><br><span class="line">System.out.print(arr[k]);</span><br><span class="line">&#125;</span><br><span class="line">System.out.print(&quot; &quot;);</span><br><span class="line"></span><br><span class="line">&#125;else &#123;</span><br><span class="line">for(int i &#x3D; l; i&lt;&#x3D; r ; i++) &#123; &#x2F;&#x2F;最开始，i&#x3D;0，l&#x3D;0, i&lt;&#x3D;2 ( r&#x3D;2 )</span><br><span class="line">int temp;</span><br><span class="line">temp &#x3D; arr[i];</span><br><span class="line">arr[i] &#x3D; arr[l];</span><br><span class="line">arr[l] &#x3D; temp;</span><br><span class="line"></span><br><span class="line">permute(arr, l+1, r);</span><br><span class="line"></span><br><span class="line">temp &#x3D; arr[i];</span><br><span class="line">arr[i] &#x3D; arr[l];</span><br><span class="line">arr[l] &#x3D; temp;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="java" scheme="https://anywheredoor.fun/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>用macbook+ubuntu开内网穿透</title>
@@ -155,7 +177,7 @@
     <published>2020-09-11T18:25:28.000Z</published>
     <updated>2020-09-14T17:11:11.900Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p><p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>        <div id="aplayer-EmqGeeJs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-EmqGeeJs"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "東京",              author: "手嶌葵",              url: "https://anywhereworld.fun/tokyo.mp3",              pic: "https://i.loli.net/2020/09/13/gXJltEPqpkArFcQ.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>（这个播放器在手机上看是很细的一条，我懒得调整了，能听就好 能听就好。）</p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 片付けたい 仕事があると<br><strong>因为还有想在明日来到之前完成的工作</strong></p><p>あなたは 一人きりで 弱い自分と 戦っている<br><strong>你独自一人和怯懦的自己战斗</strong></p><p>誰も見ていないとき<br><strong>在那些谁都不曾注视着我的日子里</strong></p><p>何をしているかを神様はきっと見ていてくれる<br><strong>神明一定在看着我的努力</strong></p><p>ほら 東京 ビルの灯り<br><strong>看 东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 直したい 気持ちがある<br><strong>因为还有想在明日来到之前调节好的心情</strong></p><p>さみしさで 未来さえ<br><strong>孤单冷清到 连未来都</strong></p><p>曇って見えない目も<br><strong>无法看清的双眼也</strong></p><p>涙ならそっと洗い流せる<br><strong>用眼泪悄悄洗净</strong></p><p>ほら 東京 星は消えて<br><strong>看 东京 星星消失了</strong></p><p>地上は 眩しい 想いが煌めいている<br><strong>但地面上正闪烁着耀眼的思念</strong></p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいて<br><strong>闪烁着无数失眠的理由</strong></p><p>静かに 明ける空の<br><strong>静静地向着黎明的方向</strong></p><p>向こうで 眩しい 明日が手招いている<br><strong>对璀璨的明天挥手</strong></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p><p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>        <div id="aplayer-KEODeLua" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-KEODeLua"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "東京",              author: "手嶌葵",              url: "https://anywhereworld.fun/tokyo.mp3",              pic: "https://i.loli.net/2020/09/13/gXJltEPqpkArFcQ.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>（这个播放器在手机上看是很细的一条，我懒得调整了，能听就好 能听就好。）</p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 片付けたい 仕事があると<br><strong>因为还有想在明日来到之前完成的工作</strong></p><p>あなたは 一人きりで 弱い自分と 戦っている<br><strong>你独自一人和怯懦的自己战斗</strong></p><p>誰も見ていないとき<br><strong>在那些谁都不曾注视着我的日子里</strong></p><p>何をしているかを神様はきっと見ていてくれる<br><strong>神明一定在看着我的努力</strong></p><p>ほら 東京 ビルの灯り<br><strong>看 东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 直したい 気持ちがある<br><strong>因为还有想在明日来到之前调节好的心情</strong></p><p>さみしさで 未来さえ<br><strong>孤单冷清到 连未来都</strong></p><p>曇って見えない目も<br><strong>无法看清的双眼也</strong></p><p>涙ならそっと洗い流せる<br><strong>用眼泪悄悄洗净</strong></p><p>ほら 東京 星は消えて<br><strong>看 东京 星星消失了</strong></p><p>地上は 眩しい 想いが煌めいている<br><strong>但地面上正闪烁着耀眼的思念</strong></p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいて<br><strong>闪烁着无数失眠的理由</strong></p><p>静かに 明ける空の<br><strong>静静地向着黎明的方向</strong></p><p>向こうで 眩しい 明日が手招いている<br><strong>对璀璨的明天挥手</strong></p>]]></content>
     
     
       
