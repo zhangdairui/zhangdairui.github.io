@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2021-01-30T14:12:03.545Z</updated>
+  <updated>2021-03-21T09:10:56.814Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将JAVAcode部署到EC2 instance的过程</title>
+    <link href="https://anywheredoor.fun/2021/03/21/instance%E7%9A%84%E8%BF%87%E7%A8%8B/"/>
+    <id>https://anywheredoor.fun/2021/03/21/instance%E7%9A%84%E8%BF%87%E7%A8%8B/</id>
+    <published>2021-03-21T08:42:48.000Z</published>
+    <updated>2021-03-21T09:10:56.814Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="将JAVAcode部署到EC2-instance的过程"><a href="#将JAVAcode部署到EC2-instance的过程" class="headerlink" title="将JAVAcode部署到EC2 instance的过程"></a>将JAVAcode部署到EC2 instance的过程</h1><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ul><li>Java code：利用了AWS recognition的图像识别程序。</li><li>本地环境：安装了AWS开发套装的Eclipse</li><li>Amazon账号：学生账号，每次从classroom的主页面可以获取access key token id等身份认证信息</li><li>EC2 instance类型：t2.micro, Amazon Linux。从本地通过终端SSH连接</li><li>目的：将本地的java项目部署到instance上，通过SSH运行jar程序。</li></ul><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><h5 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h5><p>配置EC2的环境。注意JDK版本要和自己本地开发时候用的一致</p><p><code>sudo yum install java-1.8.0-openjdk</code></p><p>然后运行java -version检查一下。<br>如果想要升级的话<code>sudo yum update</code></p><h5 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h5><p>把本地的javacode打包成可执行jar文件。将这个文件放到instance中。（我用了FileZilla，利用FileZilla连接amazon EC2的，需要先导入pem文件。<a href="https://blog.csdn.net/michael1112/article/details/52537961">教程看这篇</a>）</p><h5 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h5><p>复制好自己账号的各种key，通过终端在自己的instance里逐一运行：</p><p><code>export AWS_ACCESS_KEY_ID=&lt;自己的id&gt;</code></p><p><code>export AWS_SECRET_ACCESS_KEY=&lt;自己的key&gt;</code></p><p><code>export AWS_SESSION_TOKEN=&lt;自己的token&gt;</code></p><p>这样就设置好了认证信息。<br>注意：在本地的时候，认证信息储存于~/.aws/credential文件里。但是在instance中我们可以这样去设置。</p><p>同时因为学生账号的access key每三小时就更新一次，所以每当三小时过去了要记得手动export</p><h5 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h5><p>直接运行：<code>java -jar 你的jar文件.jar</code></p><p>就可以开始跑这个程序了。</p><p><img src="https://i.loli.net/2021/03/21/rKOMalgjCyTU48B.png" alt="rKOMalgjCyTU48B"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="服务器" scheme="https://anywheredoor.fun/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>java利用递归进行数组的全排列</title>
@@ -177,7 +199,7 @@
     <published>2020-09-11T18:25:28.000Z</published>
     <updated>2020-09-14T17:11:11.900Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p><p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>        <div id="aplayer-KEODeLua" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-KEODeLua"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "東京",              author: "手嶌葵",              url: "https://anywhereworld.fun/tokyo.mp3",              pic: "https://i.loli.net/2020/09/13/gXJltEPqpkArFcQ.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>（这个播放器在手机上看是很细的一条，我懒得调整了，能听就好 能听就好。）</p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 片付けたい 仕事があると<br><strong>因为还有想在明日来到之前完成的工作</strong></p><p>あなたは 一人きりで 弱い自分と 戦っている<br><strong>你独自一人和怯懦的自己战斗</strong></p><p>誰も見ていないとき<br><strong>在那些谁都不曾注视着我的日子里</strong></p><p>何をしているかを神様はきっと見ていてくれる<br><strong>神明一定在看着我的努力</strong></p><p>ほら 東京 ビルの灯り<br><strong>看 东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 直したい 気持ちがある<br><strong>因为还有想在明日来到之前调节好的心情</strong></p><p>さみしさで 未来さえ<br><strong>孤单冷清到 连未来都</strong></p><p>曇って見えない目も<br><strong>无法看清的双眼也</strong></p><p>涙ならそっと洗い流せる<br><strong>用眼泪悄悄洗净</strong></p><p>ほら 東京 星は消えて<br><strong>看 东京 星星消失了</strong></p><p>地上は 眩しい 想いが煌めいている<br><strong>但地面上正闪烁着耀眼的思念</strong></p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいて<br><strong>闪烁着无数失眠的理由</strong></p><p>静かに 明ける空の<br><strong>静静地向着黎明的方向</strong></p><p>向こうで 眩しい 明日が手招いている<br><strong>对璀璨的明天挥手</strong></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p><p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>        <div id="aplayer-BjzZUFOG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-BjzZUFOG"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "東京",              author: "手嶌葵",              url: "https://anywhereworld.fun/tokyo.mp3",              pic: "https://i.loli.net/2020/09/13/gXJltEPqpkArFcQ.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>（这个播放器在手机上看是很细的一条，我懒得调整了，能听就好 能听就好。）</p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 片付けたい 仕事があると<br><strong>因为还有想在明日来到之前完成的工作</strong></p><p>あなたは 一人きりで 弱い自分と 戦っている<br><strong>你独自一人和怯懦的自己战斗</strong></p><p>誰も見ていないとき<br><strong>在那些谁都不曾注视着我的日子里</strong></p><p>何をしているかを神様はきっと見ていてくれる<br><strong>神明一定在看着我的努力</strong></p><p>ほら 東京 ビルの灯り<br><strong>看 东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいている<br><strong>闪烁着无数失眠的理由</strong></p><p>明日が 来る前に 直したい 気持ちがある<br><strong>因为还有想在明日来到之前调节好的心情</strong></p><p>さみしさで 未来さえ<br><strong>孤单冷清到 连未来都</strong></p><p>曇って見えない目も<br><strong>无法看清的双眼也</strong></p><p>涙ならそっと洗い流せる<br><strong>用眼泪悄悄洗净</strong></p><p>ほら 東京 星は消えて<br><strong>看 东京 星星消失了</strong></p><p>地上は 眩しい 想いが煌めいている<br><strong>但地面上正闪烁着耀眼的思念</strong></p><p>東京 ビルの灯り<br><strong>东京 高楼大厦发出的灯光之中</strong></p><p>無数の 眠れない 理由が煌めいて<br><strong>闪烁着无数失眠的理由</strong></p><p>静かに 明ける空の<br><strong>静静地向着黎明的方向</strong></p><p>向こうで 眩しい 明日が手招いている<br><strong>对璀璨的明天挥手</strong></p>]]></content>
     
     
       
