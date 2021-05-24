@@ -1,81 +1,104 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Anywheredoor</title>
-    <link rel="icon" href="/pic/titleicon.png" sizes="32x32">
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
-    <link rel="stylesheet" href="/css/index.css"/>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<link rel="stylesheet" href="/css/main.css">
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
-
 <body>
-      
 
-<div class="hello">
-  <h1>どこでもドア</h1>
+
+
+<div class="column" id="left">
+    <div id="light">
+        <svg width="98" height="651">
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#000"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#000000"/>
+             </g>
+        </svg>
+    </div>
 </div>
 
-<section>
-  <div class="door">
-    <a  class="indoor" href="" > <img src="/pic/door/door1.png" /></a>
-  </div>
-</section>
 
-<nav>
-        
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
 
 <ul id="menu">
-    <!-- 内部链接本页面直接跳转 -->
-    
-    <li class="menu-item">
-        <a href="/" class="menu-item-link">主页</a>
-    </li>
-    
-    <li class="menu-item">
-        <a href="/about" class="menu-item-link">关于</a>
-    </li>
-    
-    <li class="menu-item">
-        <a href="/tags" class="menu-item-link">分类</a>
-    </li>
-    
-    <li class="menu-item">
-        <a href="/comment" class="menu-item-link">留言板</a>
-    </li>
-    
-
-    <!-- 外部链接打开新的窗口跳转 -->
-    
-
+            
+            <li class="menu-item">
+                <a href="/" class="menu-item-link">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives" class="menu-item-link">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/" class="menu-item-link">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about" class="menu-item-link">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment" class="menu-item-link">|COMMENT</a>
+            </li>
+            
 </ul>
+    </div>
+    
+    <div id="container">
 
-</nav>
-
-      <div class="aline"></div>
-      <div class="container">
-
-          
-            <section class="main">
+        
+            <section class="main">  
           
 
-          <!-- 每页文章 -->
-<div class="post_info">
-    <div class="post_title">
-      <span>JS实现网页header和footer复用</span>
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<div class="row">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+侧边栏目录
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5header%E5%92%8Cfooter%E5%A4%8D%E7%94%A8"><span class="toc-text">JS实现网页header和footer复用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%EF%BC%9A"><span class="toc-text">需求：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%EF%BC%9A"><span class="toc-text">解决：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-text">总结：</span></a></li></ol></li></ol>
+
+
     </div>
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    <!-- 文章信息 -->
+			<div class="post_info">
+			    <div class="post_title">
+			      <span>JS实现网页header和footer复用</span>
+			    </div>
 
-    <div class="post_auther_date_tag">
-      <span id="post-author">@emo</span>
-      <span id="post-date">2020-09-26 01:45:54</span>
-      #<a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
-    </div>
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">@emo</span>
+			      <span id="post-date">2020-09-26 01:45:54</span>
+			      #<a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
+			    </div>
+		     </div>
 
-</div>
-
-<div class="article_content">
-    <h2 id="JS实现网页header和footer复用"><a href="#JS实现网页header和footer复用" class="headerlink" title="JS实现网页header和footer复用"></a>JS实现网页header和footer复用</h2><h3 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h3><p>复用header和footer部分在一个网站的N个页面。（这里header部分包括了导航。搜索框等。footer部分只是一行字，copyright之类的。）</p>
+            <!-- 正文 -->
+			<div class="article_content">
+			    <h2 id="JS实现网页header和footer复用"><a href="#JS实现网页header和footer复用" class="headerlink" title="JS实现网页header和footer复用"></a>JS实现网页header和footer复用</h2><h3 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h3><p>复用header和footer部分在一个网站的N个页面。（这里header部分包括了导航。搜索框等。footer部分只是一行字，copyright之类的。）</p>
 <h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><p>header部分：</p>
 <ol>
 <li><p>把需要复用的部分提取出来，复制到<a target="_blank" rel="noopener" href="http://tool.chinaz.com/Tools/Html_Js.aspx">HTML/JS转换站长工具</a>中，转换成js文件，保存到项目中，文件名为header.js。</p>
@@ -99,29 +122,35 @@
     $(&quot;#share-footer&quot;).load(&quot;footer.html&quot;);</code></p>
 <h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>本来header也想用load方式解决，但是发现load之后，移动设备端的汉堡导航下拉菜单没有了动效。本来是三道杠变成×的动效。强迫症不能忍。应该是不知道什么原因导致css的transform没有效果？查了很久也没有发现类似的问题和解决方法，无奈选择了转换成js文件引入的方式。这种方式对SEO不太友好，但是我这个是一个作业而已，不涉及到SEO，就暂时这样了。footer的话就只有一行字，所以可以暴力load没有关系。</p>
 
+			</div>
+    </div>
+
 </div>
 
-          </section>
-      </div>
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li>
+                <a href="/">Github</a>
+            </li>
+            <li><a href="/">mail</a></li>
+            <li><a href="/">RSS</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<footer><p>copyright Anywheredoor emo</p></footer>
+
 
 </body>
-
-<div class="footerbox">
-  <div class="footerejs">
-    <footer>
-  <div class="footer">
-    Copyright &copy; 2021 emo
-  </div>
-
-  <div class="count">
-
-  </div>
-</footer>
-
-  </div>
-  <div class="count">
-    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-  </div>
-
-</div>
 </html>

@@ -1,0 +1,79 @@
+/* ==================LAYOUT ================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: yellow;
+}
+
+.column {
+  float: left;
+  height: 100%;
+}
+ 
+/* 左右侧栏的宽度 */
+#left,#right {
+  width: 10%;
+  background: red;
+  position: relative;
+}
+ 
+/* 中间列宽度 */
+#medium {
+  width: 80%;
+  background: green;
+  position: relative;
+}
+ 
+
+#nav{
+  height: 15%;
+  bottom: 0;
+  border: 1px black solid;
+  position: relative;
+}
+
+#container{
+  margin-top: 2%;
+  margin-bottom: 30%; 
+  height: 70%;
+
+  border: 1px black solid;
+}
+/*MENU*/
+#menu {
+    float: right;
+    padding-right: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#nav ul li {
+    float: left;
+    padding: 10px;
+    list-style: none;
+}
+#nav ul li a{
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+#nav ul li a:hover {
+    border-bottom: 1px solid;
+}
+
+/*GITHUB,MAIL,RSS*/
+#links{
+    position: absolute;
+    bottom: 12%;
+}
+
+#links ul li{
+  list-style: none;
+}
+/* ==================LAYOUT END================== */

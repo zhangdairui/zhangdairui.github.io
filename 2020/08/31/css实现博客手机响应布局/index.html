@@ -1,106 +1,135 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Anywheredoor</title>
-    <link rel="icon" href="/pic/titleicon.png" sizes="32x32">
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
-    <link rel="stylesheet" href="/css/index.css"/>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<link rel="stylesheet" href="/css/main.css">
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
-
 <body>
-      
 
-<div class="hello">
-  <h1>どこでもドア</h1>
+
+
+<div class="column" id="left">
+    <div id="light">
+        <svg width="98" height="651">
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#000"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#000000"/>
+             </g>
+        </svg>
+    </div>
 </div>
 
-<section>
-  <div class="door">
-    <a  class="indoor" href="" > <img src="/pic/door/door1.png" /></a>
-  </div>
-</section>
 
-<nav>
-        
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
 
 <ul id="menu">
-    <!-- 内部链接本页面直接跳转 -->
-    
-    <li class="menu-item">
-        <a href="/" class="menu-item-link">主页</a>
-    </li>
-    
-    <li class="menu-item">
-        <a href="/about" class="menu-item-link">关于</a>
-    </li>
-    
-    <li class="menu-item">
-        <a href="/tags" class="menu-item-link">分类</a>
-    </li>
-    
-    <li class="menu-item">
-        <a href="/comment" class="menu-item-link">留言板</a>
-    </li>
-    
-
-    <!-- 外部链接打开新的窗口跳转 -->
-    
-
+            
+            <li class="menu-item">
+                <a href="/" class="menu-item-link">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives" class="menu-item-link">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/" class="menu-item-link">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about" class="menu-item-link">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment" class="menu-item-link">|COMMENT</a>
+            </li>
+            
 </ul>
+    </div>
+    
+    <div id="container">
 
-</nav>
-
-      <div class="aline"></div>
-      <div class="container">
-
-          
-            <section class="main">
+        
+            <section class="main">  
           
 
-          <!-- 每页文章 -->
-<div class="post_info">
-    <div class="post_title">
-      <span>css实现博客手机响应布局</span>
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<div class="row">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+侧边栏目录
+
+
+
     </div>
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    <!-- 文章信息 -->
+			<div class="post_info">
+			    <div class="post_title">
+			      <span>css实现博客手机响应布局</span>
+			    </div>
 
-    <div class="post_auther_date_tag">
-      <span id="post-author">@emo</span>
-      <span id="post-date">2020-08-31 15:38:15</span>
-      #<a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
-    </div>
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">@emo</span>
+			      <span id="post-date">2020-08-31 15:38:15</span>
+			      #<a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
+			    </div>
+		     </div>
 
-</div>
-
-<div class="article_content">
-    <p>今天使用css的【@media  screen and (max-width: 980px){}】把手机端的页面也做了适配。<br>  整体主题效果如下：<br>  <img src="https://i.loli.net/2020/08/31/qhtC3DAiWE4o8KV.jpg" alt="qhtC3DAiWE4o8KV"><br>其中，用vw代替px这个单位，会对更多手机机型适配的更好一些。<br>在适配的过程中，直接用chromeF12自带的响应式布局浏览进行。在字体上不太准确。还好手边有手机可以实际上测试。<br>（打开hexo server，手机和电脑接入同一wifi，然后把手机浏览器的地址输入：ip地址:4000，就可以在手机上实际调试页面）</p>
+            <!-- 正文 -->
+			<div class="article_content">
+			    <p>今天使用css的【@media  screen and (max-width: 980px){}】把手机端的页面也做了适配。<br>  整体主题效果如下：<br>  <img src="https://i.loli.net/2020/08/31/qhtC3DAiWE4o8KV.jpg" alt="qhtC3DAiWE4o8KV"><br>其中，用vw代替px这个单位，会对更多手机机型适配的更好一些。<br>在适配的过程中，直接用chromeF12自带的响应式布局浏览进行。在字体上不太准确。还好手边有手机可以实际上测试。<br>（打开hexo server，手机和电脑接入同一wifi，然后把手机浏览器的地址输入：ip地址:4000，就可以在手机上实际调试页面）</p>
 <p>遇到的无法解决的问题是ios下safari的滚动条总是默认隐藏的，目前在网上搜到的所有方法没有能够解决这个问题。我还挺想要一个滚动条做装饰的。<br>:(</p>
 
+			</div>
+    </div>
+
 </div>
 
-          </section>
-      </div>
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li>
+                <a href="/">Github</a>
+            </li>
+            <li><a href="/">mail</a></li>
+            <li><a href="/">RSS</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<footer><p>copyright Anywheredoor emo</p></footer>
+
 
 </body>
-
-<div class="footerbox">
-  <div class="footerejs">
-    <footer>
-  <div class="footer">
-    Copyright &copy; 2021 emo
-  </div>
-
-  <div class="count">
-
-  </div>
-</footer>
-
-  </div>
-  <div class="count">
-    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-  </div>
-
-</div>
 </html>
