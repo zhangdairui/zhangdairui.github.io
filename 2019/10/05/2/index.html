@@ -5,12 +5,18 @@
     <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/zhangdairui.github.io/atom.xml" title="Anywheredoor" type="application/atom+xml">
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 <body>
 
@@ -35,7 +41,7 @@
     
     <div id="nav">
          
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 <ul id="menu">
@@ -87,38 +93,51 @@
 
           
 
-<link rel="stylesheet" href="/zhangdairui.github.io/css/post.css">
+<link rel="stylesheet" href="/css/post.css">
 
 
-<div class="row">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+
+<div class="row" id="postPage">
 	<!-- 侧边栏 -->
 	<div class="aside">
        
 
 <!-- 侧边目录栏 -->
 
-侧边栏目录
 
 
 
     </div>
+
+
     <!-- 文章内容 -->
     <div class="postContent">
-    	    <!-- 文章信息 -->
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
 			<div class="post_info">
-			    <div class="post_title">
+			    
+				<div class="post_title" id="postTitle">
 			      <span>blog建设计划</span>
 			    </div>
-
+			    
 			    <div class="post_auther_date_tag">
-			      <span id="post-author">@emo</span>
-			      <span id="post-date">2019-10-05 21:17:13</span>
-			      #<a class="tag-link-link" href="/zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2019年10月05日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a></span>
+			      
 			    </div>
+
 		     </div>
 
-            <!-- 正文 -->
-			<div class="article_content">
+			    <!-- 正文 -->
 			    <p>1.分类/点赞/留言功能添加。 //已添加。点赞功能没什么用所以放弃（202008）<br>2.图床搭建。 //已搭建 SM.MS图床（202008）<br>3.画个搞笑大方心态阳光的logo和头像。 //好像用不到了2333就用一扇门的插画吧（202008）<br>4.如果有空有心情的话：SEO设置 //除此之外还有很多想做的不重要的功能：日志内目录，面包导航，RSS订阅等等（202008）<br>5.不知道什么时候才能实现-&gt;自己写theme。 //竟然第一个实现的是这个。惊呆（202008）</p>
 
 			</div>
@@ -135,12 +154,15 @@
 </div>
 
 
+
+
+
 <div class="column" id="right">
     <div id="links">
         <ul>
             <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
             <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
-            <li><a target="_blank" rel="noopener" href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
         </ul>
     </div>
 </div>
@@ -148,8 +170,13 @@
 
 
 
-</body>
+    <!-- 引入代码高亮的 js -->
+    
+<script src="/js/highlight.min.js"></script>
 
-<script>
+    <script>hljs.highlightAll();</script>
+    
+
+</body>
 
 </html>

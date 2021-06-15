@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Anywheredoor</title>
-  <icon>https://zhangdairui.github.io/icon.png</icon>
+  <icon>https://anywheredoor.fun/icon.png</icon>
   
-  <link href="https://zhangdairui.github.io/atom.xml" rel="self"/>
+  <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
-  <link href="https://zhangdairui.github.io/"/>
-  <updated>2021-05-19T17:14:43.871Z</updated>
-  <id>https://zhangdairui.github.io/</id>
+  <link href="https://anywheredoor.fun/"/>
+  <updated>2021-06-15T12:47:55.802Z</updated>
+  <id>https://anywheredoor.fun/</id>
   
   <author>
     <name>emo</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>将JAVAcode部署到EC2 instance的过程</title>
-    <link href="https://zhangdairui.github.io/2021/03/21/instance%E7%9A%84%E8%BF%87%E7%A8%8B/"/>
-    <id>https://zhangdairui.github.io/2021/03/21/instance%E7%9A%84%E8%BF%87%E7%A8%8B/</id>
+    <link href="https://anywheredoor.fun/2021/03/21/instance%E7%9A%84%E8%BF%87%E7%A8%8B/"/>
+    <id>https://anywheredoor.fun/2021/03/21/instance%E7%9A%84%E8%BF%87%E7%A8%8B/</id>
     <published>2021-03-21T08:42:48.000Z</published>
-    <updated>2021-05-19T17:14:43.871Z</updated>
+    <updated>2021-06-15T12:47:55.802Z</updated>
     
     
     <summary type="html">&lt;p&gt;如何将本地的java程序打包并部署到EC2云端服务器&lt;/p&gt;</summary>
@@ -29,14 +29,14 @@
     
     
     
-    <category term="服务器" scheme="https://zhangdairui.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://anywheredoor.fun/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>java利用递归进行数组的全排列</title>
-    <link href="https://zhangdairui.github.io/2021/01/30/java%E5%88%A9%E7%94%A8%E9%80%92%E5%BD%92%E8%BF%9B%E8%A1%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97/"/>
-    <id>https://zhangdairui.github.io/2021/01/30/java%E5%88%A9%E7%94%A8%E9%80%92%E5%BD%92%E8%BF%9B%E8%A1%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97/</id>
+    <link href="https://anywheredoor.fun/2021/01/30/java%E5%88%A9%E7%94%A8%E9%80%92%E5%BD%92%E8%BF%9B%E8%A1%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97/"/>
+    <id>https://anywheredoor.fun/2021/01/30/java%E5%88%A9%E7%94%A8%E9%80%92%E5%BD%92%E8%BF%9B%E8%A1%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97/</id>
     <published>2021-01-30T14:11:12.000Z</published>
     <updated>2021-01-30T14:12:03.545Z</updated>
     
@@ -45,21 +45,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="java" scheme="https://zhangdairui.github.io/tags/java/"/>
+    <category term="java" scheme="https://anywheredoor.fun/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>用macbook+ubuntu开内网穿透</title>
-    <link href="https://zhangdairui.github.io/2020/12/22/%E7%94%A8macbook-ubuntu%E5%BC%80%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
-    <id>https://zhangdairui.github.io/2020/12/22/%E7%94%A8macbook-ubuntu%E5%BC%80%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
+    <link href="https://anywheredoor.fun/2020/12/22/%E7%94%A8macbook-ubuntu%E5%BC%80%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    <id>https://anywheredoor.fun/2020/12/22/%E7%94%A8macbook-ubuntu%E5%BC%80%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
     <published>2020-12-22T14:25:36.000Z</published>
     <updated>2020-12-22T15:00:20.657Z</updated>
     
@@ -68,21 +68,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="其他" scheme="https://zhangdairui.github.io/tags/%E5%85%B6%E4%BB%96/"/>
+    <category term="其他" scheme="https://anywheredoor.fun/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
   <entry>
     <title>MUI聊天app页面间传值</title>
-    <link href="https://zhangdairui.github.io/2020/11/22/MUI%E8%81%8A%E5%A4%A9app%E9%A1%B5%E9%9D%A2%E9%97%B4%E4%BC%A0%E5%80%BC/"/>
-    <id>https://zhangdairui.github.io/2020/11/22/MUI%E8%81%8A%E5%A4%A9app%E9%A1%B5%E9%9D%A2%E9%97%B4%E4%BC%A0%E5%80%BC/</id>
+    <link href="https://anywheredoor.fun/2020/11/22/MUI%E8%81%8A%E5%A4%A9app%E9%A1%B5%E9%9D%A2%E9%97%B4%E4%BC%A0%E5%80%BC/"/>
+    <id>https://anywheredoor.fun/2020/11/22/MUI%E8%81%8A%E5%A4%A9app%E9%A1%B5%E9%9D%A2%E9%97%B4%E4%BC%A0%E5%80%BC/</id>
     <published>2020-11-22T08:53:26.000Z</published>
     <updated>2020-11-22T10:30:13.467Z</updated>
     
@@ -91,21 +91,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="前端" scheme="https://zhangdairui.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://anywheredoor.fun/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>会自动计算的购物车</title>
-    <link href="https://zhangdairui.github.io/2020/10/13/%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E8%B4%AD%E7%89%A9%E8%BD%A6/"/>
-    <id>https://zhangdairui.github.io/2020/10/13/%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E8%B4%AD%E7%89%A9%E8%BD%A6/</id>
+    <link href="https://anywheredoor.fun/2020/10/13/%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E8%B4%AD%E7%89%A9%E8%BD%A6/"/>
+    <id>https://anywheredoor.fun/2020/10/13/%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E8%B4%AD%E7%89%A9%E8%BD%A6/</id>
     <published>2020-10-13T14:01:55.000Z</published>
     <updated>2020-10-13T14:18:39.549Z</updated>
     
@@ -114,21 +114,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="前端" scheme="https://zhangdairui.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://anywheredoor.fun/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>JS实现网页header和footer复用</title>
-    <link href="https://zhangdairui.github.io/2020/09/26/JS%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5header%E5%92%8Cfooter%E5%A4%8D%E7%94%A8/"/>
-    <id>https://zhangdairui.github.io/2020/09/26/JS%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5header%E5%92%8Cfooter%E5%A4%8D%E7%94%A8/</id>
+    <link href="https://anywheredoor.fun/2020/09/26/JS%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5header%E5%92%8Cfooter%E5%A4%8D%E7%94%A8/"/>
+    <id>https://anywheredoor.fun/2020/09/26/JS%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5header%E5%92%8Cfooter%E5%A4%8D%E7%94%A8/</id>
     <published>2020-09-25T17:45:54.000Z</published>
     <updated>2020-09-25T18:06:01.263Z</updated>
     
@@ -137,21 +137,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="前端" scheme="https://zhangdairui.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://anywheredoor.fun/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>实现更改密码时校验两次输入是否一致</title>
-    <link href="https://zhangdairui.github.io/2020/09/26/%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81%E6%97%B6%E6%A0%A1%E9%AA%8C%E4%B8%A4%E6%AC%A1%E8%BE%93%E5%85%A5%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4/"/>
-    <id>https://zhangdairui.github.io/2020/09/26/%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81%E6%97%B6%E6%A0%A1%E9%AA%8C%E4%B8%A4%E6%AC%A1%E8%BE%93%E5%85%A5%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4/</id>
+    <link href="https://anywheredoor.fun/2020/09/26/%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81%E6%97%B6%E6%A0%A1%E9%AA%8C%E4%B8%A4%E6%AC%A1%E8%BE%93%E5%85%A5%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4/"/>
+    <id>https://anywheredoor.fun/2020/09/26/%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81%E6%97%B6%E6%A0%A1%E9%AA%8C%E4%B8%A4%E6%AC%A1%E8%BE%93%E5%85%A5%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4/</id>
     <published>2020-09-25T17:45:22.000Z</published>
     <updated>2020-09-25T17:54:23.232Z</updated>
     
@@ -160,21 +160,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="前端" scheme="https://zhangdairui.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://anywheredoor.fun/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>Nodejs连接mysql报错ERROR 1045 (28000)解决办法</title>
-    <link href="https://zhangdairui.github.io/2020/09/16/0916/"/>
-    <id>https://zhangdairui.github.io/2020/09/16/0916/</id>
+    <link href="https://anywheredoor.fun/2020/09/16/0916/"/>
+    <id>https://anywheredoor.fun/2020/09/16/0916/</id>
     <published>2020-09-15T17:37:01.000Z</published>
     <updated>2020-09-15T17:47:48.887Z</updated>
     
@@ -183,21 +183,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="搭建各种各样的环境" scheme="https://zhangdairui.github.io/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
+    <category term="搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
   <entry>
     <title>Aplayer试用/很喜欢的一首歌</title>
-    <link href="https://zhangdairui.github.io/2020/09/12/%E4%B8%80%E9%A6%96%E5%BE%88%E5%96%9C%E6%AC%A2%E7%9A%84%E6%AD%8C/"/>
-    <id>https://zhangdairui.github.io/2020/09/12/%E4%B8%80%E9%A6%96%E5%BE%88%E5%96%9C%E6%AC%A2%E7%9A%84%E6%AD%8C/</id>
+    <link href="https://anywheredoor.fun/2020/09/12/%E4%B8%80%E9%A6%96%E5%BE%88%E5%96%9C%E6%AC%A2%E7%9A%84%E6%AD%8C/"/>
+    <id>https://anywheredoor.fun/2020/09/12/%E4%B8%80%E9%A6%96%E5%BE%88%E5%96%9C%E6%AC%A2%E7%9A%84%E6%AD%8C/</id>
     <published>2020-09-11T18:25:28.000Z</published>
     <updated>2020-09-14T17:11:11.900Z</updated>
     
@@ -206,21 +206,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    <category term="blog建设记录" scheme="https://anywheredoor.fun/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>开启websocket之后的无脑400失误</title>
-    <link href="https://zhangdairui.github.io/2020/09/03/%E5%BC%80%E5%90%AFwebsocket%E4%B9%8B%E5%90%8E%E7%9A%84%E6%97%A0%E8%84%91400%E5%A4%B1%E8%AF%AF/"/>
-    <id>https://zhangdairui.github.io/2020/09/03/%E5%BC%80%E5%90%AFwebsocket%E4%B9%8B%E5%90%8E%E7%9A%84%E6%97%A0%E8%84%91400%E5%A4%B1%E8%AF%AF/</id>
+    <link href="https://anywheredoor.fun/2020/09/03/%E5%BC%80%E5%90%AFwebsocket%E4%B9%8B%E5%90%8E%E7%9A%84%E6%97%A0%E8%84%91400%E5%A4%B1%E8%AF%AF/"/>
+    <id>https://anywheredoor.fun/2020/09/03/%E5%BC%80%E5%90%AFwebsocket%E4%B9%8B%E5%90%8E%E7%9A%84%E6%97%A0%E8%84%91400%E5%A4%B1%E8%AF%AF/</id>
     <published>2020-09-03T15:12:31.000Z</published>
     <updated>2020-09-03T15:42:43.152Z</updated>
     
@@ -229,21 +229,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="搭建各种各样的环境" scheme="https://zhangdairui.github.io/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
+    <category term="搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
   <entry>
     <title>MAC下用nodemon实现express网站热更新</title>
-    <link href="https://zhangdairui.github.io/2020/09/03/MAC%E4%B8%8B%E7%94%A8nodemon%E5%AE%9E%E7%8E%B0express%E7%BD%91%E7%AB%99%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
-    <id>https://zhangdairui.github.io/2020/09/03/MAC%E4%B8%8B%E7%94%A8nodemon%E5%AE%9E%E7%8E%B0express%E7%BD%91%E7%AB%99%E7%83%AD%E6%9B%B4%E6%96%B0/</id>
+    <link href="https://anywheredoor.fun/2020/09/03/MAC%E4%B8%8B%E7%94%A8nodemon%E5%AE%9E%E7%8E%B0express%E7%BD%91%E7%AB%99%E7%83%AD%E6%9B%B4%E6%96%B0/"/>
+    <id>https://anywheredoor.fun/2020/09/03/MAC%E4%B8%8B%E7%94%A8nodemon%E5%AE%9E%E7%8E%B0express%E7%BD%91%E7%AB%99%E7%83%AD%E6%9B%B4%E6%96%B0/</id>
     <published>2020-09-03T15:10:58.000Z</published>
     <updated>2020-12-01T07:20:52.469Z</updated>
     
@@ -252,21 +252,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="搭建各种各样的环境" scheme="https://zhangdairui.github.io/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
+    <category term="搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
   <entry>
     <title>MAC搭建react-native安卓开发环境问题与解决</title>
-    <link href="https://zhangdairui.github.io/2020/09/03/MAC%E6%90%AD%E5%BB%BA%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/"/>
-    <id>https://zhangdairui.github.io/2020/09/03/MAC%E6%90%AD%E5%BB%BA%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/</id>
+    <link href="https://anywheredoor.fun/2020/09/03/MAC%E6%90%AD%E5%BB%BA%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/"/>
+    <id>https://anywheredoor.fun/2020/09/03/MAC%E6%90%AD%E5%BB%BA%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/</id>
     <published>2020-09-03T15:09:37.000Z</published>
     <updated>2020-09-03T15:33:21.924Z</updated>
     
@@ -275,21 +275,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="搭建各种各样的环境" scheme="https://zhangdairui.github.io/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
+    <category term="搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
   <entry>
     <title>css实现博客手机响应布局</title>
-    <link href="https://zhangdairui.github.io/2020/08/31/css%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%89%8B%E6%9C%BA%E5%93%8D%E5%BA%94%E5%B8%83%E5%B1%80/"/>
-    <id>https://zhangdairui.github.io/2020/08/31/css%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%89%8B%E6%9C%BA%E5%93%8D%E5%BA%94%E5%B8%83%E5%B1%80/</id>
+    <link href="https://anywheredoor.fun/2020/08/31/css%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%89%8B%E6%9C%BA%E5%93%8D%E5%BA%94%E5%B8%83%E5%B1%80/"/>
+    <id>https://anywheredoor.fun/2020/08/31/css%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%89%8B%E6%9C%BA%E5%93%8D%E5%BA%94%E5%B8%83%E5%B1%80/</id>
     <published>2020-08-31T07:38:15.000Z</published>
     <updated>2020-08-31T13:46:51.358Z</updated>
     
@@ -298,21 +298,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    <category term="blog建设记录" scheme="https://anywheredoor.fun/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>upic+SMMS+ImageOptim搭建博客图床</title>
-    <link href="https://zhangdairui.github.io/2020/08/30/20200830/"/>
-    <id>https://zhangdairui.github.io/2020/08/30/20200830/</id>
+    <link href="https://anywheredoor.fun/2020/08/30/20200830/"/>
+    <id>https://anywheredoor.fun/2020/08/30/20200830/</id>
     <published>2020-08-30T09:46:52.000Z</published>
     <updated>2020-08-30T12:26:19.419Z</updated>
     
@@ -321,21 +321,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    <category term="blog建设记录" scheme="https://anywheredoor.fun/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>博客开发过程中遇到的问题和解决</title>
-    <link href="https://zhangdairui.github.io/2020/08/29/3/"/>
-    <id>https://zhangdairui.github.io/2020/08/29/3/</id>
+    <link href="https://anywheredoor.fun/2020/08/29/3/"/>
+    <id>https://anywheredoor.fun/2020/08/29/3/</id>
     <published>2020-08-29T11:39:12.000Z</published>
     <updated>2020-08-31T11:55:40.021Z</updated>
     
@@ -344,21 +344,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    <category term="blog建设记录" scheme="https://anywheredoor.fun/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>blog建设计划</title>
-    <link href="https://zhangdairui.github.io/2019/10/05/2/"/>
-    <id>https://zhangdairui.github.io/2019/10/05/2/</id>
+    <link href="https://anywheredoor.fun/2019/10/05/2/"/>
+    <id>https://anywheredoor.fun/2019/10/05/2/</id>
     <published>2019-10-05T13:17:13.000Z</published>
     <updated>2020-08-30T18:40:15.529Z</updated>
     
@@ -367,21 +367,21 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    <category term="blog建设记录" scheme="https://anywheredoor.fun/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>blog报道</title>
-    <link href="https://zhangdairui.github.io/2018/11/06/1/"/>
-    <id>https://zhangdairui.github.io/2018/11/06/1/</id>
+    <link href="https://anywheredoor.fun/2018/11/06/1/"/>
+    <id>https://anywheredoor.fun/2018/11/06/1/</id>
     <published>2018-11-06T13:17:13.000Z</published>
     <updated>2020-08-29T11:36:33.311Z</updated>
     
@@ -390,14 +390,14 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/zhangdairui.github.io/assets/css/APlayer.min.css&quot;&gt;&lt;script</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
     
     
     
-    <category term="blog建设记录" scheme="https://zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
+    <category term="blog建设记录" scheme="https://anywheredoor.fun/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   

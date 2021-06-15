@@ -5,12 +5,18 @@
     <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/zhangdairui.github.io/atom.xml" title="Anywheredoor" type="application/atom+xml">
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 <body>
 
@@ -35,7 +41,7 @@
     
     <div id="nav">
          
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 <ul id="menu">
@@ -87,38 +93,51 @@
 
           
 
-<link rel="stylesheet" href="/zhangdairui.github.io/css/post.css">
+<link rel="stylesheet" href="/css/post.css">
 
 
-<div class="row">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+
+<div class="row" id="postPage">
 	<!-- 侧边栏 -->
 	<div class="aside">
        
 
 <!-- 侧边目录栏 -->
 
-侧边栏目录
 
 
 
     </div>
+
+
     <!-- 文章内容 -->
     <div class="postContent">
-    	    <!-- 文章信息 -->
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
 			<div class="post_info">
-			    <div class="post_title">
+			    
+				<div class="post_title" id="postTitle">
 			      <span>css实现博客手机响应布局</span>
 			    </div>
-
+			    
 			    <div class="post_auther_date_tag">
-			      <span id="post-author">@emo</span>
-			      <span id="post-date">2020-08-31 15:38:15</span>
-			      #<a class="tag-link-link" href="/zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2020年08月31日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a></span>
+			      
 			    </div>
+
 		     </div>
 
-            <!-- 正文 -->
-			<div class="article_content">
+			    <!-- 正文 -->
 			    <p>今天使用css的【@media  screen and (max-width: 980px){}】把手机端的页面也做了适配。<br>  整体主题效果如下：<br>  <img src="https://i.loli.net/2020/08/31/qhtC3DAiWE4o8KV.jpg" alt="qhtC3DAiWE4o8KV"><br>其中，用vw代替px这个单位，会对更多手机机型适配的更好一些。<br>在适配的过程中，直接用chromeF12自带的响应式布局浏览进行。在字体上不太准确。还好手边有手机可以实际上测试。<br>（打开hexo server，手机和电脑接入同一wifi，然后把手机浏览器的地址输入：ip地址:4000，就可以在手机上实际调试页面）</p>
 <p>遇到的无法解决的问题是ios下safari的滚动条总是默认隐藏的，目前在网上搜到的所有方法没有能够解决这个问题。我还挺想要一个滚动条做装饰的。<br>:(</p>
 
@@ -136,12 +155,15 @@
 </div>
 
 
+
+
+
 <div class="column" id="right">
     <div id="links">
         <ul>
             <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
             <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
-            <li><a target="_blank" rel="noopener" href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
         </ul>
     </div>
 </div>
@@ -149,8 +171,13 @@
 
 
 
-</body>
+    <!-- 引入代码高亮的 js -->
+    
+<script src="/js/highlight.min.js"></script>
 
-<script>
+    <script>hljs.highlightAll();</script>
+    
+
+</body>
 
 </html>

@@ -5,12 +5,18 @@
     <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/zhangdairui.github.io/atom.xml" title="Anywheredoor" type="application/atom+xml">
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 <body>
 
@@ -35,7 +41,7 @@
     
     <div id="nav">
          
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 <ul id="menu">
@@ -87,38 +93,51 @@
 
           
 
-<link rel="stylesheet" href="/zhangdairui.github.io/css/post.css">
+<link rel="stylesheet" href="/css/post.css">
 
 
-<div class="row">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+
+<div class="row" id="postPage">
 	<!-- 侧边栏 -->
 	<div class="aside">
        
 
 <!-- 侧边目录栏 -->
 
-侧边栏目录
 
 
 
     </div>
+
+
     <!-- 文章内容 -->
     <div class="postContent">
-    	    <!-- 文章信息 -->
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
 			<div class="post_info">
-			    <div class="post_title">
+			    
+				<div class="post_title" id="postTitle">
 			      <span>upic+SMMS+ImageOptim搭建博客图床</span>
 			    </div>
-
+			    
 			    <div class="post_auther_date_tag">
-			      <span id="post-author">@emo</span>
-			      <span id="post-date">2020-08-30 17:46:52</span>
-			      #<a class="tag-link-link" href="/zhangdairui.github.io/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2020年08月30日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a></span>
+			      
 			    </div>
+
 		     </div>
 
-            <!-- 正文 -->
-			<div class="article_content">
+			    <!-- 正文 -->
 			    <p>图床：SM.MS<br>ImageOptim：压缩图片<br>upic：图床上传</p>
 <p>—–以下是测试—–</p>
 <p>测试图片：<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版多写一些字看看图文排版<br>大图片（自适应窗口大小）：<br><img src="https://i.loli.net/2020/08/30/strAJFCPUSagv92.jpg" alt="strAJFCPUSagv92"></p>
@@ -138,12 +157,15 @@
 </div>
 
 
+
+
+
 <div class="column" id="right">
     <div id="links">
         <ul>
             <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
             <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
-            <li><a target="_blank" rel="noopener" href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
         </ul>
     </div>
 </div>
@@ -151,8 +173,13 @@
 
 
 
-</body>
+    <!-- 引入代码高亮的 js -->
+    
+<script src="/js/highlight.min.js"></script>
 
-<script>
+    <script>hljs.highlightAll();</script>
+    
+
+</body>
 
 </html>

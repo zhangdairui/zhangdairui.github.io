@@ -5,12 +5,18 @@
     <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/zhangdairui.github.io/atom.xml" title="Anywheredoor" type="application/atom+xml">
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 <body>
 
@@ -35,7 +41,7 @@
     
     <div id="nav">
          
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 <ul id="menu">
@@ -87,38 +93,51 @@
 
           
 
-<link rel="stylesheet" href="/zhangdairui.github.io/css/post.css">
+<link rel="stylesheet" href="/css/post.css">
 
 
-<div class="row">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+
+<div class="row" id="postPage">
 	<!-- 侧边栏 -->
 	<div class="aside">
        
 
 <!-- 侧边目录栏 -->
 
-侧边栏目录
 <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E7%AC%AC%E4%B8%80%E7%BB%84chatlist%E8%B7%B3%E8%BD%AC%E7%A7%81%E8%81%8A%E4%BC%A0%E5%80%BC%E4%B8%BA%E4%BE%8B"><span class="toc-text">以第一组chatlist跳转私聊传值为例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#chats-js"><span class="toc-text">chats.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#singlechat-html"><span class="toc-text">singlechat.html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-text">最后</span></a></li></ol></li></ol>
 
 
     </div>
+
+
     <!-- 文章内容 -->
     <div class="postContent">
-    	    <!-- 文章信息 -->
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
 			<div class="post_info">
-			    <div class="post_title">
+			    
+				<div class="post_title" id="postTitle">
 			      <span>MUI聊天app页面间传值</span>
 			    </div>
-
+			    
 			    <div class="post_auther_date_tag">
-			      <span id="post-author">@emo</span>
-			      <span id="post-date">2020-11-22 16:53:26</span>
-			      #<a class="tag-link-link" href="/zhangdairui.github.io/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2020年11月22日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></span>
+			      
 			    </div>
+
 		     </div>
 
-            <!-- 正文 -->
-			<div class="article_content">
+			    <!-- 正文 -->
 			    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>MUI框架写的聊天app，网上有很多教程，官方也有可以参考的案例。本该没什么可说的了，后来发现一般的教程和案例，在页面传值这一块都只做了昵称的，没有做头像的传值。以及我自己做的时候，还加入了好友名片和添加好友的页面，所以需要更多的去使用这个功能。</p>
 <p>看似简单，在做的时候还是遇到了很多细节上的小问题。综合种种，终于完成，把代码记录一下。分别有以下三组传值：</p>
 <ol>
@@ -148,12 +167,15 @@
 </div>
 
 
+
+
+
 <div class="column" id="right">
     <div id="links">
         <ul>
             <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
             <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
-            <li><a target="_blank" rel="noopener" href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
         </ul>
     </div>
 </div>
@@ -161,8 +183,13 @@
 
 
 
-</body>
+    <!-- 引入代码高亮的 js -->
+    
+<script src="/js/highlight.min.js"></script>
 
-<script>
+    <script>hljs.highlightAll();</script>
+    
+
+</body>
 
 </html>

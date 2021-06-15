@@ -1,8 +1,29 @@
 /* ==================颜色准备 ================== */
 /*背景：#F0F0F0
 文字，边框深灰：#595959*/
+::selection {
+background: #595959;
+color: #ffffff;
+}
+
+::-moz-selection {
+background: #595959;
+color: #ffffff;
+}
+
+::selection {
+background: #595959;
+color: #ffffff;
+}
+
+::-moz-selection {
+background: #595959;
+color: #ffffff;
+}
 
 /* ==================LAYOUT ================== */
+
+
 
 * {
     margin: 0;
@@ -89,7 +110,7 @@ html, body {
 }
 #menu li a{
     color: #595959;
-    font-size: 0.8em;
+    font-size: 0.6em;
     font-family: SimHei;
     letter-spacing: 5px;
     text-decoration: none;

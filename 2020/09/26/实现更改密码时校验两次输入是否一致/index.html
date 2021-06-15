@@ -5,12 +5,18 @@
     <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/zhangdairui.github.io/atom.xml" title="Anywheredoor" type="application/atom+xml">
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 <body>
 
@@ -35,7 +41,7 @@
     
     <div id="nav">
          
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 <ul id="menu">
@@ -87,48 +93,141 @@
 
           
 
-<link rel="stylesheet" href="/zhangdairui.github.io/css/post.css">
+<link rel="stylesheet" href="/css/post.css">
 
 
-<div class="row">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+
+<div class="row" id="postPage">
 	<!-- 侧边栏 -->
 	<div class="aside">
        
 
 <!-- 侧边目录栏 -->
 
-侧边栏目录
 <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81%E6%97%B6%E6%A0%A1%E9%AA%8C%E4%B8%A4%E6%AC%A1%E8%BE%93%E5%85%A5%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4"><span class="toc-text">实现更改密码时校验两次输入是否一致</span></a></li></ol>
 
 
     </div>
+
+
     <!-- 文章内容 -->
     <div class="postContent">
-    	    <!-- 文章信息 -->
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
 			<div class="post_info">
-			    <div class="post_title">
+			    
+				<div class="post_title" id="postTitle">
 			      <span>实现更改密码时校验两次输入是否一致</span>
 			    </div>
-
+			    
 			    <div class="post_auther_date_tag">
-			      <span id="post-author">@emo</span>
-			      <span id="post-date">2020-09-26 01:45:22</span>
-			      #<a class="tag-link-link" href="/zhangdairui.github.io/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2020年09月26日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></span>
+			      
 			    </div>
+
 		     </div>
 
-            <!-- 正文 -->
-			<div class="article_content">
+			    <!-- 正文 -->
 			    <h2 id="实现更改密码时校验两次输入是否一致"><a href="#实现更改密码时校验两次输入是否一致" class="headerlink" title="实现更改密码时校验两次输入是否一致"></a>实现更改密码时校验两次输入是否一致</h2><p>效果图：<br><img src="https://i.loli.net/2020/09/26/7zIMlnrYgmBpHc1.png" alt="7zIMlnrYgmBpHc1"></p>
 <p>如果两次输入密码匹配则点亮change password按钮，</p>
 <p>同时“password do not match”字样消失。</p>
 <p>顺便也实现了showpassword按钮，也就相当于输入密码时候的小眼睛，原理都是一样的。</p>
 <p>代码如下：</p>
 <p>——–HTML——–</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;front-content&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class&#x3D;&quot;container-mid&quot;&gt;</span><br><span class="line"></span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;img class&#x3D;&quot;img-responsive logo&quot; src&#x3D;&quot;images&#x2F;password.png&quot; width&#x3D;&quot;100px&quot; alt&#x3D;&quot;image&quot;&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;col-sm-12&quot;&gt;</span><br><span class="line">        &lt;h1&gt;Change Password&lt;&#x2F;h1&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;p class&#x3D;&quot;text-center&quot;&gt;Use the form below to change your password.&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      &lt;div class&#x3D;&quot;row&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;col-sm-6 col-sm-offset-3 m-auto&quot;&gt;</span><br><span class="line"></span><br><span class="line">            &lt;div class&#x3D;&quot;input-group mb-4 input-group-lg&quot;&gt;</span><br><span class="line">              &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;password1&quot; id&#x3D;&quot;password1&quot; placeholder&#x3D;&quot;New Password&quot; autocomplete&#x3D;&quot;off&quot;&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">            &lt;div class&#x3D;&quot;input-group mb-3 input-group-lg&quot;&gt;</span><br><span class="line">              &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;password1&quot; id&#x3D;&quot;password2&quot; placeholder&#x3D;&quot;Reapeat Password&quot; autocomplete&#x3D;&quot;off&quot;&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">            &lt;div class&#x3D;&quot;row&quot;&gt;</span><br><span class="line">              &lt;div class&#x3D;&quot;col-sm-12 mb-4&quot;&gt;</span><br><span class="line">                &lt;span id&#x3D;&quot;pwmatch&quot; class&#x3D;&quot;glyphicon&quot; style&#x3D;&quot;color:red;&quot;&gt;Passwords Do Not Match&lt;&#x2F;span&gt;</span><br><span class="line">              &lt;&#x2F;div&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">            &lt;div class&#x3D;&quot;form-check&quot;&gt;</span><br><span class="line">              &lt;button class&#x3D;&quot;btn btn-info btn-lg&quot; type&#x3D;&quot;button&quot; name&#x3D;&quot;showpassword&quot; id&#x3D;&quot;showpassword&quot; value&#x3D;&quot;Show Password&quot;&gt;Show password&lt;&#x2F;button&gt;</span><br><span class="line">              &lt;input type&#x3D;&quot;submit&quot; id&#x3D;&quot;ChangePassword&quot; disabled&#x3D;&quot;disabled&quot; class&#x3D;&quot;col-xs-12 btn btn-primary btn-load btn-lg&quot; data-loading-text&#x3D;&quot;Changing Password...&quot; value&#x3D;&quot;Change Password&quot;&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      &lt;&#x2F;div&gt;&lt;!--&#x2F;col-sm-6--&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;&lt;!--&#x2F;row--&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>  &lt;div class=&quot;front-content&quot;&gt;
 
-<p>——–html底部内嵌script标签——–</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F; Show password Button 点按按钮显示&#x2F;隐藏密码</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">$(&quot;#showpassword&quot;).on(&#39;click&#39;, function()&#123;</span><br><span class="line"></span><br><span class="line">  var pass1 &#x3D; $(&quot;#password1&quot;);</span><br><span class="line">  var pass2 &#x3D; $(&quot;#password2&quot;);</span><br><span class="line"></span><br><span class="line">  var fieldtype1 &#x3D; pass1.attr(&#39;type&#39;);</span><br><span class="line">  var fieldtype2 &#x3D; pass2.attr(&#39;type&#39;);</span><br><span class="line"></span><br><span class="line">  if (fieldtype1 &#x3D;&#x3D; &#39;password&#39; &amp; fieldtype2 &#x3D;&#x3D; &#39;password&#39;) &#123;</span><br><span class="line">    pass1.attr(&#39;type&#39;, &#39;text&#39;);</span><br><span class="line">    pass2.attr(&#39;type&#39;, &#39;text&#39;);</span><br><span class="line">    $(this).text(&quot;Hide Password&quot;);</span><br><span class="line">  &#125;else&#123;</span><br><span class="line">    pass1.attr(&#39;type&#39;, &#39;password&#39;);</span><br><span class="line">    pass2.attr(&#39;type&#39;, &#39;password&#39;);</span><br><span class="line">    $(this).text(&quot;Show Password&quot;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Password Match 校验两次输入密码是否一致</span><br><span class="line"></span><br><span class="line">$(&quot;input[type&#x3D;password]&quot;).keyup(function()&#123;</span><br><span class="line">  if ($(&quot;#password1&quot;).val() !&#x3D; &quot;&quot; || $(&quot;#password2&quot;).val() !&#x3D; &quot;&quot;) &#123;</span><br><span class="line">    if ($(&quot;#password1&quot;).val() &#x3D;&#x3D; $(&quot;#password2&quot;).val()) &#123;</span><br><span class="line"></span><br><span class="line">      $(&quot;#pwmatch&quot;).css(&quot;display&quot;,&quot;none&quot;);</span><br><span class="line">      $(&quot;#ChangePassword&quot;).attr(&#39;disabled&#39;,false);</span><br><span class="line"></span><br><span class="line">    &#125;else&#123;</span><br><span class="line">    $(&quot;#pwmatch&quot;).css(&quot;display&quot;,&quot;block&quot;);</span><br><span class="line">    $(&quot;#ChangePassword&quot;).attr(&#39;disabled&#39;,&#39;disabled&#39;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    &lt;div class=&quot;container-mid&quot;&gt;
+
+        &lt;div&gt;
+          &lt;img class=&quot;img-responsive logo&quot; src=&quot;images/password.png&quot; width=&quot;100px&quot; alt=&quot;image&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-sm-12&quot;&gt;
+          &lt;h1&gt;Change Password&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;text-center&quot;&gt;Use the form below to change your password.&lt;/p&gt;
+
+
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-sm-6 col-sm-offset-3 m-auto&quot;&gt;
+
+              &lt;div class=&quot;input-group mb-4 input-group-lg&quot;&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; name=&quot;password1&quot; id=&quot;password1&quot; placeholder=&quot;New Password&quot; autocomplete=&quot;off&quot;&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;input-group mb-3 input-group-lg&quot;&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; name=&quot;password1&quot; id=&quot;password2&quot; placeholder=&quot;Reapeat Password&quot; autocomplete=&quot;off&quot;&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-sm-12 mb-4&quot;&gt;
+                  &lt;span id=&quot;pwmatch&quot; class=&quot;glyphicon&quot; style=&quot;color:red;&quot;&gt;Passwords Do Not Match&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;form-check&quot;&gt;
+                &lt;button class=&quot;btn btn-info btn-lg&quot; type=&quot;button&quot; name=&quot;showpassword&quot; id=&quot;showpassword&quot; value=&quot;Show Password&quot;&gt;Show password&lt;/button&gt;
+                &lt;input type=&quot;submit&quot; id=&quot;ChangePassword&quot; disabled=&quot;disabled&quot; class=&quot;col-xs-12 btn btn-primary btn-load btn-lg&quot; data-loading-text=&quot;Changing Password...&quot; value=&quot;Change Password&quot;&gt;
+              &lt;/div&gt;
+
+
+        &lt;/div&gt;&lt;!--/col-sm-6--&gt;
+      &lt;/div&gt;&lt;!--/row--&gt;
+    &lt;/div&gt;</code></pre><p>——–html底部内嵌script标签——–</p>
+<pre><code>
+// Show password Button 点按按钮显示/隐藏密码
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(&quot;#showpassword&quot;).on(&#39;click&#39;, function()&#123;
+
+  var pass1 = $(&quot;#password1&quot;);
+  var pass2 = $(&quot;#password2&quot;);
+
+  var fieldtype1 = pass1.attr(&#39;type&#39;);
+  var fieldtype2 = pass2.attr(&#39;type&#39;);
+
+  if (fieldtype1 == &#39;password&#39; &amp; fieldtype2 == &#39;password&#39;) &#123;
+    pass1.attr(&#39;type&#39;, &#39;text&#39;);
+    pass2.attr(&#39;type&#39;, &#39;text&#39;);
+    $(this).text(&quot;Hide Password&quot;);
+  &#125;else&#123;
+    pass1.attr(&#39;type&#39;, &#39;password&#39;);
+    pass2.attr(&#39;type&#39;, &#39;password&#39;);
+    $(this).text(&quot;Show Password&quot;);
+  &#125;
+
+
+&#125;);
+
+// Password Match 校验两次输入密码是否一致
+
+$(&quot;input[type=password]&quot;).keyup(function()&#123;
+  if ($(&quot;#password1&quot;).val() != &quot;&quot; || $(&quot;#password2&quot;).val() != &quot;&quot;) &#123;
+    if ($(&quot;#password1&quot;).val() == $(&quot;#password2&quot;).val()) &#123;
+
+      $(&quot;#pwmatch&quot;).css(&quot;display&quot;,&quot;none&quot;);
+      $(&quot;#ChangePassword&quot;).attr(&#39;disabled&#39;,false);
+
+    &#125;else&#123;
+    $(&quot;#pwmatch&quot;).css(&quot;display&quot;,&quot;block&quot;);
+    $(&quot;#ChangePassword&quot;).attr(&#39;disabled&#39;,&#39;disabled&#39;);
+  &#125;
+&#125;
+
+
+&#125;);
+//
+
+&lt;/script&gt;
+</code></pre>
 			</div>
     </div>
 
@@ -143,12 +242,15 @@
 </div>
 
 
+
+
+
 <div class="column" id="right">
     <div id="links">
         <ul>
             <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
             <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
-            <li><a target="_blank" rel="noopener" href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
         </ul>
     </div>
 </div>
@@ -156,8 +258,13 @@
 
 
 
-</body>
+    <!-- 引入代码高亮的 js -->
+    
+<script src="/js/highlight.min.js"></script>
 
-<script>
+    <script>hljs.highlightAll();</script>
+    
+
+</body>
 
 </html>

@@ -1,7 +1,20 @@
 /*==============================*/
 /*==============================*/
-/*==============POST_ENTRY.EJS==*/
+/*==============ARCHIVE.EJS=====*/
 /*==============================*/
+.archive-part {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: SimHei;
+  font-size: 2em;
+  color: #fff;
+  text-shadow: #000 1px 0, #000 -1px 0, #000 0 -1px, #000 0 1px, #000 1px 1px, #000 -1px 1px,
+   #000 1px -1px, #000 -1px -1px, #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px,
+    #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px, 4px 4px 0 #000, 0 4px 0 #000;
+}
+
+
 .card_list{
   margin-top: 20px;
 }
@@ -32,24 +45,19 @@
   letter-spacing: 3px;
 }
 .post_title{
-
   color: black;
   font-size: 1.2em;
   font-family: SimHei;
   letter-spacing: 3px;
 }
 #post_tag{
-  background: black;
-  color: white;
+  background: #F0EEF1;
+  color: grey;
   padding: 5px;
   font-size: 10px;
   border-radius: 10%;
 }
 
-.tag-link-link{
-  background: black;
-  color: white;
-}
 .card p{
   font-size: 15px;
 }
@@ -62,81 +70,155 @@
 
 /*==============ASIDE================*/
 .toc{
-  list-style: none;
+  text-decoration: none;
+  list-style-type:circle;
 }
+
 .toc-child {
   margin-left:1em;
   list-style: none;
+  text-decoration: none;
 }
 
+.toc li a{
+  text-decoration: none;
+  color: black;
+  font-family: SimHei;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+}
 
 
 /*==============POST CONTENT================*/
-
-.container{
-    width: 100%;
-    
-    background: black;
+#postPage{
+  width: 100%;
+  height: 100%;
 }
+
 .aside {
     float: left;
-    width: 30%;
-    height:36vw;
+    width: 20%;
+    height:30em;
+    margin: 40px 30px;
+    border-right: 1px solid #595959;
     
 }
 
 .postContent{
     float: left;
-    width: 65%;
-    height:36vw;
+    width: 70%;
+    height:28em;
+    margin-top: 40px;
+    text-align: justify;
 }
 
 .article_content{
   overflow:scroll;
   overflow-x: hidden;
-  height:31vw;
+  height:100%;
   width:100%;
-  border: solid 1px black;
+  border: solid 1px #595959;
   margin: 0 auto;
-  font-family: wdfs;
+  font-family: SimHei;
   font-size: 12px;
   color: black;
   padding: 10px;
   letter-spacing: 0.8px;
   line-height: 25px;
+  text-align: justify;
+
+
 }
 
-/*.post_info{
-  font-size: 10px;
-  color: black;
+.post_info{
+    text-align: center;
+    padding: 20px 20px;
+    color: #595959;
+
 }
-.article-tag{
-  color: black;
+
+#postTitle{
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
 }
-.article_content{
-  overflow:scroll;
-  overflow-x: hidden;
-  height:300px;
-  width:800px;
-  border: solid 1px black;
-  margin: 0 auto;
-  font-family: wdfs;
-  font-size: 12px;
-  color: black;
-  padding: 10px;
-  letter-spacing: 0.8px;
-  line-height: 25px;
-}
+
 .post_auther_date_tag{
+  letter-spacing: 3px;
+}
+.tag-link-link{
+  text-decoration: none;
+  color: #595959;
+  letter-spacing: 1px;
+
+}
+
+
+
+/*==============POST CONTENT-h1 h2 h3 h4 h5...================*/
+
+
+h1{
+/*border-bottom: dashed 2px black;
+padding-top: 20px;*/
+position: relative;
+
+  padding: 0.6em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #595959;
+}
+h1:after{
+content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: -webkit-repeating-linear-gradient(-45deg, #595959, #595959 2px, #fff 2px, #fff 4px);
+  background: repeating-linear-gradient(-45deg, #595959, #595959 2px, #fff 2px, #fff 4px);
+}
+
+h2 {
+  position: relative;
+  line-height: 1.4;
+  padding:0.25em 1em;
+  display: inline-block;
+  top:0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #595959;
+  font-size: 14px;
+}
+
+h2:before, h2:after { 
+  position: absolute;
+  top: 0;
+  content:'';
+  width: 8px;
+  height: 100%;
   display: inline-block;
 }
-.article_content p{
-  text-align: justify;
+h2:before {
+  border-left: solid 1px black;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  left: 0;
 }
-.article_content img{
-  display: block;
-  max-width: 100%;
-  text-align: center;
-  margin: 0 auto;
+h2:after {
+  content: '';
+  border-top: solid 1px black;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  right: 0;
+}
 
-}*/
+img{
+  width: 95%;
+}
+
+p{
+  font-size: 14px;
+}
+
+

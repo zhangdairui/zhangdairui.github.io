@@ -5,12 +5,18 @@
     <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
     
-<link rel="stylesheet" href="/zhangdairui.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/zhangdairui.github.io/atom.xml" title="Anywheredoor" type="application/atom+xml">
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 <body>
 
@@ -35,7 +41,7 @@
     
     <div id="nav">
          
-<link rel="stylesheet" href="/zhangdairui.github.io/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 <ul id="menu">
@@ -89,19 +95,20 @@
 <!-- 首页-->
 <div class="home_things">
 	<div class="computer">
-		<img src="img/computer.png" style="width: 33em; display:block;">
+		<img src="img/computer.png" style="width: 25em; display:block;">
 	</div>
 
-	<div class="words" style="font-family: courier New; letter-spacing: 2px;">
-		<p style="padding-top: 30em;">“Now you can know everything in the world, but the only way you're findin' out that one is by givin' it a shot.”</p>
+	<div class="words" style="font-family: courier New; letter-spacing: 2px; font-size: 12px;">
+		<p style="padding-top: 25em;">“Now you can know everything in the world, but the only way you're findin' out that one is by givin' it a shot.”</p>
 		<br>
 		<p style="font-style: italic;">--from Good Will Hunting</p>
 	</div>
 
 	<div class="person">
-		<img src="img/person.png" style="width: 30em; display:block; padding-top: 4em;">
+		<img src="img/person.png" style="width: 22em; display:block; padding-top: 4em;">
 	</div>
 </div>
+
 
           </section> 
     </div>
@@ -109,12 +116,15 @@
 </div>
 
 
+
+
+
 <div class="column" id="right">
     <div id="links">
         <ul>
             <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
             <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
-            <li><a target="_blank" rel="noopener" href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
         </ul>
     </div>
 </div>
@@ -122,8 +132,13 @@
 
 
 
-</body>
+    <!-- 引入代码高亮的 js -->
+    
+<script src="/js/highlight.min.js"></script>
 
-<script>
+    <script>hljs.highlightAll();</script>
+    
+
+</body>
 
 </html>
