@@ -1,22 +1,22 @@
-
----
-title: 留言板
-layout: false
----
-
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>AnywhereDoor</title>
     <meta charset="utf-8">
     <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-    
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+    <meta name="generator" content="Hexo 5.1.1">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>    
+
+
 </head>
-<style>
+<!-- <style>
     #welcome{text-align: center;font-size: 10px;background-color: black;color: white;}
     .down{
       text-align:center;
@@ -44,7 +44,7 @@ layout: false
     }
   }
 
-  </style>
+  </style> -->
 
 
 <body>
@@ -108,10 +108,12 @@ layout: false
     </div>
     
     <div id="container">
-      <section class="main">  
+      <section class="main"> 
+
         <div id="vcomments"></div>
         <script>
-            new Valine({
+            var valine = new Valine();
+            valine.init({
                 visitor: true,
                 meta: ['nick','mail']
                 recordIP: false,
@@ -119,9 +121,18 @@ layout: false
                 el: '#vcomments',
                 appId: 'NLPDKEo9lOeofmocU9BxeXlC-gzGzoHsz',
                 appKey: 'J94d60PM6Px752PGws3W8tlj'
-
-              })
+            })
+            // new Valine({
+            //     visitor: true,
+            //     meta: ['nick','mail']
+            //     recordIP: false,
+            //     avatar:'hide', // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+            //     el: '#vcomments',
+            //     appId: 'NLPDKEo9lOeofmocU9BxeXlC-gzGzoHsz',
+            //     appKey: 'J94d60PM6Px752PGws3W8tlj'
+            //   })
         </script>
+
       </section> 
     </div>
     
@@ -142,7 +153,5 @@ layout: false
 
 
 </body>
-
-<script>
 
 </html>
