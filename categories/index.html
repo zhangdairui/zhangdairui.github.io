@@ -7,6 +7,9 @@
     
 <link rel="stylesheet" href="/css/main.css">
 
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 <body>
@@ -18,11 +21,13 @@
         <svg width="98" height="651">
              <g>
               <title>Switch</title>
-              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#000"/>
-              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#000000"/>
+              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#595959"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#595959"/>
              </g>
         </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
     </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
 </div>
 
 
@@ -36,26 +41,42 @@
 <ul id="menu">
             
             <li class="menu-item">
-                <a href="/" class="menu-item-link">|HOME</a>
+                <a href="/">|HOME</a>
             </li>
             
             <li class="menu-item">
-                <a href="/archives" class="menu-item-link">|BLOGS</a>
+                <a href="/archives">|BLOGS</a>
             </li>
             
             <li class="menu-item">
-                <a href="/tags/" class="menu-item-link">|CATEGORY</a>
+                <a href="/tags/">|CATEGORY</a>
             </li>
             
             <li class="menu-item">
-                <a href="/about" class="menu-item-link">|ABOUT</a>
+                <a href="/about">|ABOUT</a>
             </li>
             
             <li class="menu-item">
-                <a href="/comment" class="menu-item-link">|COMMENT</a>
+                <a href="/comment">|COMMENT</a>
             </li>
             
 </ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
     </div>
     
     <div id="container">
@@ -117,18 +138,18 @@
 <div class="column" id="right">
     <div id="links">
         <ul>
-            <li>
-                <a href="/">Github</a>
-            </li>
-            <li><a href="/">mail</a></li>
-            <li><a href="/">RSS</a></li>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
         </ul>
-
     </div>
 </div>
 
-<footer><p>copyright Anywheredoor emo</p></footer>
+
 
 
 </body>
+
+<script>
+
 </html>

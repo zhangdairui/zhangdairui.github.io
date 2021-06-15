@@ -7,6 +7,9 @@
     
 <link rel="stylesheet" href="/css/main.css">
 
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 <body>
@@ -18,11 +21,13 @@
         <svg width="98" height="651">
              <g>
               <title>Switch</title>
-              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#000"/>
-              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#000000"/>
+              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#595959"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#595959"/>
              </g>
         </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
     </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
 </div>
 
 
@@ -36,26 +41,42 @@
 <ul id="menu">
             
             <li class="menu-item">
-                <a href="/" class="menu-item-link">|HOME</a>
+                <a href="/">|HOME</a>
             </li>
             
             <li class="menu-item">
-                <a href="/archives" class="menu-item-link">|BLOGS</a>
+                <a href="/archives">|BLOGS</a>
             </li>
             
             <li class="menu-item">
-                <a href="/tags/" class="menu-item-link">|CATEGORY</a>
+                <a href="/tags/">|CATEGORY</a>
             </li>
             
             <li class="menu-item">
-                <a href="/about" class="menu-item-link">|ABOUT</a>
+                <a href="/about">|ABOUT</a>
             </li>
             
             <li class="menu-item">
-                <a href="/comment" class="menu-item-link">|COMMENT</a>
+                <a href="/comment">|COMMENT</a>
             </li>
             
 </ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
     </div>
     
     <div id="container">
@@ -64,12 +85,95 @@
             <section class="main slideDownMin">
           
 
-          这里是分类
-<div class="all_tags">
-  #
-  <a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>, <a class="tag-link-link" href="/tags/java/" rel="tag">java</a>, <a class="tag-link-link" href="/tags/%E5%85%B6%E4%BB%96/" rel="tag">其他</a>, <a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>, <a class="tag-link-link" href="/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/" rel="tag">搭建各种各样的环境</a>, <a class="tag-link-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a>
+          <style>
+
+  #all_tags a{
+    text-decoration: none;
+    font-family: simHei;
+    letter-spacing: 3px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: 
+    wobbling_x 1.8s ease-in-out infinite alternate;
+
+  }
+
+
+#all_tags a::before {
+
+    transition: transform .2s ease-in-out;
+}
+
+#all_tags a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #474E51;
+    transition: transform .2s ease-in-out;
+}
+
+#all_tags a:hover::before {
+    transform: translate(6px, -4px);
+}
+
+#all_tags a:hover::after {
+    transform: translate(-6px, 4px);
+}
+
+
+@keyframes wobbling_x {
+  0% {
+    margin-left: 8px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+</style>
+
+<div id="all_tags" style="width: 100%;height: 30em;">
+
+  <a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a><a class="tag-link-link" href="/tags/java/" rel="tag">java</a><a class="tag-link-link" href="/tags/%E5%85%B6%E4%BB%96/" rel="tag">其他</a><a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><a class="tag-link-link" href="/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/" rel="tag">搭建各种各样的环境</a><a class="tag-link-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a>
+  
+ 
 </div>
 
+<!-- 随机排列标签 -->
+<script>
+  window.onload=function(){
+
+      var obox=document.getElementById("all_tags");
+      var obj=obox.getElementsByTagName("a");
+
+      //获取标签可活动区域
+      var windowW = obox.getBoundingClientRect().width - 800;
+      var windowH = obox.getBoundingClientRect().height;
+
+      //随机方法
+      function rand(num){
+       return parseInt(Math.random()*num+1);
+      }
+
+      //循环
+      for( len=obj.length,i=len;i--;){
+
+        obj[i].style.position="relative";
+        obj[i].style.zIndex=rand(5);
+        obj[i].style.fontSize=rand(12)+10+"px";
+        
+      //随机获取位置
+      obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+      obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+      }
+    }
+</script>
 
           </section> 
     </div>
@@ -80,18 +184,18 @@
 <div class="column" id="right">
     <div id="links">
         <ul>
-            <li>
-                <a href="/">Github</a>
-            </li>
-            <li><a href="/">mail</a></li>
-            <li><a href="/">RSS</a></li>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
         </ul>
-
     </div>
 </div>
 
-<footer><p>copyright Anywheredoor emo</p></footer>
+
 
 
 </body>
+
+<script>
+
 </html>

@@ -1,3 +1,65 @@
+/*==============================*/
+/*==============================*/
+/*==============POST_ENTRY.EJS==*/
+/*==============================*/
+.card_list{
+  margin-top: 20px;
+}
+.card {
+    border: 1px #595959 solid;
+    background: white;
+    transition: 0.3s;
+    width: 70%;
+    height: 10em;
+    margin:0 auto;
+    padding: 10px 16px;
+}
+
+.card:hover {
+    box-shadow: black 0px 0px 0px 1px inset,
+     rgb(255, 255, 255) 8px -8px 0px -1px,
+      black 8px -8px;
+}
+
+.card *{
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.post_date{
+  font-size: 10px;
+  font-family: SimHei;
+  letter-spacing: 3px;
+}
+.post_title{
+
+  color: black;
+  font-size: 1.2em;
+  font-family: SimHei;
+  letter-spacing: 3px;
+}
+#post_tag{
+  background: black;
+  color: white;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 10%;
+}
+
+.tag-link-link{
+  background: black;
+  color: white;
+}
+.card p{
+  font-size: 15px;
+}
+
+
+/*==============================*/
+/*==============================*/
+/*==============POST.EJS==*/
+/*==============================*/
+
 /*==============ASIDE================*/
 .toc{
   list-style: none;
@@ -25,8 +87,7 @@
 
 .postContent{
     float: left;
-    width: 70%;
-    background: grey;
+    width: 65%;
     height:36vw;
 }
 

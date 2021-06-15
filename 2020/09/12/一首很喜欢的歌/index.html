@@ -7,6 +7,9 @@
     
 <link rel="stylesheet" href="/css/main.css">
 
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 <link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
 <script src="/assets/js/APlayer.min.js" class="aplayer-script-marker"></script>
@@ -20,11 +23,13 @@
         <svg width="98" height="651">
              <g>
               <title>Switch</title>
-              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#000"/>
-              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#000000"/>
+              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#595959"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#595959"/>
              </g>
         </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
     </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
 </div>
 
 
@@ -38,26 +43,42 @@
 <ul id="menu">
             
             <li class="menu-item">
-                <a href="/" class="menu-item-link">|HOME</a>
+                <a href="/">|HOME</a>
             </li>
             
             <li class="menu-item">
-                <a href="/archives" class="menu-item-link">|BLOGS</a>
+                <a href="/archives">|BLOGS</a>
             </li>
             
             <li class="menu-item">
-                <a href="/tags/" class="menu-item-link">|CATEGORY</a>
+                <a href="/tags/">|CATEGORY</a>
             </li>
             
             <li class="menu-item">
-                <a href="/about" class="menu-item-link">|ABOUT</a>
+                <a href="/about">|ABOUT</a>
             </li>
             
             <li class="menu-item">
-                <a href="/comment" class="menu-item-link">|COMMENT</a>
+                <a href="/comment">|COMMENT</a>
             </li>
             
 </ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
     </div>
     
     <div id="container">
@@ -103,12 +124,12 @@
 			    <h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p>
 <p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>
 
-        <div id="aplayer-BjzZUFOG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-yDwsQSqy" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-BjzZUFOG"),
+            element: document.getElementById("aplayer-yDwsQSqy"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -161,18 +182,18 @@
 <div class="column" id="right">
     <div id="links">
         <ul>
-            <li>
-                <a href="/">Github</a>
-            </li>
-            <li><a href="/">mail</a></li>
-            <li><a href="/">RSS</a></li>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
         </ul>
-
     </div>
 </div>
 
-<footer><p>copyright Anywheredoor emo</p></footer>
+
 
 
 </body>
+
+<script>
+
 </html>

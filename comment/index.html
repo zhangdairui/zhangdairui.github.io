@@ -1,13 +1,17 @@
 <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Anywheredoor</title>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
-
-<body>
-  <style>
+<style>
     #welcome{text-align: center;font-size: 10px;background-color: black;color: white;}
     .down{
       text-align:center;
@@ -37,28 +41,103 @@
 
   </style>
 
-      <p id="welcome">欢迎在下方输入昵称留言：）你的留言会显示在下方（小窗向下滑哦）</p>
 
-        <div class="down">
-              <img src="/pic/down.png" width="20px">
+<body>
+<div class="column" id="left">
+    <div id="light">
+        <svg width="98" height="651">
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#595959"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#595959"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
 
-      </div>
+
+<div class="column" id="medium"> 
+    <div id="nav">
+          <link rel="stylesheet" href="/css/main.css">
+          <ul id="menu">
+                      
+                      <li class="menu-item">
+                          <a href="/">|HOME</a>
+                      </li>
+                      
+                      <li class="menu-item">
+                          <a href="/archives">|BLOGS</a>
+                      </li>
+                      
+                      <li class="menu-item">
+                          <a href="/tags/">|CATEGORY</a>
+                      </li>
+                      
+                      <li class="menu-item">
+                          <a href="/about">|ABOUT</a>
+                      </li>
+                      
+                      <li class="menu-item">
+                          <a href="/comment">|COMMENT</a>
+                      </li>
+                      
+          </ul>
+
+          <!-- 点击高亮js -->
+          <script type="text/javascript">
+              var oLis=document.getElementsByTagName("a");
+              var i,j;
+              var length=oLis.length;
+              for(i=0;i<length;i++){
+                  oLis[i].onclick=function(){
+                      for(j=0;j<length;j++){
+                          oLis[j].className="";
+                      }
+                      this.className+="clickstyle";
+                  }
+              }
+          </script>
+
+    </div>
+    
+    <div id="container">
+      <section class="main">  
+        <div id="vcomments"></div>
+        <script>
+            new Valine({
+                visitor: true,
+                meta: ['nick','mail']
+                recordIP: false,
+                avatar:'hide', // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+                el: '#vcomments',
+                appId: 'NLPDKEo9lOeofmocU9BxeXlC-gzGzoHsz',
+                appKey: 'J94d60PM6Px752PGws3W8tlj'
+
+              })
+        </script>
+      </section> 
+    </div>
+    
+</div> 
+<!-- 中间栏结束 -->
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
 
 
-      <div id="vcomments">
-      <script>
-          new Valine({
-              visitor: true,
-              meta: false,
-              recordIP: false,
-              avatar:'hide', // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
-              el: '#vcomments',
-              appId: 'NLPDKEo9lOeofmocU9BxeXlC-gzGzoHsz',
-              appKey: 'J94d60PM6Px752PGws3W8tlj'
 
-            })
-      </script>
-      </div>
+
 </body>
+
+<script>
 
 </html>
