@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+<body>
+
+
+
+<div class="column" id="left">
+    <div id="light">
+        <svg width="98" height="651">
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#595959"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#595959"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#int%E5%92%8CString%E4%B9%8B%E9%97%B4"><span class="toc-text">int和String之间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#String%E5%92%8Cchar%E4%B9%8B%E9%97%B4"><span class="toc-text">String和char之间</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#String-amp-char-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-text">String &amp; char 字符串之间的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-amp-char-%E5%8D%95%E4%B8%AA%E5%AD%97%E7%AC%A6%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-text">String &amp; char 单个字符的转换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#int%E5%92%8Clong%E4%B9%8B%E9%97%B4"><span class="toc-text">int和long之间</span></a></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>Java各种数据类型互相转换笔记</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年06月17日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/java/" rel="tag">java</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <p>总结一下常用的java的各种变量类型之间的转换。</p>
+<a id="more"></a>
+
+<h1 id="int和String之间"><a href="#int和String之间" class="headerlink" title="int和String之间"></a>int和String之间</h1><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">int转String</th>
+<th align="left">String转int</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">方法一</td>
+<td align="left">String.valueOf(num)</td>
+<td align="left">Integer.parseInt(str);</td>
+</tr>
+<tr>
+<td align="left">方法二</td>
+<td align="left">Integer.toString(num)</td>
+<td align="left">Integer.valueOf(str).intValue()</td>
+</tr>
+<tr>
+<td align="left">方法三</td>
+<td align="left">num + “”</td>
+<td align="left">-</td>
+</tr>
+</tbody></table>
+<h1 id="String和char之间"><a href="#String和char之间" class="headerlink" title="String和char之间"></a>String和char之间</h1><p>char只储存一个字符，String储存字符串。而且char是基本数据类型，String是一个类。</p>
+<h2 id="String-amp-char-字符串之间的转换"><a href="#String-amp-char-字符串之间的转换" class="headerlink" title="String &amp; char 字符串之间的转换"></a>String &amp; char 字符串之间的转换</h2><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">String转char</th>
+<th align="left">char转String</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">方法一</td>
+<td align="left">char[] str2ch = new char[str.length()];【然后for】</td>
+<td align="left">String ch2Str = String.valueOf(ch);</td>
+</tr>
+<tr>
+<td align="left">方法二</td>
+<td align="left">char[] Str2ch1 = str1.toCharArray();</td>
+<td align="left">StringBuffer ch2Str1 = new StringBuffer(); ch2Str1.append(ch1);</td>
+</tr>
+</tbody></table>
+<h2 id="String-amp-char-单个字符的转换"><a href="#String-amp-char-单个字符的转换" class="headerlink" title="String &amp; char 单个字符的转换"></a>String &amp; char 单个字符的转换</h2><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">String转char</th>
+<th align="left">char转String</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">方法一</td>
+<td align="left">char Str2ch2 = str2.charAt(0);</td>
+<td align="left">String ch2Str2 = ch+””;</td>
+</tr>
+<tr>
+<td align="left">方法二</td>
+<td align="left">char Str2ch3 = str3.toCharArray()[0];</td>
+<td align="left">-</td>
+</tr>
+</tbody></table>
+<h1 id="int和long之间"><a href="#int和long之间" class="headerlink" title="int和long之间"></a>int和long之间</h1><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">int转long</th>
+<th align="left">long转int</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">方法一</td>
+<td align="left">in.longValue();</td>
+<td align="left">(int) lo;</td>
+</tr>
+<tr>
+<td align="left">方法二</td>
+<td align="left">-</td>
+<td align="left">lo.intValue();</td>
+</tr>
+</tbody></table>
+
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+    <!-- 引入代码高亮的 js -->
+    
+<script src="/js/highlight.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+    
+
+</body>
+
+</html>
