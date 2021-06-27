@@ -222,3 +222,70 @@ p{
 }
 
 
+/*==============POST CONTENT-table...================*/
+table *, table *:before, table *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table th {
+  color: white;
+  width: 13%;
+  background: #595959;
+  padding: 10px;
+  border: 1px solid #dddddd;
+}
+table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px;
+  border: 1px solid #dddddd;
+}
+table td:first-child {
+  text-align: left;
+  vertical-align: middle;
+  font-weight: bold;
+}
+@media only screen and (max-width: 480px) {
+ table {
+    display: block;
+    width: 100%;
+  }
+ table thead {
+    display: block;
+    float: left;
+    overflow-x: scroll;
+  }
+ table tbody {
+    display: block;
+    width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+ table th {
+    display: block;
+    width: auto;
+    border-width: 1px 0px 0px 1px;
+    border-color: #dddddd;
+    border-style: solid;
+  }
+  table th:last-child {
+    border-bottom: 1px solid #dddddd;
+  }
+  table tbody tr {
+    display: inline-block;
+    margin: 0;
+  }
+  table td {
+    display: block;
+    border-width: 1px 1px 0px 1px;
+    border-color: #dddddd;
+    border-style: solid;
+  }
+  table td:last-child {
+    border-bottom: 1px solid #dddddd;
+  }
+}

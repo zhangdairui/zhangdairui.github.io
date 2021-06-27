@@ -260,12 +260,77 @@ html, body {
 }
 .words{
     width: 30%;
-    height: 90%;
+    height: 80%;
 }
 
 .person{
     width: 30%;
-    height: 90%;
+    height: 80%;
 }
 
+/* ==================HOME END================== */
+/* ================LANDSCAPE警告页面==================== */
+
+    #warning-message{ 
+      text-align: center;
+      font-size: 3vw;
+      margin: 7vw;
+     
+
+
+      display: none; 
+    }
+    #eng, #jap{
+        font-size: 2vw;
+    }
+    #chi{
+        padding-top: 10vw;
+        font-size: 5vw;
+    }
+
+
+
+   .gifgif{
+        float: left;
+        width: 100%;
+        padding-left: 10em;
+        padding-bottom: 10vw;
+        padding-top: 15vh;
+    }
+    .gifgif img{
+        border: 1px black solid;
+        width: 10em; 
+        box-shadow: 
+        black 0px 0px 0px 2px inset,
+         rgb(255, 255, 255) -10px -10px 0px -1px,
+          black -10px -10px,
+           rgb(255, 255, 255) -20px -20px 0px -1px,
+            black -20px -20px,
+             rgb(255, 255, 255) -30px -30px 0px -1px,
+              black -30px -30px,
+               rgb(255, 255, 255) -40px -40px 0px -1px,
+                black -40px -40px;
+    }
+    
+
+    @media only screen and (orientation:portrait){
+        .column { 
+          display:none; 
+        }
+
+        #warning-message { 
+          display:block; 
+
+    }
+}
+    
+
+    @media only screen and (orientation:landscape){
+        #warning-message{
+          display:none; 
+      }
+
+
+
+    }
 
