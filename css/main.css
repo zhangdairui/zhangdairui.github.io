@@ -277,8 +277,6 @@ html, body {
       text-align: center;
       font-size: 3vw;
       margin: 7vw;
-     
-
 
       display: none; 
     }
@@ -290,17 +288,15 @@ html, body {
         font-size: 5vw;
     }
 
-
-
-   .gifgif{
-        float: left;
+   .Wgifgif{
         width: 100%;
-        padding-left: 10em;
+
         padding-bottom: 10vw;
         padding-top: 15vh;
     }
-    .gifgif img{
+    .Wgifgif img{
         border: 1px black solid;
+        margin: 0 auto;
         width: 10em; 
         box-shadow: 
         black 0px 0px 0px 2px inset,
