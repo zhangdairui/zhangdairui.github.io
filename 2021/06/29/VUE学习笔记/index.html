@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+
+<div id="warning-message">
+    <div class="gifgif">
+
+        <img src="img/a.gif" style="width: 8em; display:block;">
+ 
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、どうぞ端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+
+</div>
+
+
+
+<div class="column" id="left">
+    <div id="light">
+
+        <svg width="98" height="651">
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#595959"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#595959"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">基础知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Demo%E7%BB%84%E4%BB%B6"><span class="toc-text">Demo组件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%82%B9%E5%87%BB%E7%AE%AD%E5%A4%B4%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%EF%BC%88v-bind-v-show-v-on%EF%BC%89"><span class="toc-text">点击箭头图片轮播（v-bind + v-show + v-on）</span></a></li></ol></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>VUE学习笔记</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年06月29日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <p>Vue使开发过程中无需直接操作dom元素，并实现组件化开发。此篇是初学Vue过程中的一些笔记。供自己加深印象。查缺补漏。</p>
+<a id="more"></a>
+
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p><strong>首先：</strong></p>
+<ol>
+<li>官方文档：<br><a target="_blank" rel="noopener" href="https://cn.vuejs.org/index.html">VUE中文文档</a></li>
+</ol>
+<ol start="2">
+<li>引入cdn：<pre><code>&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js&quot;&gt;&lt;/script&gt;
+&lt;!-- 生产环境版本，优化了尺寸和速度 --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2&quot;&gt;&lt;/script&gt;</code></pre></li>
+</ol>
+<p><strong>常用基本Vue指令：</strong></p>
+<p>v-text：更改元素内部文字（除非使用表达式，不然默认全部替换）</p>
+<p>v-html：更改元素的html代码</p>
+<p>v-on：可写成@，为元素绑定事件。如:</p>
+<pre><code>@click = &quot;functionName&quot;
+@keyup.enter = &quot;functionName(parameter)&quot; //指定回车键触发事件</code></pre><p>v-show：控制元素是否显示</p>
+<p>v-if：控制元素是否存在。（较耗性能，因此在仅需要控制显示的情况下，v-show更好。）</p>
+<p>v-bind：操作元素的属性。简写成冒号，如：:scr=”imgAddress”。</p>
+<p>v-for：遍历准备好的数组数据在网页中生成ul列表结构。在li标签内部用双花括号写好要用的元素。</p>
+<p>如：</p>
+<p><code>&lt;li v-for=&quot;item in arr&quot;&gt;&#123;&#123;item.name&#125;&#125;&lt;/li&gt;</code></p>
+<p>或者直接可以使用index：</p>
+<p><code>&lt;li v-for=&quot;(item, index) in arr&quot;&gt; &#123;&#123; index &#125;&#125; &lt;/li&gt;</code></p>
+<p>v-model：获取/设置input表单元素的值。一旦用户更新了input中的值，在Vue实例中也会同步更新。</p>
+<h1 id="Demo组件"><a href="#Demo组件" class="headerlink" title="Demo组件"></a>Demo组件</h1><p><em>（以下demo引用自黑马程序员课程资料）</em></p>
+<h2 id="点击箭头图片轮播（v-bind-v-show-v-on）"><a href="#点击箭头图片轮播（v-bind-v-show-v-on）" class="headerlink" title="点击箭头图片轮播（v-bind + v-show + v-on）"></a>点击箭头图片轮播（v-bind + v-show + v-on）</h2><p>HTML代码：</p>
+<pre><code>&lt;div id=&quot;mask&quot;&gt; 
+      &lt;div class=&quot;center&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;&lt;img src=&quot;./images/logo.png&quot; alt=&quot;&quot;&gt; 深圳创维校区环境&lt;/h2&gt;
+        &lt;img :src=&quot;imgList[index]&quot; alt=&quot;&quot; /&gt;
+        &lt;a
+          href=&quot;javascript:void(0)&quot;
+          @click=&quot;prev&quot;
+          class=&quot;left&quot;
+          v-show=&quot;index&gt;0&quot;
+        &gt;
+ &lt;!--上方a标签是一个向左指的箭头，@click绑定点击事件，
+v-show指定一个表达式，当index=0的时候（也就意味着轮播到了第一张图片）
+需要将该箭头隐藏。--&gt;
+
+          &lt;img src=&quot;./images/prev.png&quot; alt=&quot;&quot; /&gt;
+        &lt;/a&gt;
+        &lt;a
+          href=&quot;javascript:void(0)&quot;
+          @click=&quot;next&quot;
+          class=&quot;right&quot;
+          v-show=&quot;index&lt;imgList.length-1&quot;
+        &gt;
+          &lt;img src=&quot;./images/next.png&quot; alt=&quot;&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre><p>Vue部分代码：</p>
+<pre><code>&lt;script&gt;
+      const app = new Vue(&#123;
+        el: &quot;#mask&quot;,
+        data: &#123;
+          imgList: [
+            &quot;./images/00.jpg&quot;,
+            &quot;./images/01.jpg&quot;,
+            &quot;./images/02.jpg&quot;,
+            &quot;./images/03.jpg&quot;,
+            &quot;./images/04.jpg&quot;,
+            &quot;./images/05.jpg&quot;,
+            &quot;./images/06.jpg&quot;,
+            &quot;./images/07.jpg&quot;,
+            &quot;./images/08.jpg&quot;,
+            &quot;./images/09.jpg&quot;,
+            &quot;./images/10.jpg&quot;,
+          ], //数组保存需要轮播的图片地址
+          index: 0 
+        &#125;,
+        methods: &#123;
+          // 上一张
+          prev() &#123;
+            this.index--; //this代表当前vue实例
+          &#125;,
+          // 下一张
+          next() &#123;
+            this.index++;
+          &#125;
+        &#125;
+      &#125;);
+    &lt;/script&gt;</code></pre>
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+</body>
+
+</html>

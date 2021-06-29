@@ -26,6 +26,8 @@
     height: 10em;
     margin:0 auto;
     padding: 10px 16px;
+
+
 }
 
 .card:hover {
@@ -36,7 +38,7 @@
 
 .card *{
   text-decoration: none;
-  margin-top: 20px;
+
 }
 
 .post_date{
@@ -60,6 +62,11 @@
 
 .card p{
   font-size: 15px;
+  /*超出单行的话省略号*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 10px;
 }
 
 

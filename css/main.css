@@ -23,7 +23,9 @@ color: #ffffff;
 
 /* ==================LAYOUT ================== */
 
-
+#mobileLayout{
+    display: none;
+}
 
 * {
     margin: 0;
