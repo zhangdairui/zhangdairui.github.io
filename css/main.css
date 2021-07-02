@@ -72,9 +72,13 @@ html, body {
   overflow-x: hidden;
 }
 
-/*container滚动条*/
+
+
+
+/*滚动条*/
 ::-webkit-scrollbar {
       width: 10px;
+      height:10px;
   } /* 这是针对缺省样式 (必须的) */
 ::-webkit-scrollbar-track {
       background-color: #ECECEC;
@@ -92,6 +96,10 @@ html, body {
       background-color: rgb(34, 34, 34);
   } /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
 
+
+@media only screen and (max-width: 980px){
+    ::-webkit-overflow-scrolling: touch;
+}
 
 /*MENU*/
 #menu {
@@ -171,8 +179,12 @@ html, body {
 
 }
 
-
+/* 灯的开关 */
 /*LIGHT*/
+#light svg{
+     width:8em; 
+     height:15em;
+}
 #light{
     height: 25%;
     width: 60%;
@@ -224,6 +236,11 @@ html, body {
 }
 
 
+@media only screen and (max-width: 980px){
+
+ }
+
+
 /*FOOTER*/
 
 .copyright p{
@@ -247,6 +264,13 @@ html, body {
 }
 
 
+ @media only screen and (max-width: 980px){
+    .copyright p{
+        left: 30%;
+        top: 75%;
+        letter-spacing: 1px;
+    }
+ }
 
 /* ==================LAYOUT END================== */
 /* ==================HOME================== */
@@ -260,15 +284,40 @@ html, body {
     width: 40%;
     height: 80%;
 }
+.computer img{
+    width: 24em; 
+    display:block;
+}
 .words{
     width: 30%;
     height: 80%;
+    font-family: courier New;
+     letter-spacing: 2px; 
+     font-size: 12px; 
+     padding-top: 25em;
 }
 
 .person{
     width: 30%;
     height: 80%;
 }
+.person img{
+    width: 22em; display:block; padding-top: 3em;
+}
+ @media only screen and (max-width: 980px){
+    .computer img{
+        width: 16em;
+    }
+    .person img{
+        width: 15em;
+        padding-top: 0;
+    }
+    .words{
+        padding-top: 15em;
+        font-size: 9px;
+
+    }
+ }
 
 /* ==================HOME END================== */
 /* ================LANDSCAPE警告页面==================== */

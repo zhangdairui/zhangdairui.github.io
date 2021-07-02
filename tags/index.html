@@ -41,7 +41,7 @@
 <div class="column" id="left">
     <div id="light">
 
-        <svg width="98" height="651">
+        <svg>
              <g>
               <title>Switch</title>
               <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#595959"/>
@@ -164,7 +164,6 @@
 
   <a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a><a class="tag-link-link" href="/tags/java/" rel="tag">java</a><a class="tag-link-link" href="/tags/%E5%85%B6%E4%BB%96/" rel="tag">其他</a><a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><a class="tag-link-link" href="/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/" rel="tag">搭建各种各样的环境</a><a class="tag-link-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a>
   
- 
 </div>
 
 <!-- 随机排列标签 -->
@@ -176,7 +175,7 @@
 
       //获取标签可活动区域
       var windowW = obox.getBoundingClientRect().width - 800;
-      var windowH = obox.getBoundingClientRect().height;
+      var windowH = obox.getBoundingClientRect().height -200;
 
       //随机方法
       function rand(num){
