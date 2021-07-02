@@ -358,3 +358,49 @@ table td:first-child {
     border-bottom: 1px solid #dddddd;
   }
 }
+
+
+
+
+/*==============黑暗模式================*/
+
+/*文字改色*/
+body.dark .toc li a,
+body.dark h1,
+body.dark h2,
+body.dark .article_content,
+body.dark .post_info,
+body.dark .post_info span,
+body.dark .post_info a
+{
+  color: #F0F0F0;
+}
+
+body.dark .article_content a{
+  color: #31E4F3;
+}
+/*边框改色*/
+body.dark .aside{
+  border-right: 1px solid #F0F0F0;
+}
+
+body.dark .article_content{
+  border: 1px solid #F0F0F0;
+}
+
+
+/*背景改色（代码块等）*/
+  
+/*
+其它改色*/
+body.dark .archive-part{
+    text-shadow: #000 1px 0, 
+    #000 -1px 0, 
+    #000 0 -1px, 
+    #000 0 1px, 
+    #000 1px 1px, #000 -1px 1px,
+   #000 1px -1px, #000 -1px -1px, #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px,
+    #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px, 4px 4px 0 #F0F0F0, 0 4px 0 #000;
+}
+
+

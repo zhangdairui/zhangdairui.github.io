@@ -15,7 +15,11 @@
 <link rel="stylesheet" href="/css/default.min.css">
 
     
+<link rel="stylesheet" href="/css/main.css">
+
+    
 <link rel="stylesheet" href="/css/post.css">
+
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 <link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
@@ -41,13 +45,13 @@
 
 
 <div class="column" id="left">
-    <div id="light">
+    <div id="light" onclick="switchLight()" class="dayTime">
 
         <svg>
              <g>
               <title>Switch</title>
-              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#595959"/>
-              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#595959"/>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
              </g>
         </svg>
         <span class="tooltiptext">点击开灯/关灯</span>
@@ -159,12 +163,12 @@
 			    <h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p>
 <p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>
 
-        <div id="aplayer-tsbggsFv" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-GxnsimIA" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-tsbggsFv"),
+            element: document.getElementById("aplayer-GxnsimIA"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -236,6 +240,36 @@
 
 <script>hljs.highlightAll();</script>
 
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
+        } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+
+        localStorage.setItem('dark','0');
+        return;
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        return;
+        }
+    }
+
+</script>
 
 </body>
 

@@ -15,7 +15,11 @@
 <link rel="stylesheet" href="/css/default.min.css">
 
     
+<link rel="stylesheet" href="/css/main.css">
+
+    
 <link rel="stylesheet" href="/css/post.css">
+
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
@@ -39,13 +43,13 @@
 
 
 <div class="column" id="left">
-    <div id="light">
+    <div id="light" onclick="switchLight()" class="dayTime">
 
         <svg>
              <g>
               <title>Switch</title>
-              <line id="swicth-line" y2="200" x2="48" x1="48" stroke="#595959"/>
-              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48" fill="#595959"/>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
              </g>
         </svg>
         <span class="tooltiptext">点击开灯/关灯</span>
@@ -276,6 +280,36 @@ v-show指定一个表达式，当index=0的时候（也就意味着轮播到了�
 
 <script>hljs.highlightAll();</script>
 
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
+        } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+
+        localStorage.setItem('dark','0');
+        return;
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        return;
+        }
+    }
+
+</script>
 
 </body>
 

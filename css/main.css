@@ -181,6 +181,13 @@ html, body {
 
 /* 灯的开关 */
 /*LIGHT*/
+line{
+    stroke: #595959;
+}
+ellipse{
+    fill: #595959;
+}
+
 #light svg{
      width:8em; 
      height:15em;
@@ -211,7 +218,7 @@ html, body {
 .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: black;
+    background-color: rgba(90, 90, 90, 0.5);
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -246,12 +253,12 @@ html, body {
 .copyright p{
    position:absolute;
    width: auto;
-   left:30%;
+   left:12%;
    top:78%;
    font-size: 6px;
   font-family: SimHei;
   color: #595959;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
    transform: rotate(90deg);
             -ms-transform: rotate(90deg);
             /* Internet Explorer 9*/
@@ -377,7 +384,68 @@ html, body {
           display:none; 
       }
 
-
-
     }
+
+
+/* ==================警告END================== */
+/* ================黑暗模式==================== */
+/*背景改色*/
+body.dark,
+body.dark .card,
+::-webkit-scrollbar-track
+{
+    background-color: #424c50;
+}
+
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner{
+    background-color:#F0F0F0;
+}
+
+/*文字改色*/
+body.dark .column,
+body.dark .column #links ul li a,
+body.dark .column #menu li a,
+body.dark .column .copyright p,
+body.dark #warning-message p,
+body.dark .card a,
+body.dark #page-nav span,
+body.dark #page-nav a
+
+{
+    color: #F0F0F0;
+}
+
+
+body.dark .card #post_tag,
+body.dark .card #post_tag a
+{
+    color: #424c50;
+}
+
+/*边框改色*/
+body.dark .column #container,
+body.dark .card,
+body.dark #page-nav a
+{
+    border: 1px #F0F0F0 solid;
+}
+
+/*图片改色*/
+body.dark .home_things img{
+    filter: invert(100%);
+}
+
+/*其他改色*/
+
+body.dark line{
+    stroke: #F0F0F0;
+}
+body.dark ellipse{
+    fill: #F0F0F0;
+
+}
+
 
