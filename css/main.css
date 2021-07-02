@@ -32,8 +32,11 @@ color: #ffffff;
     padding: 0;
     border: 0;
 }
+html{
+    height: 100%;
+}
 
-html, body {
+body {
     height: 100%;
     background-color: #F0F0F0;
 }
@@ -392,6 +395,7 @@ ellipse{
 /*背景改色*/
 body.dark,
 body.dark .card,
+body.dark html,
 ::-webkit-scrollbar-track
 {
     background-color: #424c50;
