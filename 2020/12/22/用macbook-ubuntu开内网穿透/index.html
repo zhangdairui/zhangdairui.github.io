@@ -216,11 +216,8 @@ remote_port = 7000</code></pre><p>4.在该文件夹下的终端运行<code>./frp
     if (localStorage.getItem('dark') === '1') {
         document.body.classList.add('dark');
         }
-        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
-        document.body.classList.add('dark');
-        } 
-        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
         }
 
     
@@ -229,13 +226,10 @@ remote_port = 7000</code></pre><p>4.在该文件夹下的终端运行<code>./frp
         var body = document.body;
         if(body.classList.contains('dark')){
         document.body.classList.remove('dark');
-
         localStorage.setItem('dark','0');
-        return;
         } else {
         document.body.classList.add('dark');
         localStorage.setItem('dark','1');
-        return;
         }
     }
 
