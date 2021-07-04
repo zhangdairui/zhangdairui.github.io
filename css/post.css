@@ -394,13 +394,13 @@ body.dark .article_content{
 /*
 其它改色*/
 body.dark .archive-part{
-    text-shadow: #000 1px 0, 
-    #000 -1px 0, 
-    #000 0 -1px, 
-    #000 0 1px, 
-    #000 1px 1px, #000 -1px 1px,
-   #000 1px -1px, #000 -1px -1px, #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px,
-    #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px, 4px 4px 0 #F0F0F0, 0 4px 0 #000;
+    text-shadow: #424c50 1px 0, 
+    #424c50 -1px 0, 
+    #424c50 0 -1px, 
+    #424c50 0 1px, 
+    #424c50 1px 1px, #424c50 -1px 1px,
+   #424c50 1px -1px, #424c50 -1px -1px, #424c50 1px 1px, #424c50 -1px 1px, #424c50 1px -1px, #424c50 -1px -1px,
+    #424c50 1px 1px, #424c50 -1px 1px, #424c50 1px -1px, #424c50 -1px -1px, 4px 4px 0 #F0F0F0, 0 4px 0 #424c50;
 }
 
 

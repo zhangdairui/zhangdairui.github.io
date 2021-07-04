@@ -21,6 +21,31 @@ background: #595959;
 color: #ffffff;
 }
 
+/* ==================Loading ================== */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #F0F0F0;
+  text-align: center;
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+
+.loadingIMG{
+    width:10vw;
+    margin: 100px auto;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* ==================LAYOUT ================== */
 
 #mobileLayout{
@@ -396,6 +421,7 @@ ellipse{
 body.dark,
 body.dark .card,
 body.dark html,
+body.dark #loading,
 ::-webkit-scrollbar-track
 {
     background-color: #424c50;
@@ -438,7 +464,9 @@ body.dark #page-nav a
 }
 
 /*图片改色*/
-body.dark .home_things img{
+body.dark .home_things img,
+body.dark #loading img
+{
     filter: invert(100%);
 }
 

@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="/css/post.css">
 
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 <link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
 <script src="/assets/js/APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
@@ -29,21 +29,27 @@
 
 
 
-<body>
-
+<body onload="load()">
+<!-- 强制横屏div -->
 <div id="warning-message">
     <div class="Wgifgif">
         <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
-        <img src="/img/a.gif" width="8em">
+        <img src="/img/a.gif">
     </div>
     
     <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
-    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、どうぞ端末を回転し、横画面モードで御覧ください。</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
     <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
 </div>
 
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
 
-
+<!-- 主要布局开始 -->
 <div class="column" id="left">
     <div id="light" onclick="switchLight()" class="dayTime">
 
@@ -163,12 +169,12 @@
 			    <h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p>
 <p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>
 
-        <div id="aplayer-GNYSWsXc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-LtnOwEtM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-GNYSWsXc"),
+            element: document.getElementById("aplayer-LtnOwEtM"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -234,12 +240,6 @@
 
 
 
-<!-- 引入代码高亮的 js -->
-
-<script src="/js/highlight.min.js"></script>
-
-<script>hljs.highlightAll();</script>
-
 <!-- 切换白天黑夜模式-->
 <script>
 
@@ -264,6 +264,61 @@
     }
 
 </script>
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByTagName("a");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
 
 </body>
 
