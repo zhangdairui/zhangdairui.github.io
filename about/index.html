@@ -20,14 +20,18 @@
     
 <link rel="stylesheet" href="/css/post.css">
 
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 
 
+<body>
 
 
-<body onload="load()">
 <!-- 强制横屏div -->
 <div id="warning-message">
     <div class="Wgifgif">
@@ -46,6 +50,8 @@
         <img src="/img/loading.png" width="8em">
     </div>
 </div>
+
+
 
 <!-- 主要布局开始 -->
 <div class="column" id="left">
@@ -207,7 +213,7 @@
 		<p>那个时候的经历对我来说还是有很大意义的，无论什么形式，总归算是拉近了我和计算机的距离。</p>
 		<br><br>
 		<p>在写这个about文档的时候，博客很多预计的功能还没有完成，比如黑暗模式的配色，或者是一些细节的动画做的还不够好，接下来的日子里希望我不要鸽了自己慢慢完善。</p>
-		<p>（上面的GIF动画来自我的好朋友Chroma，感谢他的神仙gif，真的生动形象的展示了我在学习编程的路上经历的抓狂和自己性格的变化！也一并感谢在我追寻自我实现的道路上无私地给予我支持和鼓励的亲友师长，祝我能持之以恒越走越远，祝你们健康开心。）</p>
+		<p>（上面的GIF动画以及loading动画来自我的好朋友Chroma。感谢他的神仙gif，真的生动形象的展示了我在学习编程的路上经历的抓狂和自己性格的变化！也一并感谢在我追寻自我实现的道路上无私地给予我支持和鼓励的亲友师长，祝我能持之以恒越走越远，祝你们健康开心。）</p>
 
 		<div style="text-align: center;"><img src="door1.png" style="width: 3em;"></div>
 		<br>
@@ -259,6 +265,7 @@
         if(body.classList.contains('dark')){
         document.body.classList.remove('dark');
         localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
         } else {
         document.body.classList.add('dark');
         localStorage.setItem('dark','1');
@@ -267,16 +274,18 @@
 
 </script>
 
+
 <!-- loading用js -->
 <script>
    window.onload = function() {
     //0.感应白天黑夜
     if (localStorage.getItem('dark') === '1') {
-        document.body.classList.add('dark');
-        }
-        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
         document.body.classList.remove('dark');
-        }
+        $('html').css("cursor","default");
+    }
 
 
     // 1. loading图案
@@ -286,7 +295,7 @@
 
     // 2. 排列tags 不写在这里到时候会冲突
           var obox=document.getElementById("all_tags");
-          var obj=obox.getElementsByTagName("a");
+          var obj=obox.getElementsByClassName("tag-link-link");
 
           //获取标签可活动区域
           var windowW = obox.getBoundingClientRect().width - 800;

@@ -20,6 +20,10 @@
     
 <link rel="stylesheet" href="/css/post.css">
 
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 <link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
@@ -27,9 +31,9 @@
 </head>
 
 
+<body>
 
 
-<body onload="load()">
 <!-- 强制横屏div -->
 <div id="warning-message">
     <div class="Wgifgif">
@@ -48,6 +52,8 @@
         <img src="/img/loading.png" width="8em">
     </div>
 </div>
+
+
 
 <!-- 主要布局开始 -->
 <div class="column" id="left">
@@ -169,12 +175,12 @@
 			    <h2 id="喜欢的歌"><a href="#喜欢的歌" class="headerlink" title="喜欢的歌"></a>喜欢的歌</h2><p>一直都非常喜欢的一首歌，能让我回忆起来在日本的时候。虽然它唱的是东京的高楼大厦的灯光，但是换成熊本黒髪稀稀拉拉的路灯，札幌狸小路药妆店的灯光，大阪茨木居酒屋的灯光，对我来说也是一样的。</p>
 <p>这歌在网抑云上的翻译其实有两句话差点意思，下面的歌词是我翻的。</p>
 
-        <div id="aplayer-NudTNLhh" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-vGnJkWiz" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-NudTNLhh"),
+            element: document.getElementById("aplayer-vGnJkWiz"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -257,6 +263,7 @@
         if(body.classList.contains('dark')){
         document.body.classList.remove('dark');
         localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
         } else {
         document.body.classList.add('dark');
         localStorage.setItem('dark','1');
@@ -265,16 +272,18 @@
 
 </script>
 
+
 <!-- loading用js -->
 <script>
    window.onload = function() {
     //0.感应白天黑夜
     if (localStorage.getItem('dark') === '1') {
-        document.body.classList.add('dark');
-        }
-        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
         document.body.classList.remove('dark');
-        }
+        $('html').css("cursor","default");
+    }
 
 
     // 1. loading图案
@@ -284,7 +293,7 @@
 
     // 2. 排列tags 不写在这里到时候会冲突
           var obox=document.getElementById("all_tags");
-          var obj=obox.getElementsByTagName("a");
+          var obj=obox.getElementsByClassName("tag-link-link");
 
           //获取标签可活动区域
           var windowW = obox.getBoundingClientRect().width - 800;

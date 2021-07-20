@@ -20,14 +20,18 @@
     
 <link rel="stylesheet" href="/css/post.css">
 
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
 </head>
 
 
+<body>
 
 
-<body onload="load()">
 <!-- 强制横屏div -->
 <div id="warning-message">
     <div class="Wgifgif">
@@ -46,6 +50,8 @@
         <img src="/img/loading.png" width="8em">
     </div>
 </div>
+
+
 
 <!-- 主要布局开始 -->
 <div class="column" id="left">
@@ -219,6 +225,7 @@
         if(body.classList.contains('dark')){
         document.body.classList.remove('dark');
         localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
         } else {
         document.body.classList.add('dark');
         localStorage.setItem('dark','1');
@@ -227,16 +234,18 @@
 
 </script>
 
+
 <!-- loading用js -->
 <script>
    window.onload = function() {
     //0.感应白天黑夜
     if (localStorage.getItem('dark') === '1') {
-        document.body.classList.add('dark');
-        }
-        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
         document.body.classList.remove('dark');
-        }
+        $('html').css("cursor","default");
+    }
 
 
     // 1. loading图案
@@ -246,7 +255,7 @@
 
     // 2. 排列tags 不写在这里到时候会冲突
           var obox=document.getElementById("all_tags");
-          var obj=obox.getElementsByTagName("a");
+          var obj=obox.getElementsByClassName("tag-link-link");
 
           //获取标签可活动区域
           var windowW = obox.getBoundingClientRect().width - 800;

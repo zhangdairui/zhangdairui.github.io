@@ -1,3 +1,8 @@
+
+@font-face {
+  font-family: Gochi;
+  src: url('../fonts/GochiHand-Regular.ttf');
+}
 /*==============================*/
 /*==============================*/
 /*==============ARCHIVE.EJS=====*/
@@ -362,7 +367,7 @@ table td:first-child {
 
 
 
-/*==============黑暗模式================*/
+/*==============手机黑暗模式================*/
 
 /*文字改色*/
 body.dark .toc li a,
@@ -401,6 +406,18 @@ body.dark .archive-part{
     #424c50 1px 1px, #424c50 -1px 1px,
    #424c50 1px -1px, #424c50 -1px -1px, #424c50 1px 1px, #424c50 -1px 1px, #424c50 1px -1px, #424c50 -1px -1px,
     #424c50 1px 1px, #424c50 -1px 1px, #424c50 1px -1px, #424c50 -1px -1px, 4px 4px 0 #F0F0F0, 0 4px 0 #424c50;
+}
+
+/*==============电脑黑暗模式================*/
+
+@media only screen and (min-width: 981px){
+  body.dark .card{
+    background-color: black;
+    color: white;
+  }
+  body.dark .post_title{
+    color: white;
+  }
 }
 
 
