@@ -121,7 +121,7 @@
     <div id="container">
 
         
-            <section class="main slideDownMin">
+            <section class="main">  
           
 
           
@@ -129,124 +129,93 @@
 <link rel="stylesheet" href="/css/post.css">
 
 
-<section class="archive slideDownMin">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
 
-    <div class="scroll-article">
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li></ol>
 
 
-    
-    
-
-    
-
-      
-
-        
+    </div>
 
 
-          
-          <div class="archive-part">
-              <span class="archive-part-item">
-                <span>2021</span>
-              </span>
-          </div>
-          
-      
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2021年07月27日</span>
-          <a class="post_title" href="/2021/07/27/剑指offer-07重建二叉树js详细题解/">剑指offer-07重建二叉树js详细题解</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
 
-          <p></p>
-        </div>
-      </div>
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>剑指offer-07重建二叉树js详细题解</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年07月27日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a></span>
+			      
+			    </div>
 
-    
+		     </div>
 
-      
+			    <!-- 正文 -->
+			    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>输入某二叉树的前序遍历和中序遍历的结果，请构建该二叉树并返回其根节点。</p>
+<p>假设输入的前序遍历和中序遍历的结果中都不含重复的数字。</p>
+<p><img src="https://i.loli.net/2021/07/27/2OibcW1KaEQ6tFe.png" alt="2OibcW1KaEQ6tFe"></p>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><pre><code>/*TreeNode定义
+ * Definition for a binary tree node.
+ * function TreeNode(val) &#123;
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * &#125;
+ */
+/**变量类型
+ * @param &#123;number[]&#125; preorder
+ * @param &#123;number[]&#125; inorder
+ * @return &#123;TreeNode&#125;
+ */
+//代码正式开始
+var buildTree = function (preorder, inorder) &#123;
+    //目的：需要通过pre和in，划分出所有的子树。意味着，每一个subTree都有pre和in，
+   //每一个subtree的root都需要通过pre和in来获得。
 
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2021年06月29日</span>
-          <a class="post_title" href="/2021/06/29/VUE学习笔记/">VUE学习笔记</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
-          </span>
+    if (preorder.length === 0) return null 
+    const cur = new TreeNode(preorder[0]) //preorder的第一个数 即为当前根
+    const index = inorder.indexOf(preorder[0]) //找到root在inorder里的index
 
-          <p><p>Vue使开发过程中无需直接操作dom元素，并实现组件化开发。此篇是初学Vue过程中的一些笔记。供自己加深印象。查缺补漏。</p></p>
-        </div>
-      </div>
+    /*在inorder里，索引是1，说明左子树有index个元素，并且inorder.slice(0, index)是left的inorder;
+    右子树有inorder.length - 1 - index个元素，并且inorder.slice(index + 1)是right的inorder。
+    这样，我们有了subtree的inorder。我们还需要subtree的preorder。
 
-    
+    无论是pre还是in，每个tree元素的个数是不变的。刚刚我们通过inorder已经得知了left和right的个数，
+    在preorder里，顺序是根-左-右，
+    因此根节点往后查index个元素就是left（即preorder.slice(1, index + 1)）；
+    同时index+1一直到末尾就是right（即inorder.slice(index + 1)）。
+    */ 
 
-      
+    //slice用来返回数组中 传入的两个参数index之间的元素。包括start，不包括end。
+    cur.left = buildTree(preorder.slice(1, index + 1), inorder.slice(0, index))
+    cur.right = buildTree(preorder.slice(index + 1), inorder.slice(index + 1))
+    return cur
+&#125;;
+</code></pre>
+			</div>
+    </div>
 
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2021年06月17日</span>
-          <a class="post_title" href="/2021/06/17/Java各种数据类型互相转换笔记/">Java各种数据类型互相转换笔记</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/java/" rel="tag">java</a>
-          </span>
+</div>
 
-          <p><p>总结一下常用的java的各种变量类型之间的转换。</p></p>
-        </div>
-      </div>
 
-    
-
-      
-
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2021年03月21日</span>
-          <a class="post_title" href="/2021/03/21/instance的过程/">将JAVAcode部署到EC2 instance的过程</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a>
-          </span>
-
-          <p><p>如何将本地的java程序打包并部署到EC2云端服务器</p></p>
-        </div>
-      </div>
-
-    
-
-      
-
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2021年01月30日</span>
-          <a class="post_title" href="/2021/01/30/java利用递归进行数组的全排列/">java利用递归进行数组的全排列</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/java/" rel="tag">java</a>
-          </span>
-
-          <p></p>
-        </div>
-      </div>
-
-    
-  </div>
-
-<div class="pageChange">
-  
-
- </div>
-  
-</section>
 
 
           </section> 
