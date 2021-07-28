@@ -121,78 +121,44 @@
     <div id="container">
 
         
-            <section class="main slideDownMin">
+            <section class="main">  
           
 
           
 
-<link rel="stylesheet" href="/css/post.css">
+
+<!-- 首页-->
+<div class="home_things">
+	<!-- 懐中電灯DIV -->
+	<div id='flashlight'></div>
+	<div class="computer">
+		<img src="img/computer.png">
+	</div>
+
+	<div class="words" >
+		<p>“Now you can know everything in the world, but the only way you're findin' out that one is by givin' it a shot.”</p>
+		<br>
+		<p style="font-style: italic;">--from Good Will Hunting</p>
+	</div>
+
+	<div class="person">
+		<img src="img/person.png">
+	</div>
+</div>
 
 
-<section class="archive slideDownMin">
 
-
-    <div class="scroll-article">
-
-
-    
-    
-
-    
-
-      
-
-        
-
-
-          
-          <div class="archive-part">
-              <span class="archive-part-item">
-                <span>2021</span>
-              </span>
-          </div>
-          
-      
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2021年07月28日</span>
-          <a class="post_title" href="/2021/07/28/斐波那契数列题解/">剑指offer-10斐波那契数列JS题解</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
-
-          <p></p>
-        </div>
-      </div>
-
-    
-
-      
-
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2021年07月27日</span>
-          <a class="post_title" href="/2021/07/27/剑指offer-07重建二叉树js详细题解/">剑指offer-07重建二叉树js详细题解</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
-
-          <p></p>
-        </div>
-      </div>
-
-    
-  </div>
-
-<div class="pageChange">
-  
-
- </div>
-  
-</section>
+<script>
+    //开启flashlight手电筒
+    $(document).ready(function(){
+   $(document).mousemove(function(event){
+      $("#flashlight").css({"top": event.pageY-400 , "left": event.pageX-400 , "z-index":-2}); 
+   }); 
+   $('html').css("cursor","url(img/dentou.png),auto");
+   
+   
+});
+</script>
 
 
           </section> 
