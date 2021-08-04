@@ -139,7 +139,7 @@
 
 <!-- 侧边目录栏 -->
 
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#BS%E7%B1%BB%E7%9A%84%E4%BA%94%E7%A7%8D%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0"><span class="toc-text">BS类的五种基本元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%85%B7%E4%BD%93%E5%85%83%E7%B4%A0%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-text">获取网页中具体元素的例子</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BS%E5%AF%B9HTML%E6%A0%87%E7%AD%BE%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">BS对HTML标签树的遍历方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">下行遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">上行遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">平行遍历</span></a></li></ol></li></ol>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#BS%E7%B1%BB%E7%9A%84%E4%BA%94%E7%A7%8D%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0"><span class="toc-text">BS类的五种基本元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%85%B7%E4%BD%93%E5%85%83%E7%B4%A0%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-text">获取网页中具体元素的例子</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BS%E5%AF%B9HTML%E6%A0%87%E7%AD%BE%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">BS对HTML标签树的遍历方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">下行遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">上行遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">平行遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="toc-text">python代码示例</span></a></li></ol></li></ol>
 
 
     </div>
@@ -209,7 +209,23 @@
 <li>tag.next_siblings: 后续所有平行节点标签</li>
 <li>tag.previous_siblings: 前序所有平行节点标签</li>
 </ol>
+<h2 id="python代码示例"><a href="#python代码示例" class="headerlink" title="python代码示例"></a>python代码示例</h2><pre><code>import requests
+import re      # 正则表达式
+from bs4 import BeautifulSoup
 
+
+# =======第一步用request库获取目标页面的text文本
+r = requests.get(&quot;http://python123.io/ws/demo.html&quot;)
+demo = r.text
+
+# =======第二步把获取的text文本煲成一锅汤
+soup = BeautifulSoup(demo, &quot;html.parser&quot;) # html.parser是解析器
+# BeautifulSoup有两个参数，第一个是html格式的信息，第二个是指定以什么方式去解析。
+# BS共用4种解析器，html.parser; lxml ; xml ; html5lib;
+
+# =======第三步把这个页面的代码print在控制台
+print(soup.prettify())
+</code></pre>
 			</div>
     </div>
 
