@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2021-07-31T16:27:06.959Z</updated>
+  <updated>2021-08-04T13:45:09.663Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BeautifulSoup库笔记</title>
+    <link href="https://anywheredoor.fun/2021/08/04/BeautifulSoup%E5%BA%93%E7%AC%94%E8%AE%B0/"/>
+    <id>https://anywheredoor.fun/2021/08/04/BeautifulSoup%E5%BA%93%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-08-04T13:35:19.000Z</published>
+    <updated>2021-08-04T13:45:09.663Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="python" scheme="https://anywheredoor.fun/tags/python/"/>
+    
+    <category term="爬虫" scheme="https://anywheredoor.fun/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>Python爬虫入门代码框架</title>
@@ -420,29 +445,6 @@
     <id>https://anywheredoor.fun/2020/08/31/css%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%89%8B%E6%9C%BA%E5%93%8D%E5%BA%94%E5%B8%83%E5%B1%80/</id>
     <published>2020-08-31T07:38:15.000Z</published>
     <updated>2020-08-31T13:46:51.358Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="blog建设记录" scheme="https://anywheredoor.fun/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>upic+SMMS+ImageOptim搭建博客图床</title>
-    <link href="https://anywheredoor.fun/2020/08/30/20200830/"/>
-    <id>https://anywheredoor.fun/2020/08/30/20200830/</id>
-    <published>2020-08-30T09:46:52.000Z</published>
-    <updated>2020-08-30T12:26:19.419Z</updated>
     
     
       

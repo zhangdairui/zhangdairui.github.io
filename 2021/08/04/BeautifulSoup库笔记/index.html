@@ -121,7 +121,7 @@
     <div id="container">
 
         
-            <section class="main slideDownMin">
+            <section class="main">  
           
 
           
@@ -129,132 +129,93 @@
 <link rel="stylesheet" href="/css/post.css">
 
 
-<section class="archive slideDownMin">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
 
-    <div class="scroll-article">
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#BS%E7%B1%BB%E7%9A%84%E4%BA%94%E7%A7%8D%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0"><span class="toc-text">BS类的五种基本元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%85%B7%E4%BD%93%E5%85%83%E7%B4%A0%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-text">获取网页中具体元素的例子</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BS%E5%AF%B9HTML%E6%A0%87%E7%AD%BE%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">BS对HTML标签树的遍历方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">下行遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">上行遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">平行遍历</span></a></li></ol></li></ol>
 
 
-    
-    
-
-    
-
-      
-
-        
+    </div>
 
 
-          
-          <div class="archive-part">
-              <span class="archive-part-item">
-                <span>2020</span>
-              </span>
-          </div>
-          
-      
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2020年08月30日</span>
-          <a class="post_title" href="/2020/08/30/20200830/">upic+SMMS+ImageOptim搭建博客图床</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
-          </span>
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
 
-          <p></p>
-        </div>
-      </div>
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>BeautifulSoup库笔记</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年08月04日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/python/" rel="tag">python</a>,<a class="tag-link-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></span>
+			      
+			    </div>
 
-    
+		     </div>
 
-      
+			    <!-- 正文 -->
+			    <p>以下笔记基于Beautiful Soup 4，soup指BS解析之后的对象，tag指网页中的标签元素。</p>
+<p>BS是一个Python库，用来从html或者xml中提取数据。</p>
+<h1 id="BS类的五种基本元素"><a href="#BS类的五种基本元素" class="headerlink" title="BS类的五种基本元素"></a>BS类的五种基本元素</h1><ol>
+<li>Tag:标签&lt; &gt; &lt;/&gt;</li>
+<li>Name:标签的名字，如&lt; p&gt;…&lt; /p&gt;的名字是p，格式<tag>.name</li>
+<li>Attributes:标签的属性，格式<tag>.attrs</li>
+<li>NavigableString:标签内非属性的字符串，格式<tag>.string</li>
+<li>Comment:标签内字符串的注释部分，一种特殊的comment类型</li>
+</ol>
+<h1 id="获取网页中具体元素的例子"><a href="#获取网页中具体元素的例子" class="headerlink" title="获取网页中具体元素的例子"></a>获取网页中具体元素的例子</h1><ol>
+<li><p>soup.title ; soup.head ; soup.a(只获取第一个a标签)</p>
+</li>
+<li><p>tag.attrs 获取所有属性; tag.attrs[‘class’] 获取class属性</p>
+</li>
+<li><p>tag.string 获取该标签里的字符串</p>
+</li>
+<li><p>soup.find_all(name, attrs, recursive, string, **kwargs) 返回一个列表类型，存储查找的结果</p>
+<ul>
+<li>name是指标签的name，可以查多个name，传入数组就行了比如[‘a’,’span’]</li>
+<li>各个参数也可以用正则表达式 如soup.find_all(string = re.compile(“python”))查找带有python的字符串</li>
+<li>一些例子：soup.find_all(string = “Basic Python”)</li>
+</ul>
+</li>
+</ol>
+<h1 id="BS对HTML标签树的遍历方式"><a href="#BS对HTML标签树的遍历方式" class="headerlink" title="BS对HTML标签树的遍历方式"></a>BS对HTML标签树的遍历方式</h1><h2 id="下行遍历"><a href="#下行遍历" class="headerlink" title="下行遍历"></a>下行遍历</h2><ol>
+<li>tag.contents: 子节点的列表，将所有tag的子节点存入列表</li>
+<li>tag.children: 子节点的迭代类型，与contents相似，用于循环遍历子节点</li>
+<li>tag.descendants: 子孙节点的迭代类型，包含所有子孙节点，用于循环遍历</li>
+</ol>
+<h2 id="上行遍历"><a href="#上行遍历" class="headerlink" title="上行遍历"></a>上行遍历</h2><ol>
+<li>tag.parent: 节点的父亲标签</li>
+<li>tag.parents: 节点先辈标签类型，用于循环遍历先辈节点</li>
+</ol>
+<h2 id="平行遍历"><a href="#平行遍历" class="headerlink" title="平行遍历"></a>平行遍历</h2><ol>
+<li>tag.next_sibling: 下一个平行节点标签</li>
+<li>tag.previous_sibling: 上一个平行节点标签</li>
+<li>tag.next_siblings: 后续所有平行节点标签</li>
+<li>tag.previous_siblings: 前序所有平行节点标签</li>
+</ol>
 
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2020年08月29日</span>
-          <a class="post_title" href="/2020/08/29/3/">博客开发过程中遇到的问题和解决</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
-          </span>
+			</div>
+    </div>
 
-          <p></p>
-        </div>
-      </div>
-
-    
-
-      
-
-        
-
-
-          
-          <div class="archive-part">
-              <span class="archive-part-item">
-                <span>2019</span>
-              </span>
-          </div>
-          
-      
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2019年10月05日</span>
-          <a class="post_title" href="/2019/10/05/2/">blog建设计划</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
-          </span>
-
-          <p></p>
-        </div>
-      </div>
-
-    
-
-      
-
-        
+</div>
 
 
-          
-          <div class="archive-part">
-              <span class="archive-part-item">
-                <span>2018</span>
-              </span>
-          </div>
-          
-      
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2018年11月06日</span>
-          <a class="post_title" href="/2018/11/06/1/">blog报道</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/blog%E5%BB%BA%E8%AE%BE%E8%AE%B0%E5%BD%95/" rel="tag">blog建设记录</a>
-          </span>
-
-          <p></p>
-        </div>
-      </div>
-
-    
-  </div>
-
-<div class="pageChange">
-  
-
-  <section id="nav-wrapper">
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&lt;</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
-  </section>
-
- </div>
-  
-</section>
 
 
           </section> 
