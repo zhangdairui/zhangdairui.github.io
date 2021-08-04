@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84"><span class="toc-text">创建数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE"><span class="toc-text">数组查找</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8F%92%E5%85%A5"><span class="toc-text">数组插入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4"><span class="toc-text">数组删除</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><span class="toc-text">数组排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%88%AA%E5%8F%96%EF%BC%8C%E5%90%88%E5%B9%B6%EF%BC%8C%E5%A4%8D%E5%88%B6"><span class="toc-text">数组截取，合并，复制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array%E5%AF%B9%E8%B1%A1%E5%8F%AF%E7%94%A8%E6%96%B9%E6%B3%95%E4%B8%80%E8%A7%88"><span class="toc-text">Array对象可用方法一览</span></a></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>JS中数组相关</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年07月28日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/js/" rel="tag">js</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <h1 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h1><pre><code>var arr = [ ]; //创建一个空数组
+
+var arr = new Array();　//创建一个空数组
+
+var arr = new Array([size]);　//创建一个指定长度的数组。后面可以变化。
+
+var arr = new Array(element0, element1, ..., elementn);　//创建一个数组并赋值</code></pre><h1 id="数组查找"><a href="#数组查找" class="headerlink" title="数组查找"></a>数组查找</h1><p><code>arr.indexOf(&quot;apple&quot;);//返回apple元素所在的索引</code> </p>
+<h1 id="数组插入"><a href="#数组插入" class="headerlink" title="数组插入"></a>数组插入</h1><pre><code>arr.push(&quot;apple&quot;);//向末尾添加apple元素（返回新的长度）此方法改变数组的长度
+
+arr.unshift(&quot;apple&quot;);//向开头添加apple元素（返回新的长度）此方法改变数组的长度</code></pre><h1 id="数组删除"><a href="#数组删除" class="headerlink" title="数组删除"></a>数组删除</h1><pre><code>arr.pop();//删掉数组末尾元素（返回该元素）此方法改变数组的长度
+
+arr.shift();//删掉数组第一个元素（返回该元素）此方法改变数组的长度</code></pre><h1 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h1><pre><code>//-------字母排序
+arr.sort();//升序排序。
+
+//-------数字排序
+var points = [40,100,1,5,25,10];
+points.sort(function(a,b)&#123;return a-b&#125;); //升序排列
+points.sort(function(a,b)&#123;return b-a&#125;); //降序排列
+
+//-------倒序
+arr.reverse(); //返回数组地址</code></pre><h1 id="数组截取，合并，复制"><a href="#数组截取，合并，复制" class="headerlink" title="数组截取，合并，复制"></a>数组截取，合并，复制</h1><pre><code>//-------截取
+arr.slice(start, end);
+/*返回一个新的数组，包含从 start (包含) 到 end（不包含）的 arr中的元素。
+start参数必需。规定从何处开始选取。end非必须，如果不指定默认到最后。
+如果参数是负数，那么它表示倒着查。也就是说，-1 指最后一个元素，-2 指倒数第二个元素…。
+*/
+
+//-------合并
+arr.concat(arrayX,arrayX,......,arrayX);//arrayX参数必须，可以是单个元素的值，也可以是数组。在arr尾部添加，返回新数组。
+
+//-------复制
+arr.slice(0); 
+
+arr.concat(); </code></pre><h1 id="Array对象可用方法一览"><a href="#Array对象可用方法一览" class="headerlink" title="Array对象可用方法一览"></a>Array对象可用方法一览</h1><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">entries()</td>
+<td align="left">返回数组的可迭代对象。</td>
+</tr>
+<tr>
+<td align="left">concat()</td>
+<td align="left">连接两个或更多的数组，并返回结果。</td>
+</tr>
+<tr>
+<td align="left">copyWithin()</td>
+<td align="left">从数组的指定位置拷贝元素到数组的另一个指定位置中。</td>
+</tr>
+<tr>
+<td align="left">every()</td>
+<td align="left">检测数值元素的每个元素是否都符合条件。</td>
+</tr>
+<tr>
+<td align="left">fill()</td>
+<td align="left">使用一个固定值来填充数组。</td>
+</tr>
+<tr>
+<td align="left">filter()</td>
+<td align="left">检测数值元素，并返回符合条件所有元素的数组。</td>
+</tr>
+<tr>
+<td align="left">find()</td>
+<td align="left">返回符合传入测试（函数）条件的数组元素。</td>
+</tr>
+<tr>
+<td align="left">findIndex()</td>
+<td align="left">返回符合传入测试（函数）条件的数组元素索引。</td>
+</tr>
+<tr>
+<td align="left">forEach()</td>
+<td align="left">数组每个元素都执行一次回调函数。</td>
+</tr>
+<tr>
+<td align="left">from()</td>
+<td align="left">通过给定的对象中创建一个数组。</td>
+</tr>
+<tr>
+<td align="left">includes()</td>
+<td align="left">判断一个数组是否包含一个指定的值。</td>
+</tr>
+<tr>
+<td align="left">indexOf()</td>
+<td align="left">搜索数组中的元素，并返回它所在的位置。</td>
+</tr>
+<tr>
+<td align="left">isArray()</td>
+<td align="left">判断对象是否为数组。</td>
+</tr>
+<tr>
+<td align="left">join()</td>
+<td align="left">把数组的所有元素放入一个字符串。</td>
+</tr>
+<tr>
+<td align="left">keys()</td>
+<td align="left">返回数组的可迭代对象，包含原始数组的键(key)。</td>
+</tr>
+<tr>
+<td align="left">lastIndexOf()</td>
+<td align="left">搜索数组中的元素，并返回它最后出现的位置。</td>
+</tr>
+<tr>
+<td align="left">map()</td>
+<td align="left">通过指定函数处理数组的每个元素，并返回处理后的数组。</td>
+</tr>
+<tr>
+<td align="left">pop()</td>
+<td align="left">删除数组的最后一个元素并返回删除的元素。</td>
+</tr>
+<tr>
+<td align="left">push()</td>
+<td align="left">向数组的末尾添加一个或更多元素，并返回新的长度。</td>
+</tr>
+<tr>
+<td align="left">reduce()</td>
+<td align="left">将数组元素计算为一个值（从左到右）。</td>
+</tr>
+<tr>
+<td align="left">reduceRight()</td>
+<td align="left">将数组元素计算为一个值（从右到左）。</td>
+</tr>
+<tr>
+<td align="left">reverse()</td>
+<td align="left">反转数组的元素顺序。</td>
+</tr>
+<tr>
+<td align="left">shift()</td>
+<td align="left">删除并返回数组的第一个元素。</td>
+</tr>
+<tr>
+<td align="left">slice()</td>
+<td align="left">选取数组的一部分，并返回一个新数组。</td>
+</tr>
+<tr>
+<td align="left">some()</td>
+<td align="left">检测数组元素中是否有元素符合指定条件。</td>
+</tr>
+<tr>
+<td align="left">sort()</td>
+<td align="left">对数组的元素进行排序。</td>
+</tr>
+<tr>
+<td align="left">splice()</td>
+<td align="left">从数组中添加或删除元素。</td>
+</tr>
+<tr>
+<td align="left">toString()</td>
+<td align="left">把数组转换为字符串，并返回结果。</td>
+</tr>
+<tr>
+<td align="left">unshift()</td>
+<td align="left">向数组的开头添加一个或更多元素，并返回新的长度。</td>
+</tr>
+<tr>
+<td align="left">valueOf()</td>
+<td align="left">返回数组对象的原始值。</td>
+</tr>
+</tbody></table>
+
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>
