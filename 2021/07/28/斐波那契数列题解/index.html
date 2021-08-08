@@ -139,7 +139,7 @@
 
 <!-- 侧边目录栏 -->
 
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#No-10"><span class="toc-text">No.10</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#No-11-%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6"><span class="toc-text">No.11 青蛙跳台阶</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="toc-text">代码</span></a></li></ol></li></ol>
 
 
     </div>
@@ -155,7 +155,7 @@
 			<div class="post_info">
 			    
 				<div class="post_title" id="postTitle">
-			      <span>剑指offer-10斐波那契数列JS题解</span>
+			      <span>剑指offer-10&11 斐波那契数列JS题解</span>
 			    </div>
 			    
 			    <div class="post_auther_date_tag">
@@ -170,8 +170,8 @@
 		     </div>
 
 			    <!-- 正文 -->
-			    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://i.loli.net/2021/07/28/yFgB7VXHCZ31w4s.png" alt="yFgB7VXHCZ31w4s"></p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>如果纯递归会超时（递归太深栈溢出）。<br>就直接准备一个数组记录下每一次计算完fibResult的结果。</p>
+			    <h1 id="No-10"><a href="#No-10" class="headerlink" title="No.10"></a>No.10</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><img src="https://i.loli.net/2021/07/28/yFgB7VXHCZ31w4s.png" alt="yFgB7VXHCZ31w4s"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>如果纯递归会超时（递归太深栈溢出）。<br>就直接准备一个数组记录下每一次计算完fibResult的结果。</p>
 <pre><code>/**
  * @param &#123;number&#125; n
  * @return &#123;number&#125;
@@ -201,7 +201,35 @@ var fib = function(n) &#123;
 作者：demigodliu
 链接：https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/solution/dong-tai-gui-hua-fei-bo-na-qi-shu-lie-by-fpca/
 来源：力扣（LeetCode）
-</code></pre>
+</code></pre><h1 id="No-11-青蛙跳台阶"><a href="#No-11-青蛙跳台阶" class="headerlink" title="No.11 青蛙跳台阶"></a>No.11 青蛙跳台阶</h1><h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><pre><code>/**
+ * @param &#123;number&#125; n
+ * @return &#123;number&#125;
+ */
+var numWays = function(n) &#123;
+/*
+2个台阶，2种走法。
+3个台阶，3种走法。（1+2种方法，刚好是1个台阶的方法数+2个台阶的方法数）
+4个台阶，5种走法。（2+3种方法，刚好是2个台阶和3个台阶的方法数之和）
+5个台阶，8种走法。（3+5种走法，刚好是3个台阶和4个台阶的方法数之和）
+……以此类推。
+之所以会产生这样的斐波那契数列，原因是：
+比如说现在有10级台阶，
+那么青蛙要么从第8级蹦2阶到位，要么从第9级蹦1阶，就这两种选择。
+所以第10级台阶的走法数量 = 第8级的走法数量 + 第9级的走法数量
+
+*/
+var record  = new Array(n);
+record[0] = 1;
+record[1] = 1;
+record[2] = 2;
+if(n&gt;2)&#123;
+    for(var i = 3; i&lt;n+1; i++)&#123;
+        record[i] = (record[i-1] + record[i-2]) % 1000000007 ;
+    &#125;
+&#125;
+
+return record[n];
+&#125;;</code></pre>
 			</div>
     </div>
 

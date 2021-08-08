@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-%E6%98%8E%E7%A1%AE%E9%9C%80%E8%A6%81%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-text">第一步 明确需要的数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5-%E5%AF%BB%E6%89%BE%E5%90%88%E9%80%82%E7%9A%84%E7%9B%AE%E6%A0%87%E7%BD%91%E7%AB%99"><span class="toc-text">第二步 寻找合适的目标网站</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="toc-text">网站介绍：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%AB%99url"><span class="toc-text">网站url</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%97%E6%AD%8C%E9%A1%B5%E9%9D%A2%E5%88%86%E6%9E%90"><span class="toc-text">诗歌页面分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5-%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81"><span class="toc-text">第三步 编写代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5-%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="toc-text">第四步 测试代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5-%E6%AD%A3%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F"><span class="toc-text">第五步 正式运行爬虫程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5-%E7%BB%93%E6%9D%9F"><span class="toc-text">第六步 结束</span></a></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>Python爬取现代诗4000+</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年08月08日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/python/" rel="tag">python</a>,<a class="tag-link-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <p>记录Request + BeautifulSoup爬取中国现代诗歌大全网站上的4000+现代诗的过程。最终将结果数据输出为json文件。</p>
+<a id="more"></a>
+
+<p>最近想做一个和现代诗有关的小项目，第一步就是要考虑数据的问题。经过搜索，发现网上已经有大神开源了<a target="_blank" rel="noopener" href="https://github.com/qyxtim/modern-poetry">现代诗数据库</a>。但是我没有借用，还是选择自己去爬。主要是由于，难得有想做的东西，自己从头做才能学到东西。更何况亲手爬的数据才可以为所欲为。</p>
+<p>在做这件事情之前，我在中国大学MOOC听了<a target="_blank" rel="noopener" href="https://www.icourse163.org/course/BIT-1001870001">北京理工大学嵩天老师的课程</a>。也顺便学了下Python。所以这次也算是学习过后给自己交的作业。</p>
+<p>然后一个派桑菜就这样出发了。</p>
+<h1 id="第一步-明确需要的数据"><a href="#第一步-明确需要的数据" class="headerlink" title="第一步 明确需要的数据"></a>第一步 明确需要的数据</h1><p>我的需求很简单，就是想要诗人姓名，诗歌标题，诗歌内容。也不需要id什么的，所以设想的数据格式就是这样的：</p>
+<pre><code>[
+&#123;
+    poetName:
+    poemTitle:
+    poemText:[
+    “第一句”,”第二句”….
+    ]
+&#125;,
+&#123;
+    …….
+&#125;,
+….
+]</code></pre><h1 id="第二步-寻找合适的目标网站"><a href="#第二步-寻找合适的目标网站" class="headerlink" title="第二步 寻找合适的目标网站"></a>第二步 寻找合适的目标网站</h1><h2 id="网站介绍："><a href="#网站介绍：" class="headerlink" title="网站介绍："></a>网站介绍：</h2><p>我找到的网站是：<br><a target="_blank" rel="noopener" href="http://www.shigeku.com/xlib/xd/sgdq/index.htm#ppk">中国现代诗歌大全</a></p>
+<p>这个网站收藏有500多位诗人的5174首现当代诗。并且是一个公益站点，网站内容只要是非营利非商业就可以任意转载，无需授权。虽然网站曾经应该是提供过源码或者数据库的下载（因为有这个link），但是现在已经是404了。这正好让爬虫有了用武之地。<br><img src="https://i.loli.net/2021/08/09/ziZB6QHGMXbfVsx.png" alt="ziZB6QHGMXbfVsx"></p>
+<h2 id="网站url"><a href="#网站url" class="headerlink" title="网站url"></a>网站url</h2><p>网站中对诗歌的展示是采用每位诗人一个网页的形式。而且网页的url用诗人姓名的拼音命名，如诗人阿斐的url就是：</p>
+<p><a target="_blank" rel="noopener" href="http://www.shigeku.com/xlib/xd/sgdq/**afei**.htm">http://www.shigeku.com/xlib/xd/sgdq/**afei**.htm</a></p>
+<p>再比如林徽因的url就是：</p>
+<p><a target="_blank" rel="noopener" href="http://www.shigeku.com/xlib/xd/sgdq/**linhuiyin**.htm">http://www.shigeku.com/xlib/xd/sgdq/**linhuiyin**.htm</a></p>
+<p>这就帮了大忙了，这样就可以只是通过拼接url地址去遍历网页。<br>只要暴力从首页复制所有诗人的姓名，随便用什么工具一键转换成拼音，<br>再用word里的查找替换把分割的逗号左右两端加上双引号。<br>这样就拥有了一个供拼接url使用的数组。<br><img src="https://i.loli.net/2021/08/09/m5hlIQJCq3UcLjw.png" alt="m5hlIQJCq3UcLjw"></p>
+<p>但是这样做也会有漏洞，就是有时候转换拼音的工具转换出来的，并不一定就是实际url中使用的。如遇见“柏”这种字，工具会转换成bai，而实际url中使用的是bo。</p>
+<p>不过这个也好解决，后面我就单独写了个程序，实际遍历一下访问一下url，遇见报错就手动改掉就可以了。毕竟工作量也不大，也就改了几个人的拼音。</p>
+<h2 id="诗歌页面分析"><a href="#诗歌页面分析" class="headerlink" title="诗歌页面分析"></a>诗歌页面分析</h2><p>诗歌的展示是这样的：<br><img src="https://i.loli.net/2021/08/09/EWrathGZwsJCfui.png" alt="EWrathGZwsJCfui"></p>
+<p>可以检查一下源码：<br><img src="https://i.loli.net/2021/08/09/oTGwU2zV5uEdfHs.png" alt="oTGwU2zV5uEdfHs"></p>
+<p>这个网站的布局非常简单，我发现重要标签（诗名、诗人名字）的align属性都是center。这样就可以通过指定这个特征筛选出需要的p标签。<br>而具体每一句诗歌内容，则可以通过br标签去定位。</p>
+<h1 id="第三步-编写代码"><a href="#第三步-编写代码" class="headerlink" title="第三步 编写代码"></a>第三步 编写代码</h1><p>写了两个函数，第一个获取text文本属于通用的框架了，第二个是解析爬来的网页内容，详细的获取自己需要的信息。代码注释很详细所以直接贴：</p>
+<pre><code># =======函数功能：用request库获取目标页面的text文本
+def getHTMLText(url):
+    try:
+        kv = &#123;&#39;user-agent&#39;:&#39;Mozilla/5.0&#39;&#125;  
+        r = requests.get(url, timeout=30) 
+        r.raise_for_status()  # 如果返回值不是200触发HTTP异常
+        r.encoding = r.apparent_encoding  # 改变爬取的网页编码，使得print结果不是乱码
+        return r.text  # 获取网页的所有信息
+    except:
+        return &quot;Error!&quot;
+
+# =======函数功能：解析并将爬来的网页文本内容储存成json
+# 要获得指定网页中作者，诗名，诗的内容
+def fillPoemList(htmlTxt):
+    soup = BeautifulSoup(htmlTxt, &quot;html.parser&quot;)
+    poemResult = [] #用来储存本网页爬取结果的数组
+    poemList = soup.find_all(&#39;p&#39;,align=&quot;center&quot;)
+
+    #获取作者（正则表达式把开头的诗选剔除掉）
+    poetName = re.sub(r&#39;诗选&#39;, &quot;&quot;, poemList[0].text)
+
+    #获取每首诗的内容并存进数组
+    a = 1 #list中的第0个元素是网页标题诗人介绍，并不需要所以从1开始
+    while(a &lt; len(poemList)):
+        nowPoem = poemList[a]
+        poemContent = [] #用来装每首诗的内容
+        #每首诗的标题
+        poemTitle = re.sub(r&#39;\s&#39;,&quot;&quot;,nowPoem.text)#剔除多余的空白字符
+
+        #每首诗下面的诗歌内容,需要循环按句子存,以br标签后面的内容为一句话
+        for sentencesTag in nowPoem.next_sibling.next_element.find_all(&#39;br&#39;):
+
+            sentence  =  sentencesTag.next_sibling
+            if sentence is None:
+                pass
+            else: 
+                poemContent.append(re.sub(r&#39;\s&#39;,&quot;&quot;,sentence)) #剔除多余的空白字符
+        poemResult.append(&#123;&#39;poetName&#39;: poetName, &#39;poemTitle&#39;: poemTitle, &#39;poemContent&#39;: poemContent&#125;)
+        a += 1
+
+    return poemResult</code></pre><p>一开始犯了个小错误，在获取每一句诗的时候，用了br标签的previous_sibling.就会导致每首诗都少爬了最后一句。我竟然都没发现，有的现代诗真是太抽象了啊！少一句真的都发现不了。后来改成next就好了。</p>
+<h1 id="第四步-测试代码"><a href="#第四步-测试代码" class="headerlink" title="第四步 测试代码"></a>第四步 测试代码</h1><p>虽然写好了程序，但是不想中途各种卡死处理报错。所以还是要先测试一下。包括上文提到的排查错误的url，以及一些不适用于已定义函数规则的网页。<br>我测试的时候直接把爬取内容print出来看，总之最后晒出来大概五六个人吧，没办法按照已经写好的网页去爬。要么就是网页标签搞特殊，要么就是原网页本来就是乱码。本来就是乱码的页面就没办法了，直接T出url名单，那些标签搞特殊的人，可以踢掉之后把他们的名字记录好，后面可以手动再为他们定制爬虫规则等等。</p>
+<h1 id="第五步-正式运行爬虫程序"><a href="#第五步-正式运行爬虫程序" class="headerlink" title="第五步 正式运行爬虫程序"></a>第五步 正式运行爬虫程序</h1><p>然后写个main函数，再写两行输出成json的代码就可以了。<br>build一下等几分钟就爬好了。文件夹中出现了10个json文件。<br><img src="https://i.loli.net/2021/08/09/4NjFICgQDUlXZhH.png" alt="4NjFICgQDUlXZhH"></p>
+<p>最后逐一打开json文件，prettify一下代码。拖动滚动条大概浏览一下有没有严重的乱码。这一块我做的不太好，写代码的时候没有注意到一些细节：</p>
+<ol>
+<li><p>有一些诗歌末尾会有一两个乱码。只要删掉就行的那种。应该在写代码的时候就把它们筛除掉。但是我是最后才发现，也懒得再爬一次。就人工逐一浏览一下这10个文件，看到的就手动删掉了。边听歌边删，还能顺便读读诗，也蛮开心的。</p>
+</li>
+<li><p>还有一些诗人喜欢写组诗，组诗的标题会有一个单独的p标签，也会被我的程序识别为一个诗歌，这样的话存下来在json中就是一个空白对象。遇到这种也手动删除。</p>
+</li>
+<li><p>有的诗歌名称下面还有诗歌的简短的介绍，也会被我的程序识别为标题。就会导致存进去的标题很长，这个不符合我后面项目的需求，只能手动删。</p>
+</li>
+</ol>
+<p>还好在prettify之后，乱码、空白、过长的标题都是相对来说比较容易看到的。只是一些人工的问题了。大概半个小时搞定。</p>
+<h1 id="第六步-结束"><a href="#第六步-结束" class="headerlink" title="第六步 结束"></a>第六步 结束</h1><p>然后load一下这10个json文件，计算一下最终爬了来了多少诗。发现是4286首。</p>
+<p><img src="https://i.loli.net/2021/08/09/csqBCOtDpj7L81X.png" alt="csqBCOtDpj7L81X"></p>
+<p>四千首已经足够满足我做项目的需求啦。</p>
+<p>开心！</p>
+
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>
