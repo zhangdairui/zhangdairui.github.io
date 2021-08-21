@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2021-08-08T17:27:26.666Z</updated>
+  <updated>2021-08-21T19:09:11.429Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS宏任务微任务、Promise链条then例题</title>
+    <link href="https://anywheredoor.fun/2021/08/22/JS%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1%E3%80%81Promise%E9%93%BE%E6%9D%A1then%E4%BE%8B%E9%A2%98/"/>
+    <id>https://anywheredoor.fun/2021/08/22/JS%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1%E3%80%81Promise%E9%93%BE%E6%9D%A1then%E4%BE%8B%E9%A2%98/</id>
+    <published>2021-08-21T18:21:39.000Z</published>
+    <updated>2021-08-21T19:09:11.429Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="js" scheme="https://anywheredoor.fun/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>Python爬取现代诗4000+</title>
@@ -418,29 +441,6 @@
     <id>https://anywheredoor.fun/2020/09/03/MAC%E4%B8%8B%E7%94%A8nodemon%E5%AE%9E%E7%8E%B0express%E7%BD%91%E7%AB%99%E7%83%AD%E6%9B%B4%E6%96%B0/</id>
     <published>2020-09-03T15:10:58.000Z</published>
     <updated>2020-12-01T07:20:52.469Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MAC搭建react-native安卓开发环境问题与解决</title>
-    <link href="https://anywheredoor.fun/2020/09/03/MAC%E6%90%AD%E5%BB%BA%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/"/>
-    <id>https://anywheredoor.fun/2020/09/03/MAC%E6%90%AD%E5%BB%BA%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3/</id>
-    <published>2020-09-03T15:09:37.000Z</published>
-    <updated>2020-09-03T15:33:21.924Z</updated>
     
     
       

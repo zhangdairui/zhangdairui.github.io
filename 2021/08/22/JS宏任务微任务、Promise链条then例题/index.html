@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-text">注意点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98"><span class="toc-text">解题</span></a></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>JS宏任务微任务、Promise链条then例题</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年08月22日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/js/" rel="tag">js</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>网上的一道面试题，涉及到event loop、宏任务微任务和promise的链条then。要求写出控制台输出的结果。题目代码如下：</p>
+<pre><code>new Promise(resolve =&gt; &#123;                  // 1
+  setTimeout(()=&gt;&#123;                        // 2
+      console.log(666);                   // 3
+      new Promise(resolve =&gt; &#123;            // 4
+        resolve();                        // 5      
+      &#125;)                                  // 6       
+      .then(() =&gt; &#123;console.log(777);&#125;)    // 7
+  &#125;)                                      // 8       
+  resolve();                              // 9
+ &#125;)                                       // 10
+ .then(() =&gt; &#123;                            // 11
+         new Promise(resolve =&gt; &#123;         // 12
+           resolve();                     // 13
+         &#125;)                               // 14
+         .then(() =&gt; &#123;console.log(111);&#125;) // 15
+         .then(() =&gt; &#123;console.log(222);&#125;);// 16
+ &#125;)                                       // 17
+ .then(() =&gt; &#123;                            // 18
+         new Promise((resolve) =&gt; &#123;       // 19
+           resolve()                      // 20
+         &#125;)                               // 21
+        .then(() =&gt; &#123;                     // 22
+             new Promise((resolve) =&gt; &#123;   // 23
+               resolve()                  // 24
+             &#125;)                           // 25
+            .then(() =&gt; &#123;console.log(444)&#125;)// 26
+         &#125;)                                // 27
+        .then(() =&gt; &#123;                      // 28
+           console.log(555);               // 29
+        &#125;)                                 // 30
+&#125;)                                         // 31
+.then(() =&gt; &#123;                              // 32
+  console.log(333);                        // 33
+&#125;)                                         // 34</code></pre><h1 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h1><p>做这种题的时候，有几个注意点：</p>
+<ol>
+<li>事件循环到底是怎么循环的：是在每次宏任务结束之后再上微任务。</li>
+<li>promise内部普通的函数是同步的，then后面的才是异步的微任务。</li>
+<li>链条then需要前面的then结束了才能跑后面的</li>
+<li>每次跑微任务的时候，都逐行向下运行就可以。直到没有什么可以做的事，就去队列里拿新的微任务。</li>
+</ol>
+<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><p>下面开始暴力逐行盘清楚这个代码到底是怎么跑的：</p>
+<ol>
+<li><p>开启script宏任务一号。</p>
+</li>
+<li><p>发现setTimeout，丢到浏览器计时器线程去。它留下的回调666丢到宏任务队列。作为宏任务2号。接下来我们要很久很久见不到他了，因为必须把宏任务1号以及宏任务1号的微任务全都跑完才能见他。丢出去之后代码跑到了第9行，然后第11行。</p>
+</li>
+<li><p>第11行发现了then！丢到微任务去。他是微任务1号。此时微任务队列：</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">微任务1号</th>
+<th align="left">微任务2号</th>
+<th align="left">……</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">11then</td>
+<td align="left">空</td>
+<td align="left">……</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li><p>接下来宏任务1号已经没有可以跑的了（后面的then都得等着11行的then结束再说。）所以我们开始跑微任务。</p>
+</li>
+<li><p>微任务队列里排头是11行的then。往下走发现15行then。丢到微任务队列，微任务2号。</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">微任务1号</th>
+<th align="left">微任务2号</th>
+<th align="left">……</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">11then（now）</td>
+<td align="left">15then</td>
+<td align="left">……</td>
+</tr>
+</tbody></table>
+<p>/*其实现在11then正在被执行，所以不在队列里，这里为了好理解，表示“还没轮到微任务2号”，所以写上。</p>
+<ol start="6">
+<li><p>因为15行被丢掉了，16行暂时不能运行。</p>
+</li>
+<li><p>可以去18行的then了。</p>
+</li>
+<li><p>此处容易出错。18行是个then但是不能运行，一定要记得给他丢到微任务队列里，微任务3号。</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">微任务1号</th>
+<th align="left">微任务2号</th>
+<th align="left">微任务3号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">11then（now）</td>
+<td align="left">15then</td>
+<td align="left">18then</td>
+</tr>
+</tbody></table>
+<ol start="9">
+<li><p>那现在又没事做了，因为都丢掉了。也不能往下走。所以这个微任务1号终于结束了。我们去微任务队列里找下一个微任务2号——15行的then</p>
+</li>
+<li><p>线程的脚脚到了15行，【输出了111】！终于有输出了！</p>
+</li>
+<li><p>然后接着往下跑，16行，又是一个then，放入微队列，微任务4号。</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">微任务2号</th>
+<th align="left">微任务3号</th>
+<th align="left">微任务4号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">15then（now）</td>
+<td align="left">18then</td>
+<td align="left">16then</td>
+</tr>
+</tbody></table>
+<ol start="12">
+<li>然后接下来执行微任务3号-18行的then。往下走碰到22then，丢入微任务，微任务5号。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left"><del>微任务2号</del></th>
+<th align="left">微任务3号</th>
+<th align="left">微任务4号</th>
+<th align="left">微任务5号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><del>15then</del></td>
+<td align="left">18then (now)</td>
+<td align="left">16then</td>
+<td align="left">22then</td>
+</tr>
+</tbody></table>
+<ol start="13">
+<li>现在前两个大then（11then和18then）都被碰过了，终于可以执行32行的then了。可是还是不能执行，因为这是一个微任务，要丢到微任务队列里。微任务6号。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left"><del>微任务2号</del></th>
+<th align="left">微任务3号</th>
+<th align="left">微任务4号</th>
+<th align="left">微任务5号</th>
+<th align="left">微任务6号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><del>15then</del></td>
+<td align="left">18then (now)</td>
+<td align="left">16then</td>
+<td align="left">22then</td>
+<td align="left">32then</td>
+</tr>
+</tbody></table>
+<ol start="14">
+<li>好 现在都结束了，开始拿新的微任务也就是微任务4号。跳到16行，终于！【输出222】！</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left"><del>微任务2号</del></th>
+<th align="left"><del>微任务3号</del></th>
+<th align="left">微任务4号</th>
+<th align="left">微任务5号</th>
+<th align="left">微任务6号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><del>15then</del></td>
+<td align="left"><del>18then</del></td>
+<td align="left">16then(now)</td>
+<td align="left">22then</td>
+<td align="left">32then</td>
+</tr>
+</tbody></table>
+<ol start="15">
+<li>执行下一个微任务-微任务5号 22行的then、遇见了26行的then，丢入微任务7号。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">微任务5号</th>
+<th align="left">微任务6号</th>
+<th align="left">微任务7号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">22then(now)</td>
+<td align="left">32then</td>
+<td align="left">26then</td>
+</tr>
+</tbody></table>
+<ol start="16">
+<li>下一个微任务-微任务6号是32行的then，执行【输出333】</li>
+</ol>
+<ol start="17">
+<li><p>下一个微任务7号，【输出444】</p>
+</li>
+<li><p>往下走碰到28then，丢入微任务8号。但是因为后面也没啥东西了，所以执行8号，【输出555】</p>
+</li>
+<li><p>终于执行完了所有所有的宏任务1号以及旗下的微任务。终于可以执行宏任务2号，【输出666】</p>
+</li>
+<li><p>宏任务2号自带一个微任务也就是第7行的777，执行掉，【输出777】</p>
+</li>
+<li><p>最终输出顺序：111-222-333-444-555-666-777</p>
+</li>
+</ol>
+
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>
