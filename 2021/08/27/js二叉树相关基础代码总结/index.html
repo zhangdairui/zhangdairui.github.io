@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E5%92%8C%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-text">定义：满二叉树和完全二叉树</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E3%80%81%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E3%80%81%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91%E3%80%81BST"><span class="toc-text">定义：二叉搜索树、二叉排序树、二叉查找树、BST</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-text">定义：平衡二叉树</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%82%A8%E5%AD%98%E7%BB%93%E6%9E%84"><span class="toc-text">代码：二叉树的储存结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%EF%BC%9ABST%E6%A1%86%E6%9E%B6"><span class="toc-text">代码：BST框架</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E3%80%81%E4%B8%AD%E3%80%81%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">前、中、后序遍历</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%EF%BC%88DFS-Depth-First-Traversal%EF%BC%89"><span class="toc-text">广度优先（DFS - Depth First Traversal）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%EF%BC%88BFS%EF%BC%89"><span class="toc-text">深度优先（BFS）</span></a></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>js二叉树相关基础代码总结</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年08月27日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/js/" rel="tag">js</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <p>总结一下二叉树相关的js基本操作。</p>
+<a id="more"></a>
+
+<h1 id="定义：满二叉树和完全二叉树"><a href="#定义：满二叉树和完全二叉树" class="headerlink" title="定义：满二叉树和完全二叉树"></a>定义：满二叉树和完全二叉树</h1><p><img src="https://i.loli.net/2021/08/27/fmldgHF4eRzB1ar.png" alt="fmldgHF4eRzB1ar"><br>（完全二叉树之所以为完全二叉树是因为他完全的尽力了。【差一点就成为满二叉树】。所谓的差一点是指：除了最后一排以外都是满二叉树，并且最后一排的叶子节点从左一开始数，都是连续的，没有中断。）</p>
+<h1 id="定义：二叉搜索树、二叉排序树、二叉查找树、BST"><a href="#定义：二叉搜索树、二叉排序树、二叉查找树、BST" class="headerlink" title="定义：二叉搜索树、二叉排序树、二叉查找树、BST"></a>定义：二叉搜索树、二叉排序树、二叉查找树、BST</h1><p>他们都是一个东西。就是说那种左子树比根小，右子树比根大的树。很多网上的代码都分不清BST和普通二叉树。-_-用BST的意义就在于节省查找时间（O(logn)）。毕竟分了左右大小，肯定会对查找有帮助。大了往左走，小了往右走。</p>
+<p>BST的中序遍历以非降序的顺序访问这棵树里的元素。</p>
+<h1 id="定义：平衡二叉树"><a href="#定义：平衡二叉树" class="headerlink" title="定义：平衡二叉树"></a>定义：平衡二叉树</h1><p>假如输入的节点为一个升序的[1,2,3,4,5]，那么BST就会建立一串右子树，画一个大大的斜着的糖葫芦。这就没有意义了，查找起来从上到下，和链式储存没有区别。我们想要让3是root，这样两边平衡，降低树的高度。就可以节省时间。<br>平衡二叉树中站在顶端的就是AVL树，是最严格的。所有节点的左右子树高度不超过1。其他还有B树 红黑树。</p>
+<h1 id="代码：二叉树的储存结构"><a href="#代码：二叉树的储存结构" class="headerlink" title="代码：二叉树的储存结构"></a>代码：二叉树的储存结构</h1><p>一开始可能会想到用一维数组去表示。如[0, 1, 2, 3, 4….]。就只是把节点普通地列出来。</p>
+<p>但是这样做的话，满二叉树还好，一旦出现那种中间没有结点的不完全二叉树，数组中就会有空着的位置，这样就造成了空间的浪费。如[0, null, 2, null, 3…]<br>解决数组的空间问题，我们通常会采用链式结构去储存。</p>
+<p>所以我们会采用链式结构(linked structure)去储存。所谓的链式结构，就是【只记录自己和自己紧挨着的人】。二叉树每个结点都连着自己的左孩子和右孩子，也连着自己的爸爸，采用这种结构去表达正合适。</p>
+<p>那么一个初始化的二叉树对象中，就有了：结点的值、左孩子、右孩子。</p>
+<pre><code> // Definition for a binary tree node.
+  function TreeNode(val, left, right) &#123;
+      this.val = (val===undefined ? 0 : val)
+      this.left = (left===undefined ? null : left)
+      this.right = (right===undefined ? null : right)
+ &#125;</code></pre><p>想要真正的创建出一棵树，也就是要new很多TreeNode过去，每一个都可以看做是一个root。所以在编程题里，经常给出root的数组，就相当于给了一棵树。</p>
+<p>比如我想储存一棵长成这样的不完全二叉树：<br><img src="https://i.loli.net/2021/08/27/b1O5enJ3HoDX74x.png" alt="b1O5enJ3HoDX74x"></p>
+<p>那么我需要输入的根节点是： [A, B, E, D, C]，还需要顾及到他们每个节点的孩子情况。比<br>如，A的左孩子是B，右孩子是E等等。按照笨方法的话，就是一个个往里面放。</p>
+<pre><code>let a = new NodeTree(&#39;a&#39;);
+let b = new NodeTree(&#39;b&#39;);
+let c = new NodeTree(&#39;c&#39;);
+let d = new NodeTree(&#39;d&#39;);
+let e = new NodeTree(&#39;e&#39;);
+
+a.left = b;
+a.right = c;
+b.right = d;
+e.right = c;</code></pre><h1 id="代码：BST框架"><a href="#代码：BST框架" class="headerlink" title="代码：BST框架"></a>代码：BST框架</h1><p>一般在考题中比较经常出现的是BST的相关实现和操作。JS中BST的框架为：</p>
+<pre><code>// Node class
+class Node
+&#123;
+    constructor(data)
+    &#123;
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    &#125;
+&#125;
+
+// Binary Search tree class
+class BinarySearchTree
+&#123;
+    constructor()
+    &#123;
+        // root of a binary search tree
+        this.root = null;
+    &#125;
+
+    // function to be implemented
+    // insert(data)插入节点
+    // remove(data)删除节点
+&#125;
+
+//插入算法
+insert(data)
+&#123;
+    var newNode = new Node(data);
+    if(this.root === null)
+        this.root = newNode;
+    else
+        // find the correct position in the tree and add the node
+        this.insertNode(this.root, newNode);
+&#125;
+insertNode(node, newNode)
+&#123;
+    if(newNode.data &lt; node.data)
+    &#123;
+        // if left is null insert node here
+        if(node.left === null)
+            node.left = newNode;
+        else
+            // if left is not null recur until null is found
+            this.insertNode(node.left, newNode);
+    &#125;
+    // if the data is more than the node, data move right of the tree
+    else
+    &#123;
+        // if right is null insert node here
+        if(node.right === null)
+            node.right = newNode;
+        else
+
+            // if right is not null recur until  null is found
+            this.insertNode(node.right,newNode);
+    &#125;
+&#125;
+</code></pre><h1 id="前、中、后序遍历"><a href="#前、中、后序遍历" class="headerlink" title="前、中、后序遍历"></a>前、中、后序遍历</h1><p>所谓的前中后指的就是根的位置——</p>
+<p>前序：根在前面，即按照根左右的顺序去遍历。</p>
+<p>中序：根在中间。即左根右。</p>
+<p>后序：根在后面。左右根。</p>
+<p>代码：</p>
+<pre><code>// Performs preorder traversal of a tree    
+preorder(node)
+&#123;
+    if(node !== null)
+    &#123;
+        console.log(node.data);
+        this.preorder(node.left);
+        this.preorder(node.right);
+    &#125;
+&#125;
+
+
+// Performs inorder traversal of a tree
+inorder(node)
+&#123;
+    if(node !== null)
+    &#123;
+        this.inorder(node.left);
+        console.log(node.data);
+        this.inorder(node.right);
+    &#125;
+&#125;
+
+// Performs postorder traversal of a tree
+postorder(node)
+&#123;
+    if(node !== null)
+    &#123;
+        this.postorder(node.left);
+        this.postorder(node.right);
+        console.log(node.data);
+    &#125;
+&#125;
+</code></pre><h1 id="广度优先（DFS-Depth-First-Traversal）"><a href="#广度优先（DFS-Depth-First-Traversal）" class="headerlink" title="广度优先（DFS - Depth First Traversal）"></a>广度优先（DFS - Depth First Traversal）</h1><p>指按照层级的顺序去搜索。所谓的广，就是一个节点的所有子树。比如说这棵树：</p>
+<p><img src="https://i.loli.net/2021/08/27/b1O5enJ3HoDX74x.png" alt="b1O5enJ3HoDX74x"></p>
+<p>如果是广度优先就是先要把A的子树B和E加入到检查队列里。使用队列的原因是，队列是一种先进先出的结构。假如队列里有B和E，好像是我们先送B去检查，检查完了标记为已检查，然后删掉（因为B在队头，很容易就被删掉了，这就是队列的好处），然后再检查E。。</p>
+<pre><code>function bfs(root, target) &#123; //返回值是层数（目标节点深度）
+    /target就是我们要找的目标
+
+    let queue = []; //准备好队列
+    let step = 0;  // 根节点到目标节点之间的深度
+    queue.push(root); //将根节点加入
+
+//开始搜索
+    while(!queue.isEmpty()) &#123;
+        step += 1;
+        // 分层遍历队列，没有目标元素则删除该层元素，继续遍历下一层
+        for(let i =0; i&lt;queue.length; i++) &#123;
+            let cur = queue.shift()  // 获取队首元素，拿出来检查
+            if(target === cur) return step; //如果是目标元素，返回
+            // 如果不是，将下一层节点加入到队列
+            if(cur.children &amp;&amp; cur.children.length) &#123;
+                    queue.push(cur.children)
+            &#125;
+        &#125;
+    &#125;
+&#125;
+//使用递归会溢出</code></pre><h1 id="深度优先（BFS）"><a href="#深度优先（BFS）" class="headerlink" title="深度优先（BFS）"></a>深度优先（BFS）</h1><p>深度优先就是一条路走到黑（在树的结构中表现为向下深入），直到无路可走（抵达叶子节点，仍然没有找到匹配的值），再回溯到上一个有岔路的节点，去走岔路继续找。</p>
+<p>因此这种需要回溯的搜索，需要用栈结构去完成。</p>
+<p>这是由于栈的结构是“先进后出，后进先出”。我们需要回溯的【上一个岔路】正是最后被放进栈里的，我们就是需要把它取出来。</p>
+<pre><code>//此代码是遍历代码
+function deepTraversal(node, target) &#123;
+  var nodes = []; //准备一个栈
+  if (node != null) &#123; //只要有点
+      nodes.push(node); //就放到栈里
+      var children = node.children; //拿到node的孩子（是个数组，因为他有很多孩子）
+      for (var i = 0; i &lt; children.length; i++) //遍历数组
+          deepTraversal(children[i]); //递归孩子的孩子
+  &#125;
+  return nodes;
+&#125;</code></pre>
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>
