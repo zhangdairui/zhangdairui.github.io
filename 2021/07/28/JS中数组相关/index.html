@@ -139,7 +139,7 @@
 
 <!-- 侧边目录栏 -->
 
-<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84"><span class="toc-text">创建数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE"><span class="toc-text">数组查找</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8F%92%E5%85%A5"><span class="toc-text">数组插入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4"><span class="toc-text">数组删除</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><span class="toc-text">数组排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%88%AA%E5%8F%96%EF%BC%8C%E5%90%88%E5%B9%B6%EF%BC%8C%E5%A4%8D%E5%88%B6"><span class="toc-text">数组截取，合并，复制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array%E5%AF%B9%E8%B1%A1%E5%8F%AF%E7%94%A8%E6%96%B9%E6%B3%95%E4%B8%80%E8%A7%88"><span class="toc-text">Array对象可用方法一览</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84"><span class="toc-text">创建数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE"><span class="toc-text">数组查找</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8F%92%E5%85%A5"><span class="toc-text">数组插入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4"><span class="toc-text">数组删除</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><span class="toc-text">数组排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%88%AA%E5%8F%96%EF%BC%8C%E5%90%88%E5%B9%B6%EF%BC%8C%E5%A4%8D%E5%88%B6"><span class="toc-text">数组截取，合并，复制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%88%A4%E7%A9%BA"><span class="toc-text">数组判空</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array%E5%AF%B9%E8%B1%A1%E5%8F%AF%E7%94%A8%E6%96%B9%E6%B3%95%E4%B8%80%E8%A7%88"><span class="toc-text">Array对象可用方法一览</span></a></li></ol>
 
 
     </div>
@@ -198,12 +198,16 @@ start参数必需。规定从何处开始选取。end非必须，如果不指定
 */
 
 //-------合并
+方法1-产生新数组
 arr.concat(arrayX,arrayX,......,arrayX);//arrayX参数必须，可以是单个元素的值，也可以是数组。在arr尾部添加，返回新数组。
+方法2-不产生新数组
+arr.push.apply(arr, arrB) //apply里别忘了带上原数组
 
 //-------复制
 arr.slice(0); 
 
-arr.concat(); </code></pre><h1 id="Array对象可用方法一览"><a href="#Array对象可用方法一览" class="headerlink" title="Array对象可用方法一览"></a>Array对象可用方法一览</h1><table>
+arr.concat(); </code></pre><h1 id="数组判空"><a href="#数组判空" class="headerlink" title="数组判空"></a>数组判空</h1><p><code>arr.length === 0</code></p>
+<h1 id="Array对象可用方法一览"><a href="#Array对象可用方法一览" class="headerlink" title="Array对象可用方法一览"></a>Array对象可用方法一览</h1><table>
 <thead>
 <tr>
 <th align="left">方法</th>
