@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2021-09-24T13:15:40.496Z</updated>
+  <updated>2021-09-24T13:19:59.484Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://anywheredoor.fun/2021/09/24/MAC%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Hadoop%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/"/>
     <id>https://anywheredoor.fun/2021/09/24/MAC%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Hadoop%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/</id>
     <published>2021-09-24T07:30:16.000Z</published>
-    <updated>2021-09-24T13:15:40.496Z</updated>
+    <updated>2021-09-24T13:19:59.484Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录Haddop3.3.1的配置、启动和运行示例文件，以及遇到的问题和解决。&lt;/p&gt;</summary>
@@ -29,7 +29,9 @@
     
     
     
-    <category term="bigdata,  搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/bigdata-%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
+    <category term="搭建各种各样的环境" scheme="https://anywheredoor.fun/tags/%E6%90%AD%E5%BB%BA%E5%90%84%E7%A7%8D%E5%90%84%E6%A0%B7%E7%9A%84%E7%8E%AF%E5%A2%83/"/>
+    
+    <category term="bigdata" scheme="https://anywheredoor.fun/tags/bigdata/"/>
     
   </entry>
   
@@ -353,7 +355,7 @@
     <link href="https://anywheredoor.fun/2020/10/13/%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E8%B4%AD%E7%89%A9%E8%BD%A6/"/>
     <id>https://anywheredoor.fun/2020/10/13/%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E8%B4%AD%E7%89%A9%E8%BD%A6/</id>
     <published>2020-10-13T14:01:55.000Z</published>
-    <updated>2020-10-13T14:18:39.549Z</updated>
+    <updated>2021-09-24T13:20:38.004Z</updated>
     
     
       
@@ -366,6 +368,8 @@
     
     
     
+    
+    <category term="js" scheme="https://anywheredoor.fun/tags/js/"/>
     
     <category term="前端" scheme="https://anywheredoor.fun/tags/%E5%89%8D%E7%AB%AF/"/>
     
@@ -376,7 +380,7 @@
     <link href="https://anywheredoor.fun/2020/09/26/JS%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5header%E5%92%8Cfooter%E5%A4%8D%E7%94%A8/"/>
     <id>https://anywheredoor.fun/2020/09/26/JS%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5header%E5%92%8Cfooter%E5%A4%8D%E7%94%A8/</id>
     <published>2020-09-25T17:45:54.000Z</published>
-    <updated>2020-09-25T18:06:01.263Z</updated>
+    <updated>2021-09-24T13:19:44.926Z</updated>
     
     
       
@@ -389,6 +393,8 @@
     
     
     
+    
+    <category term="js" scheme="https://anywheredoor.fun/tags/js/"/>
     
     <category term="前端" scheme="https://anywheredoor.fun/tags/%E5%89%8D%E7%AB%AF/"/>
     
@@ -399,7 +405,7 @@
     <link href="https://anywheredoor.fun/2020/09/26/%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81%E6%97%B6%E6%A0%A1%E9%AA%8C%E4%B8%A4%E6%AC%A1%E8%BE%93%E5%85%A5%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4/"/>
     <id>https://anywheredoor.fun/2020/09/26/%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81%E6%97%B6%E6%A0%A1%E9%AA%8C%E4%B8%A4%E6%AC%A1%E8%BE%93%E5%85%A5%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4/</id>
     <published>2020-09-25T17:45:22.000Z</published>
-    <updated>2020-09-25T17:54:23.232Z</updated>
+    <updated>2021-09-24T13:20:16.437Z</updated>
     
     
       
@@ -412,6 +418,8 @@
     
     
     
+    
+    <category term="js" scheme="https://anywheredoor.fun/tags/js/"/>
     
     <category term="前端" scheme="https://anywheredoor.fun/tags/%E5%89%8D%E7%AB%AF/"/>
     
