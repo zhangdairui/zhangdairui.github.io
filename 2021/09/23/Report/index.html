@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Application-Domain"><span class="toc-text">1 Application Domain</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-What-is-the-recommender-system"><span class="toc-text">1.1 What is the recommender system</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-specific-application-recommender-system"><span class="toc-text">1.2 specific application recommender system</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Look-data-from-a-recommender-system-4-V%E2%80%99s"><span class="toc-text">2 Look data from a recommender system 4 V’s</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Volume"><span class="toc-text">2.1 Volume</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Variety"><span class="toc-text">2.2 Variety</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Velocity"><span class="toc-text">2.3 Velocity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-Veracity"><span class="toc-text">2.4 Veracity</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Big-Data-face-in-Recommendation-Systems-Related-Challenges"><span class="toc-text">3 Big Data face in Recommendation Systems Related Challenges</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-collection-issues"><span class="toc-text">3.1 collection issues</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-storage-problems"><span class="toc-text">3.2 storage problems</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-data-processing-problems"><span class="toc-text">3.3 data processing problems</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-data-mining-question"><span class="toc-text">3.4 data mining question</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-Data-Security-and-Privacy"><span class="toc-text">3.5 Data Security and Privacy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Solution"><span class="toc-text">4 Solution</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Data-Collection"><span class="toc-text">4.1 Data Collection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Data-Distributed-Storage"><span class="toc-text">4.2 Data Distributed Storage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Cloud-Computing"><span class="toc-text">4.3 Cloud Computing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Data-Mining"><span class="toc-text">4.4 Data Mining</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-Data-Security-and-Privacy"><span class="toc-text">4.5 Data Security and Privacy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Solutions-proposed-by-me"><span class="toc-text">5 Solutions proposed by me</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-References"><span class="toc-text">6 References</span></a></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>Recommander System Report</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年09月23日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <p>存档。课上要求写的报告作业。</p>
+<a id="more"></a>
+
+
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>In today’s information explosion, the massive, rapid, diversified, and valuable data makes big<br>data come into being. Daily life has long been inseparable from all kinds of Internet<br>applications. One of the most familiar technologies is the intelligent recommender system. This<br>report will focus on the intelligent recommender system and talk about the specific application<br>scenarios of the recommender system, the embodiment of big data characteristics, related<br>problems, and their solutions.</p>
+<h2 id="1-Application-Domain"><a href="#1-Application-Domain" class="headerlink" title="1 Application Domain"></a>1 Application Domain</h2><h3 id="1-1-What-is-the-recommender-system"><a href="#1-1-What-is-the-recommender-system" class="headerlink" title="1.1 What is the recommender system"></a>1.1 What is the recommender system</h3><p>A recommender system is a tool that automatically contacts users and items. It collects users’<br>information and analyzes users’ interests and hobbies to make personalized<br>recommendations. As Steve Jobs said: “ People don’t know what they want until you show it<br>to them.” This kind of recommendation can be done without giving out keywords describing<br>their needs, and it can proactively recommend customized information that may meet their<br>interests and needs.</p>
+<p>So what are the benefits of a recommender system? Imagine that Wal-Mart, which we are<br>familiar with, often places popular goods in the most eye-catching position - the reason is<br>obvious. They are popular and can bring higher income to the supermarket. However, after<br>all, these popular goods account for only a few, and the demand for most of the goods in<br>inventory is relatively low. If we try to sell these commodities with low demand, we are<br>likely to make more profits than popular mainstream commodities. This idea comes from the<br>interesting The Long Tail theory. By analogy, we can expand commodities into information<br>and data on the network (including commodities in online shopping malls, multimedia<br>content such as video and music, advertisements on Web pages, etc.). No matter what kind of<br>information, as long as it exists, someone may need it, even if only one person on earth needs<br>it. At this time, the benefits of the recommender system are very obvious. We can<br>recommend thousands of information to the suitable people through intelligent<br>recommendation technology. In this way, with the flow of information, both producers and<br>consumers can get what they want. It overcomes the problem of information overload,<br>provides customized recommendations, and improves the efficiency of information<br>dissemination. Therefore, the recommender system is undoubtedly a great invention that can<br>promote the progress of human society in the era of big data.</p>
+<h3 id="1-2-specific-application-recommender-system"><a href="#1-2-specific-application-recommender-system" class="headerlink" title="1.2 specific application recommender system"></a>1.2 specific application recommender system</h3><p>What specific cases currently have adopted such a recommender system? Almost every<br>website or web service we are familiar with will use recommendation technology. Here are<br>some specific application cases.</p>
+<ul>
+<li>E -commerce scenario:</li>
+</ul>
+<p>When we are shopping on Amazon, when browsing a certain product, we often see similar<br>products recommended by Amazon for us below, and modules such as “people who bought<br>this product also bought…”, which optimizes shopping Experience.</p>
+<ul>
+<li>Media scenario:</li>
+</ul>
+<p>when we open Youtube, the homepage will show videos recommended based on your<br>viewing history; when we visit Netflix, the Netflix recommendation system will help us<br>easily find our favorite movies or TVs program. There is also the popular Tiktok short video<br>app in recent years. As you slide up, it will continuously recommend short video content you<br>may like.</p>
+<ul>
+<li>Social network scenario:</li>
+</ul>
+<p>You must have seen the “Suggest Friends” module on social platforms such as Facebook and<br>Twitter. The recommendation system here will recommend people who may become friends<br>for users based on social graphs, interest graphs, etc.</p>
+<ul>
+<li>advertising scenario:</li>
+</ul>
+<p>Although many people do not like to see annoying ads when browsing the web but have to<br>admit: If we have to look at the ad, then they would like to see some related to their own,<br>their ads may be of interest. With recommendation technology, advertisements are like WalMart products and are accurately pushed to the right users. This is how Google Ads works.</p>
+<p>In addition to the above, there are many scenarios where personalized recommendation<br>technology is used. It can be said that the recommendation system does provide people with<br>the possibility of finding a needle in a haystack in this era of massive data.</p>
+<h2 id="2-Look-data-from-a-recommender-system-4-V’s"><a href="#2-Look-data-from-a-recommender-system-4-V’s" class="headerlink" title="2 Look data from a recommender system 4 V’s"></a>2 Look data from a recommender system 4 V’s</h2><p>The reason why big data is known as “big”, is due to it has four Vs-volume, velocity, variety,<br>and veracity. In this chapter, we will interpret the recommendation system from these four<br>perspectives.</p>
+<h3 id="2-1-Volume"><a href="#2-1-Volume" class="headerlink" title="2.1 Volume"></a>2.1 Volume</h3><p>Volume refers to the total amount of data. There is no doubt that the background of the birth<br>of the recommendation system is that we now have a lot of data. On the Internet, every<br>operation (click the mouse, transaction, email, search…) of everyone is generating huge<br>amounts of data. It is precisely because there is too much information on the Internet that not<br>only producers are eager to let their information be seen, but consumers are also eager to find<br>the content they need most efficiently, and the recommender system came into being.</p>
+<p>Moreover, the operation of the recommendation system is also inseparable from a large<br>amount of data. Take Amazon as an example, the recommendation system needs a lot of user<br>information, product information, and order information as “materials” before it can finally<br>analyze the recommendation results. Such analysis and statistics cannot be done based on a<br>small amount of data.</p>
+<h3 id="2-2-Variety"><a href="#2-2-Variety" class="headerlink" title="2.2 Variety"></a>2.2 Variety</h3><p>Variety means that there are many types of data. Big data is composed of a small part of<br>structured data and most unstructured data. It is most of the unstructured data that is closely<br>related to human information. Therefore, the recommendation system should be able to find<br>links and analyze key information from various forms of data (e-mail, web pages, social<br>records, music, pictures, videos…). This is closely related to deep learning, knowledge graph,<br>and other fields.</p>
+<h3 id="2-3-Velocity"><a href="#2-3-Velocity" class="headerlink" title="2.3 Velocity"></a>2.3 Velocity</h3><p>Refers to the rapid generation of data for consumption. The recommender system will<br>respond to and deal with such fast-paced changes promptly, so the recommendation results<br>we see are also changing all the time. For example, on the homepage of news websites, hot<br>topics will be recommended for us. And this hot topic list is changing every day, even every<br>hour.</p>
+<h3 id="2-4-Veracity"><a href="#2-4-Veracity" class="headerlink" title="2.4 Veracity"></a>2.4 Veracity</h3><p>Veracity refers to the deviation, forgery, and abnormal part of the data that should be<br>considered in the analysis of big data. There may be huge differences in the quality of data. In<br>the recommender system, measures are taken to prevent dirty data from damaging the<br>integrity and correctness of the data system, which is conducive to improving the relevance<br>and improving the accuracy of the recommendation.</p>
+<h2 id="3-Big-Data-face-in-Recommendation-Systems-Related-Challenges"><a href="#3-Big-Data-face-in-Recommendation-Systems-Related-Challenges" class="headerlink" title="3 Big Data face in Recommendation Systems Related Challenges"></a>3 Big Data face in Recommendation Systems Related Challenges</h2><p>The characteristics of big data determine its important issues: data collection, data storage,<br>data processing, data mining, and data security.</p>
+<h3 id="3-1-collection-issues"><a href="#3-1-collection-issues" class="headerlink" title="3.1 collection issues"></a>3.1 collection issues</h3><p>About collection, perhaps we can think of salespeople who distribute questionnaires on the<br>street. This most traditional way of filling out questionnaires is of course also a kind of data<br>collection, but it is no longer enough in today’s society. The era of big data emphasizes the<br>collection of complete sets of data, to provide more possibilities that humans cannot predict.</p>
+<p>For the recommendation system, perhaps the biggest problem is that a large amount of data is<br>needed to produce recommendation results. This is why the most prominent recommendation<br>systems come from large companies that have more data, such as Google, Amazon, and<br>Netflix. How to collect the complete works and solve the “cold start” problem has become<br>one of the challenges.</p>
+<h3 id="3-2-storage-problems"><a href="#3-2-storage-problems" class="headerlink" title="3.2 storage problems"></a>3.2 storage problems</h3><p>The proper storage of the collected data is undoubtedly the basis for the implementation of<br>the recommender system. So where should users, media, orders, goods, music… All this<br>provided by the platform be stored? Traditional storage methods can not accommodate, the<br>access speed is slow and the risk is also high. If the data is scattered, how to solve the<br>problem of data synchronization? These are all about storage.</p>
+<h3 id="3-3-data-processing-problems"><a href="#3-3-data-processing-problems" class="headerlink" title="3.3 data processing problems"></a>3.3 data processing problems</h3><p>Imagine that a large website needs to provide personalized recommendations for millions of<br>users at the same time. How to perform calculations? Although parallel computing is<br>currently an important means to solve a huge amount of calculations, there are still some<br>problems. For example, in parallel computing, there is no guarantee that the amount of<br>calculation for each small task is the same. As a result, the server that has completed its<br>calculation task needs to wait for individual servers that have not yet been completed. The<br>final calculation speed depends on the final completed subtask. The efficiency is reduced.</p>
+<h3 id="3-4-data-mining-question"><a href="#3-4-data-mining-question" class="headerlink" title="3.4 data mining question"></a>3.4 data mining question</h3><p>How to dig out valuable information from a bunch of chaotic data is the key to machine<br>intelligence and the mission of big data. In the recommender system, this question can be<br>understood as: how to deal with polymorphic data? How to finally discover the information<br>that users may be interested in through various data? How to optimize the algorithm to<br>recommend more accuracy? How to avoid recommending popular objects? (Such as the<br>Harry Potter problem)</p>
+<h3 id="3-5-Data-Security-and-Privacy"><a href="#3-5-Data-Security-and-Privacy" class="headerlink" title="3.5 Data Security and Privacy"></a>3.5 Data Security and Privacy</h3><p>In big data, data security and personal privacy are classic topics. Business losses and users’<br>safety are hidden dangers behind technical candy. Take the recommender system for<br>example. Although it provides convenience for users most of the time, many people don’t like<br>the feeling of being monitored by the platform. For example, when you use your mobile<br>browser to browse the web and involve some goods, or even mention them in a chat with<br>your friends, you may see the recommendation of the goods on the shopping app the next<br>minute - whether you need it or not. Moreover, various applications also collect very detailed<br>user data and behaviors to analyze users’ preferences.</p>
+<h2 id="4-Solution"><a href="#4-Solution" class="headerlink" title="4 Solution"></a>4 Solution</h2><p>A complete recommendation system consists of four parts: the recording module for<br>collecting user behavior information, the model analysis module for analyzing and processing<br>user preferences, the recommendation algorithm module (core), and the feedback processing<br>module. This section will discuss solutions to the problems mentioned in Section 3 around<br>each module.</p>
+<h3 id="4-1-Data-Collection"><a href="#4-1-Data-Collection" class="headerlink" title="4.1 Data Collection"></a>4.1 Data Collection</h3><p>Take Facebook as an example. Facebook can generate more accurate and comprehensive<br>portraits by analyzing the active sharing and interaction of users. Facebook will analyze users ‘<br>information in 98 aspects to maximize the effect of advertising, such as the location of the<br>house, the wedding anniversary within 30 days, the industry they are engaged in, and the<br>possible move in the near future. In the personal profile, Facebook provides options for users<br>to share information such as hometown, current residence, graduate school, marital status, and<br>religious beliefs. This information allows Facebook to better analyze users’ daily life behavior<br>and locate users’ hobbies and value orientation, then customize push ads.</p>
+<h3 id="4-2-Data-Distributed-Storage"><a href="#4-2-Data-Distributed-Storage" class="headerlink" title="4.2 Data Distributed Storage"></a>4.2 Data Distributed Storage</h3><p>Large websites will first distribute servers around the world. In Amazon, for example, 1.5<br>billion product catalog data from retail stores can be disseminated and stored globally in S3<br>through 200 implementation centers, with nearly 500 million updates per week. At the same<br>time, product catalogs of data on the S3 interface are analyzed every 30 minutes and sent<br>back to different databases.</p>
+<h3 id="4-3-Cloud-Computing"><a href="#4-3-Cloud-Computing" class="headerlink" title="4.3 Cloud Computing"></a>4.3 Cloud Computing</h3><p>Cloud computing technology emerges for efficient processing. Cloud computing provides<br>scalable, inexpensive distributed computing power over the network. Users can access all<br>kinds of IT resources they need anytime, anywhere, and expand their large data applications<br>in the cloud through a variety of tools, such as data storage, data collection, data location,<br>Management, data sharing, and data collaboration. For example, Amazon’s flexible<br>MapReduce program is built on top of the Hadoop framework and complements each other to<br>help retailers efficiently manage and leverage the analysis platform.</p>
+<h3 id="4-4-Data-Mining"><a href="#4-4-Data-Mining" class="headerlink" title="4.4 Data Mining"></a>4.4 Data Mining</h3><p>How to dig out the real preferences of users? As the earliest and most well-known<br>recommendation algorithm, collaborative filtering has not only been in-depth research in<br>academia, but it is still widely used in the industry. Collaborative filtering may include<br>collaborative filtering based on similar users (UserCF) and collaborative filtering based on<br>similar items (ItemCF). Because of the complexity of unstructured data, the recommender<br>system has many optimization details based on the basic algorithm. Such cases are numerous.<br>In 2011, Youtube discovered that the user clicks the video does not necessarily mean that<br>users have seen this video. Therefore, YouTube adds the consideration of video viewing time<br>to learn users’ viewing habits more accurately. Another example: Netflix will consider<br>whether it should recommend different content to two people from different regions and<br>cultures - even if they like science fiction movies. For another example, many multimedia<br>websites will provide the function of style tags and scoring mechanism, which are conducive<br>to organizing data and data mining.</p>
+<h3 id="4-5-Data-Security-and-Privacy"><a href="#4-5-Data-Security-and-Privacy" class="headerlink" title="4.5 Data Security and Privacy"></a>4.5 Data Security and Privacy</h3><p>Companies will not ignore the needs of users for data security and privacy. When we register<br>app or website users, we can often see the privacy policy-although few people will read it<br>carefully. But this represents an effort that people are making. Google and other websites use<br>strong encryption technology and confidentiality agreements to protect the storage and<br>transmission of data and prevent network attacks. If you are not satisfied with advertising<br>recommendations, many websites provide the function of canceling personalized<br>customization. At the same time, federal learning has been put forward as an important<br>technology to solve the privacy problem of recommender systems.</p>
+<h2 id="5-Solutions-proposed-by-me"><a href="#5-Solutions-proposed-by-me" class="headerlink" title="5 Solutions proposed by me"></a>5 Solutions proposed by me</h2><p>The solution I want to propose aims at the most important problem in the recommender<br>system: how to make the recommendation results more accurate. I think in the application<br>context of e-commerce shopping websites, artificial intelligence technology (such as an<br>expert system) can be used to optimize the recommendation results. If the recommender<br>system only focuses on the user behavior itself or the product itself, the recommendation<br>results may not be accurate enough. For example, in winter, if users buy a pair of snow boots,<br>they will not buy other snow boots. However, the recommendation algorithms of many ecommerce websites often ignore this point and recommend snow boots or other similar<br>products based on users’ search and purchase records.<br>In order to solve this problem, we can train the expert program in the field of clothing<br>matching in advance, grasp the current fashion, quarter, brand, and other clothing<br>professional knowledge, and recommend the matching sweaters, down jackets, and other<br>goods for users according to the snow boots they have purchased. In this way, other related<br>recommendations based on users’ existing purchase behavior can not only avoid<br>recommending popular goods but also give relative consideration to users’ portraits.</p>
+<h2 id="6-References"><a href="#6-References" class="headerlink" title="6 References"></a>6 References</h2><p>[1] Burke, Robin, Alexander Felfernig, and Mehmet H. Göker. “Recommender systems: An<br>overview.” Ai Magazine 32.3 (2011): 13-18.</p>
+<p>[2] Lu, Jie, et al. “Recommender system application developments: a survey.” Decision<br>Support Systems 74 (2015): 12-32.</p>
+<p>[3] Qing Guo, Jian Sun “ Design and Implementation of Personalized Recommendation<br>System Based on Expert System .” Ruan Jian Gong Cheng Shi 019.006(2016): 22-27.</p>
+<p>[4] Mohamed, Marwa Hussien, Mohamed Helmy Khafagy, and Mohamed Hasan Ibrahim.<br>“Recommender systems challenges and solutions survey.” 2019 International Conference on<br>Innovative Trends in Computer Engineering (ITCE). IEEE, 2019.</p>
+<p>[5] Richard Macmanus, “5 Problems of Recommender Systems”, readwrite, Jan.28.2009,</p>
+<pre><code>https://readwrite.com/2009/01/28/5_problems_of_recommender_systems/</code></pre><p>[6] Aleksandar Ilic, Maja Kabiljo, “ Recommending items to more than a billion people “,<br>Youtube, Jun.2.2015,</p>
+<pre><code>https://engineering.fb.com/2015/06/02/core-data/recommending-items-to-more-than-a-billion-people/</code></pre><p>[7] Yves Raimond, Justin Basilico, “ Recommending for the World “, Youtube, Feb.17.2016,</p>
+<pre><code>https://netflixtechblog.com/recommending-for-the-world-8da8cbcf051b</code></pre><p>[8] UpGuard Team, “How does Amazon handle cybersecurity?”, UpGuard, Aug 5, 2020,</p>
+<pre><code>https://www.upguard.com/blog/prime-day-how-amazon-handles-cybersecurity</code></pre><p>[9] Cristos Goodrow, “ On YouTube’s recommendation system “, Youtube, Sep.15.2021,<br><a target="_blank" rel="noopener" href="https://blog.youtube/inside-youtube/on-youtubes-recommendation-system/">https://blog.youtube/inside-youtube/on-youtubes-recommendation-system/</a></p>
+
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>
