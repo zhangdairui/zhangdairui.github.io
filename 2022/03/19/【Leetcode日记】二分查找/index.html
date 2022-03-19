@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8ELeetcode-No-69-Sqrt-x"><span class="toc-text">关于Leetcode No.69 Sqrt(x)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E9%A2%98"><span class="toc-text">原题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Binary-Search%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3%EF%BC%88Java%EF%BC%89"><span class="toc-text">Binary Search官方题解（Java）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-text">关于二分查找</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6"><span class="toc-text">框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E6%80%9D%E8%B7%AF"><span class="toc-text">整体思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%A1%88%E4%BE%8B-%E9%9D%9E%E9%80%92%E5%BD%92"><span class="toc-text">具体案例-非递归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%A1%88%E4%BE%8B-%E9%80%92%E5%BD%92"><span class="toc-text">具体案例-递归</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>【Leetcode日记(1)】二分查找和No.69</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2022年03月19日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <h1 id="关于Leetcode-No-69-Sqrt-x"><a href="#关于Leetcode-No-69-Sqrt-x" class="headerlink" title="关于Leetcode No.69 Sqrt(x)"></a>关于Leetcode No.69 Sqrt(x)</h1><p>这道题就是实现一个求平方根的Sqrt(x)函数。官方给出了4种题解，其中Approach 2就是Binary Search。这个二分查找每次看到都觉得“这题我肯定会！不就是对半砍掉么”但是一涉及到细节就很烦。所以在这篇记录一下二分查找的模板。</p>
+<h2 id="原题"><a href="#原题" class="headerlink" title="原题"></a>原题</h2><blockquote>
+<p>Given a non-negative integer x, compute and return the square root of x.<br>Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.<br>Note: You are not allowed to use any built-in exponent function or operator, such as pow(x, 0.5) or x ** 0.5.<br>Example 1:</p>
+<pre><code>Input: x = 4
+Output: 2</code></pre><p>Example 2:</p>
+<pre><code>Input: x = 8
+Output: 2</code></pre><p>Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned.</p>
+<ul>
+<li>Constraints: 0 &lt;= x &lt;= 231 - 1</li>
+</ul>
+</blockquote>
+<h2 id="Binary-Search官方题解（Java）"><a href="#Binary-Search官方题解（Java）" class="headerlink" title="Binary Search官方题解（Java）"></a>Binary Search官方题解（Java）</h2><pre><code>class Solution &#123;
+  public int mySqrt(int x) &#123;
+    if (x &lt; 2) return x;
+
+    long num;
+    int pivot, left = 2, right = x / 2; 
+    //上面right=x/2是因为第一次直接就砍半之后取左边就行。因为这是找平方根，不可能在右半了。
+
+    while (left &lt;= right) &#123;
+      pivot = left + (right - left) / 2; //进入循环找到中点
+      num = (long)pivot * pivot; // 看看中点的平方是多少
+      if (num &gt; x) right = pivot - 1; //如果大于target，说明我们需要把右侧边界缩小到中点左边一个
+      else if (num &lt; x) left = pivot + 1; //反之移动左边界
+      else return pivot; //如果找到了直接返回pivot
+    &#125;
+    //如果循环结束了，区间没有了，
+    return right;
+    //【为什么区间没有了之后 return的是right】：
+    //【首先，最终导致left&gt;right循环结束的主要原因，是发现中点的平方超出了目标，进而向左移动了右边界。结果导致区间不存在了。所以只要返回刚才的右边界就是最终的结果。】
+    //【也可以理解为因为这道题要求会舍去小数点后面，取整数部分】
+    //【比如找65的平方根，最终结束的瞬间，搜索区间肯定是[9,8]（left&gt;right），这时候取8。取小的那一侧。】
+    //【也就是说，这道题要求我们找一个数的平方根，宁可“不够”，也不能“超出”。所以最终从left和right里选择较小的一方】
+  &#125;
+&#125; </code></pre><h1 id="关于二分查找"><a href="#关于二分查找" class="headerlink" title="关于二分查找"></a>关于二分查找</h1><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p>二分查找需要设定一个查找范围，也就是左侧边界和右侧边界。假如在一个数组里查找一个数值，那起始的左侧边界就是0（第一个索引所在位置），右侧边界显然就是length-1的最后一个索引所在位置。之后还需要一个中点， 然后在开始查找的过程（就是while循环）中，不断地根据中点的情况，将中点的值赋给左或者右边界，实现折半的效果。</p>
+<p>如果不采取这样另设索引+while循环的方式的话，递归调用也是可以的。每次调用都传入新的折半之后的数组（可能空间占用太大了），或者新的左右边界。递归就不需要使用while循环，但是要注意出口的写法。</p>
+<h3 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h3><pre><code>int binarySearch(int[] nums, int target) &#123; //输入正序数组和查找目标
+    int left = 0, right = ...; //左右边界
+
+    while(...) &#123; //进入循环（开始查找）
+        int mid = (right + left) / 2; //每次都找到新的中点，拿这个中点位置的数字和target做比较
+        if (nums[mid] == target) &#123; //当找到了（相等）
+            ...
+        &#125; else if (nums[mid] &lt; target) &#123;//当该中点值小于目标点
+            left = ... //移动左边界到中点-1的位置。
+        &#125; else if (nums[mid] &gt; target) &#123;//当该中点值大于目标点
+            right = ...//移动右边界
+        &#125;
+    &#125;
+    //出循环了（没找到）
+    return ...;
+&#125;
+
+</code></pre><p>（代码引用自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/kyoner/p/11080078.html">murphy_gb</a>）</p>
+<h3 id="具体案例-非递归"><a href="#具体案例-非递归" class="headerlink" title="具体案例-非递归"></a>具体案例-非递归</h3><pre><code>import java.util.Scanner;
+
+public class BinarySearch &#123;
+    public static void main(String[] args) &#123;
+        int arr[] = &#123;1,5,7,10,15,20,28,56,79,85&#125;; //正序数组
+        Scanner sc = new Scanner(System.in); //输入一个查找的target
+        int val = sc.nextInt();
+        int index = search(arr,val); //调用search函数
+        System.out.println(index);
+    &#125;
+
+    /**
+     *
+     * @param arr
+     * @param val 要查找的数
+     * @return 元素下标
+     */
+    private static int search(int[] arr, int val) &#123;
+        int right = arr.length - 1;
+        int left = 0;
+        while(left &lt;= right) &#123;
+    //当left&lt;=right，可以进行查找。
+    //必须要带等号，因为即便区间是[2,2]，也是要看看2是不是的。
+            int middle = (right + left) / 2;
+            if (val == arr[middle]) &#123;
+                return middle;//找到则返回下标
+            &#125; else if (val &lt; arr[middle]) &#123;
+                right = middle - 1;//要找得数比中间数小则在左边找。
+            &#125; else &#123;
+                left = middle + 1;//要找得数比中间数小则在右边找
+            &#125;
+        &#125;
+        return -1;
+    &#125;
+&#125;
+</code></pre><p>（代码引用自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/128-cdy/p/11716438.html">蔡小菜i</a>）</p>
+<h3 id="具体案例-递归"><a href="#具体案例-递归" class="headerlink" title="具体案例-递归"></a>具体案例-递归</h3><pre><code>public class BinarySearchDemo &#123;
+    public static void main(String[] args) &#123;
+        int arr[] = &#123;1,5,7,10,15,20,28,56,79,85&#125;;
+        int index = binarySearch(arr,0,arr.length - 1,10);
+        System.out.println(index);
+    &#125;
+
+    /**
+     *
+     * @param arr
+     * @param l 左下标
+     * @param r 右下标
+     * @param data  数据
+     * @return
+     */
+    private static int binarySearch(int[] arr, int l, int r, int data) &#123; //递归同时也传入边界
+        int mid = (l + r) / 2;
+        if(r &lt; l)&#123; //递归出口，当右边界小于左边界时，区间不存在了，可以停止查找。
+            return -1;
+        &#125;
+        if(arr[mid] == data)&#123;
+            return mid;
+        &#125;
+        if(arr[mid] &lt; data)&#123;
+            return binarySearch(arr,mid+1,r,data);
+        &#125;else&#123;
+            return binarySearch(arr,l,mid-1,data);
+        &#125;
+    &#125;
+&#125;
+</code></pre><p>（代码引用自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/128-cdy/p/11716438.html">蔡小菜i</a>）</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Leetcode里的69这道题的二分查找解法，我认为难点在于循环结束之后返回值。比起基础框架的“找不到返回-1”，这里是“找不到整数的话就返回小的那一侧”。这样很容易就误以为返回的是left，忽略了最后是因为left&gt;right才终止的查找。</p>
+<p>时隔四个月打开Leetcode，发现自己都忘得差不多了。以前在中国站做过的40道题，留下的代码像是别人写的。咬咬牙为了学英语决心移步美国站，并且决定以后用java写，不用js了。随便点开一道69题Sqrt(x)，发现自己Binary Search都写不明白了，直接急火攻心大脑一片空白放弃思考，就这样歇了大半个月才有勇气再回到这道题。希望自己以后心态，不要这么容易崩溃w。壁がある時はチャンスだって！</p>
+
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>

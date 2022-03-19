@@ -121,7 +121,7 @@
     <div id="container">
 
         
-            <section class="main slideDownMin">
+            <section class="main">  
           
 
           
@@ -129,98 +129,73 @@
 <link rel="stylesheet" href="/css/post.css">
 
 
-<section class="archive slideDownMin">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
 
-    <div class="scroll-article">
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">各配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%A8pycharm%E4%B8%8B%E6%90%AD%E5%BB%BAHadoop%E7%8E%AF%E5%A2%83%E8%BF%9E%E6%8E%A5HDFS"><span class="toc-text">在pycharm下搭建Hadoop环境连接HDFS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="toc-text">问题记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#256%E9%97%AE%E9%A2%98"><span class="toc-text">256问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%AF%A6%E6%83%85"><span class="toc-text">问题详情</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F"><span class="toc-text">解决方式</span></a></li></ol></li></ol></li></ol>
 
 
-    
-    
-
-    
-
-      
-
-        
+    </div>
 
 
-          
-          <div class="archive-part">
-              <span class="archive-part-item">
-                <span>2022</span>
-              </span>
-          </div>
-          
-      
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2022年03月19日</span>
-          <a class="post_title" href="/2022/03/19/【Leetcode日记】二分查找/">【Leetcode日记(1)】二分查找和No.69</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
 
-          <p></p>
-        </div>
-      </div>
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>Mac配置MRjob运行wordcount</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2021年11月06日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/hadoop/" rel="tag">hadoop</a></span>
+			      
+			    </div>
 
-    
+		     </div>
 
-      
+			    <!-- 正文 -->
+			    <h1 id="各配置文件"><a href="#各配置文件" class="headerlink" title="各配置文件"></a>各配置文件</h1><h1 id="在pycharm下搭建Hadoop环境连接HDFS"><a href="#在pycharm下搭建Hadoop环境连接HDFS" class="headerlink" title="在pycharm下搭建Hadoop环境连接HDFS"></a>在pycharm下搭建Hadoop环境连接HDFS</h1><ul>
+<li>使用Pycharm pro版本，free的版本搜索不到big data tool工具。</li>
+<li>安装big data tool插件，步骤见<a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/pycharm/big-data-tools-support.html#get-started">官网指南</a></li>
+<li>安装好后重启IDE，在右侧出现了big data tools选项卡，点开，点击加号可以配置HDFS。</li>
+<li>配置如下图</li>
+</ul>
+<p><img src="https://i.loli.net/2021/11/06/RHTMnskg78mS34B.png" alt="RHTMnskg78mS34B"></p>
+<p>在Configs path那里填写的是有hdfs的xml文件的目录。Root path默认就可以。然后可以点test connection测试一下。</p>
+<h1 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h1><h2 id="256问题"><a href="#256问题" class="headerlink" title="256问题"></a>256问题</h2><h3 id="问题详情"><a href="#问题详情" class="headerlink" title="问题详情"></a>问题详情</h3><p>在伪分布模式下，执行</p>
+<p><code>python wordcount.py -r hadoop hdfs:///input/SampleTextFile_1000kb.txt -o hdfs:///output</code><br>时候报如下错误：</p>
+<p><code>Error: java.net.ConnectException: Call From localhost/127.0.0.1 to localhost:8020 failed on connection exception: java.net.ConnectException: Connection refused;</code></p>
+<h3 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h3><ul>
+<li>首先jps检查是不是所有的东西都启动了，有的时候是因为namenode或者datanode没有启动。</li>
+<li><code>cat /etc/hosts</code> 看看hosts配置有没有写错的。包括自己的ip地址，localhost有没有对应好等。</li>
+<li>如果还是不好的话，将core-site.xml文件中的localhost:8020（一般网上的教程都是要配置成这个localhost的形式）改成如下，然后重启hadoop集群即可。<pre><code>&lt;property&gt;
+   &lt;name&gt;fs.defaultFS&lt;/name&gt;
+   &lt;value&gt;hdfs://127.0.0.1:8020&lt;/value&gt;
+&lt;/property&gt;</code></pre></li>
+</ul>
 
-        
+			</div>
+    </div>
+
+</div>
 
 
-          
-          <div class="archive-part">
-              <span class="archive-part-item">
-                <span>2021</span>
-              </span>
-          </div>
-          
-      
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2021年07月28日</span>
-          <a class="post_title" href="/2021/07/28/斐波那契数列题解/">剑指offer-10&11 斐波那契数列JS题解</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
-
-          <p></p>
-        </div>
-      </div>
-
-    
-
-      
-
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2021年07月27日</span>
-          <a class="post_title" href="/2021/07/27/剑指offer-07重建二叉树js详细题解/">剑指offer-07重建二叉树js详细题解</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
-
-          <p></p>
-        </div>
-      </div>
-
-    
-  </div>
-
-<div class="pageChange">
-  
-
- </div>
-  
-</section>
 
 
           </section> 
