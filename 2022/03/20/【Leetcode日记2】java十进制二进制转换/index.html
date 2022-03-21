@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#No-191-Number-of-1-Bits"><span class="toc-text">No.191. Number of 1 Bits</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E9%A2%98"><span class="toc-text">原题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6%E2%86%92%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="toc-text">十进制→二进制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E5%8D%81%E8%BF%9B%E5%88%B6int%E2%86%92%E4%BA%8C%E8%BF%9B%E5%88%B6String%E7%9A%84API"><span class="toc-text">直接使用十进制int→二进制String的API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%BB%E4%BD%8D%E6%93%8D%E4%BD%9C"><span class="toc-text">移位操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A6%E7%A7%BB%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="toc-text">左移运算符的代码示例：</span></a></li></ol></li></ol></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>【Leetcode日记(2)】java十进制二进制转换 No.191</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2022年03月20日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <h1 id="No-191-Number-of-1-Bits"><a href="#No-191-Number-of-1-Bits" class="headerlink" title="No.191. Number of 1 Bits"></a>No.191. Number of 1 Bits</h1><h2 id="原题"><a href="#原题" class="headerlink" title="原题"></a>原题</h2><blockquote>
+<p>Write a function that takes an unsigned integer and returns the number of ‘1’ bits it has (also known as the Hamming weight).<br>Note:<br>Note that in some languages, such as Java, there is no unsigned integer type. In this case, the input will be given as a signed integer type. It should not affect your implementation, as the integer’s internal binary representation is the same, whether it is signed or unsigned.<br>In Java, the compiler represents the signed integers using 2’s complement notation. Therefore, in Example 3, the input represents the signed integer. -3.</p>
+<p>Example 1:</p>
+<pre><code>Input: n = 00000000000000000000000000001011
+Output: 3
+Explanation: The input binary string 00000000000000000000000000001011 has a total of three &#39;1&#39; bits.</code></pre><p>Example 2:</p>
+<pre><code>Input: n = 00000000000000000000000010000000
+Output: 1
+Explanation: The input binary string 00000000000000000000000010000000 has a total of one &#39;1&#39; bit.</code></pre><p>Example 3:</p>
+<pre><code>Input: n = 11111111111111111111111111111101
+Output: 31
+Explanation: The input binary string 11111111111111111111111111111101 has a total of thirty one &#39;1&#39; bits.</code></pre><p>*<br>Constraints:<br>The input must be a binary string of length 32.*</p>
+</blockquote>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><pre><code>public class Solution &#123;
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) &#123;
+        //=====下方已通过，采用了【转化为字符串】的方式=====
+//         int result = 0;
+//         String nString = Integer.toBinaryString(n);  //将十进制数转成字符串，例如n=5 ，s = &quot;101&quot;
+//         char[] array = nString.toCharArray();
+
+//         for(int i = 0 ; i&lt;array.length; i++)&#123;
+//             if (array[i] == &#39;1&#39;) result++;
+//         &#125;
+
+//         return result;
+        //=======================================
+
+        //=====下方已通过，采用了【二进制移位】的方式=====
+        int result = 0;
+        for(int i = 32 ; i&gt;0 ; i--)&#123;
+             if((n &gt;&gt;&gt; i &amp; 1) == 1) result++;
+        &#125;
+        return result;
+        //=======================================
+    &#125;
+&#125;</code></pre><h1 id="十进制→二进制"><a href="#十进制→二进制" class="headerlink" title="十进制→二进制"></a>十进制→二进制</h1><h2 id="直接使用十进制int→二进制String的API"><a href="#直接使用十进制int→二进制String的API" class="headerlink" title="直接使用十进制int→二进制String的API"></a>直接使用十进制int→二进制String的API</h2><p><code>String s = Integer.toBinaryString(n)  //如n=5 ，s = &quot;101&quot;</code></p>
+<h2 id="移位操作"><a href="#移位操作" class="headerlink" title="移位操作"></a>移位操作</h2><p>所有的移位操作都是在32位的二进制数的基础之上操作的。</p>
+<p>一个正数4，它在计算机内是00000000000000000000000000000100。</p>
+<p>如果是负数和零，是用原码的补码表示的。</p>
+<p>因此，利用移位操作将10进制转换为二进制其实就等同于：<br><strong>虽然传入了一个十进制数，但我们需要将计算机内储存着的对应的二进制数表示出来放在明面上。</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;&lt;</td>
+<td align="left">左移运算符，将运算符左边的对象向左移动运算符右边指定的位数（在低位补0）</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;</td>
+<td align="left">“有符号”右移运算 符，将运算符左边的对象向右移动运算符右边指定的位数。使用符号扩展机制，也就是说，如果值为正，则在高位补0，如果值为负，则在高位补1.</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;&gt;</td>
+<td align="left">“无符号”右移运算 符，将运算符左边的对象向右移动运算符右边指定的位数。采用0扩展机制，也就是说，无论值的正负，都在高位补0</td>
+</tr>
+</tbody></table>
+<h3 id="左移运算符的代码示例："><a href="#左移运算符的代码示例：" class="headerlink" title="左移运算符的代码示例："></a>左移运算符的代码示例：</h3><p>  左移运算符用“&lt;&lt;”表示，是将运算符左边的对象，向左移动运算符右边指定的位数，并且在低位补零。</p>
+<p><strong>其实，向左移n 位，就相当于乘上2 的n 次方，</strong></p>
+<p>例如下面的例子。</p>
+<pre><code>public class test&#123;
+    public static void main(String[] args) &#123;
+        int a=2,b=2,c;
+        c=a&lt;&lt;b; //2的二进制是00000010 向左移动2位，就是000010000 变成了8（也就是乘上2的2次方）
+        System.out.print(&quot;a 移位的结果是&quot;+c);
+    &#125;
+&#125;
+//输出结果：8</code></pre><p>###利用无符号右移获取二进制</p>
+<p>那么如何告诉计算机我们需要打印十进制n的二进制数呢？</p>
+<p>只要应用位移操作运算符，计算机就会自动以二进制进行操作，</p>
+<p>我们只需要想办法读取二进制n的每一位。</p>
+<p>所以就从最高位开始，无脑右移。最后和1做一个&amp;运算，</p>
+<p>是1是0都趁机打印出来就可以。</p>
+<p>循环32次，逐一读取每一位是1还是0.</p>
+<pre><code>
+public void binaryToDecimal(int n)&#123;
+      for(int i = 31;i &gt;= 0; i--)
+          System.out.print(n &gt;&gt;&gt; i &amp; 1); //只有1&amp;1才会输出1
+ &#125;
+//如果是负数，会按照它的补码输出的。负数的补码 = 原码取反+1，符号位不变。</code></pre>
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%A8%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-text">在有序数组中进行二分查找</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89%EF%BC%88%E7%9B%B8%E5%90%8C%E4%BD%8D%E7%BD%AE%E7%9A%84%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0%E4%B8%80%E8%87%B4-%E6%95%B0%E9%87%8F%E4%B8%80%E8%87%B4%EF%BC%89"><span class="toc-text">判断数组是否相等（相同位置的所有元素一致+数量一致）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%86%E4%B8%80%E4%B8%AAint%E5%80%BC%E5%88%86%E9%85%8D%E7%BB%99%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%EF%BC%8C%E5%A1%AB%E5%85%85%E5%85%83%E7%B4%A0"><span class="toc-text">将一个int值分配给数组中的每个元素，填充元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%87%E5%BA%8F%E6%8E%92%E5%BA%8F"><span class="toc-text">升序排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E8%BD%ACString%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">数组转String字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%89%A9%E5%AE%B9-%E7%BC%A9%E5%AE%B9"><span class="toc-text">数组扩容&#x2F;缩容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%A4%8D%E5%88%B6"><span class="toc-text">数组的复制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E8%BD%ACset%E3%80%81list"><span class="toc-text">数组转set、list</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%ACset"><span class="toc-text">转set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AClist"><span class="toc-text">转list</span></a></li></ol></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>【Leetcode日记(3)】通过Arrays类操作数组</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2022年03月21日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <h1 id="在有序数组中进行二分查找"><a href="#在有序数组中进行二分查找" class="headerlink" title="在有序数组中进行二分查找"></a>在有序数组中进行二分查找</h1><p>注意仅能用于有序数组，适用于数组中数据很多的情况</p>
+<p><strong>Arrays.binarySearch(arr, targetValue)</strong></p>
+<pre><code>public static boolean binarySearch(String[] arr, String targetValue) &#123;
+        int j = Arrays.binarySearch(arr, targetValue);
+        if (j &gt; 0) &#123;
+            return true;
+        &#125; else
+            return false;
+    &#125;</code></pre><p>用二分查找算法在给定数组中搜索给定值的对象(Byte,Int,double等)。数组在调用前必须排序好的。如果查找值包含在数组中，则返回搜索键的索引；否则返回 (-(插入点) - 1)。</p>
+<h1 id="判断数组是否相等（相同位置的所有元素一致-数量一致）"><a href="#判断数组是否相等（相同位置的所有元素一致-数量一致）" class="headerlink" title="判断数组是否相等（相同位置的所有元素一致+数量一致）"></a>判断数组是否相等（相同位置的所有元素一致+数量一致）</h1><p><strong>public static boolean equals(long[] a, long[] a2)</strong></p>
+<p>如果两个指定的 long 型数组彼此相等，则返回 true。如果两个数组包含相同数量的元素，并且两个数组中的所有相应元素对都是相等的，则认为这两个数组是相等的。换句话说，如果两个数组以相同顺序包含相同的元素，则两个数组是相等的。同样的方法适用于所有的其他基本数据类型（Byte，short，Int等）。</p>
+<h1 id="将一个int值分配给数组中的每个元素，填充元素"><a href="#将一个int值分配给数组中的每个元素，填充元素" class="headerlink" title="将一个int值分配给数组中的每个元素，填充元素"></a>将一个int值分配给数组中的每个元素，填充元素</h1><p><strong>Arrays.fill(array, 100);</strong></p>
+<p>将指定的 int 值分配给指定 int 型数组指定范围中的每个元素。同样的方法适用于所有的其他基本数据类型（Byte，short，Int等）。</p>
+<pre><code>import java.util.Arrays;
+
+public class ArrayFill &#123;
+    public static void main(String[] args) &#123;
+
+        int arr[] = &#123;1,2,3,4,5,6,7,8,9,10&#125;;
+        Arrays.fill(arr, 3, 6, 50);
+        for(int a:arr)
+            System.out.print(a+&quot; &quot;);
+
+        System.out.println();
+
+        int array[] = new int[6];
+            Arrays.fill(array, 100);
+            for (int i=0, n=array.length; i &lt; n; i++) &#123;
+                System.out.print(array[i]+&quot; &quot;);
+            &#125;
+    &#125;
+&#125;
+//运行结果：
+//1 2 3 50 50 50 7 8 9 10 
+//100 100 100 100 100 100 
+</code></pre><h1 id="升序排序"><a href="#升序排序" class="headerlink" title="升序排序"></a>升序排序</h1><p><strong>Arrays.sort(arr)</strong></p>
+<p>对指定对象数组根据其元素的自然顺序进行升序排列。同样的方法适用于所有的其他基本数据类型（Byte，short，Int等）。</p>
+<pre><code>import java.util.Arrays;
+
+public class ArraySort &#123;
+    public static void main(String[] args) &#123;
+        int arr[] = &#123; 2, 5, -2, 6, -3, 8, 0, -7, -9, 4 &#125;;
+        Arrays.sort(arr);
+
+        for(int a:arr)
+            System.out.print(a+&quot; &quot;);
+    &#125;
+&#125;
+//运行结果：-9 -7 -3 -2 0 2 4 5 6 8 </code></pre><h1 id="数组转String字符串"><a href="#数组转String字符串" class="headerlink" title="数组转String字符串"></a>数组转String字符串</h1><p><strong>Arrays.toString(arr)</strong></p>
+<pre><code>import java.util.Arrays;
+
+public class ArrayToString &#123;
+    public static void main(String[] args) &#123;
+        int arr[] = &#123;1,2,3,4,5,6&#125;;
+
+        String newArr = Arrays.toString(arr);
+        System.out.println(newArr);
+    &#125;
+&#125;
+//运行结果： [1, 2, 3, 4, 5, 6]</code></pre><h1 id="数组扩容-缩容"><a href="#数组扩容-缩容" class="headerlink" title="数组扩容/缩容"></a>数组扩容/缩容</h1><p><strong>Arrays.copyOf(arr,val)</strong></p>
+<pre><code>import java.util.Arrays;
+
+public class ArraycopyOf &#123;
+    public static void main(String[] args) &#123;
+        int arr[] = &#123;1,2,3,4&#125;;
+
+        arr = Arrays.copyOf(arr,8);
+
+        for(int a:arr)
+            System.out.print(a+&quot; &quot;);
+    &#125;
+&#125;
+//运行结果：1 2 3 4 0 0 0 0 </code></pre><h1 id="数组的复制"><a href="#数组的复制" class="headerlink" title="数组的复制"></a>数组的复制</h1><p>** System.arraycopy(arr, 0, arr1, 1, 3);**</p>
+<pre><code>public class Arrayscopy &#123;
+    public static void main(String[] args) &#123;
+        int arr[] = &#123;1,2,3,4&#125;;
+        int[] arr1 = new int[6];
+
+        System.arraycopy(arr, 0, arr1, 1, 3);
+        for (int str : arr1)&#123;
+            System.out.print(str+“ ”);
+        &#125;
+    &#125;
+&#125;
+//运行结果：0 1 2 3 0 0 </code></pre><h1 id="数组转set、list"><a href="#数组转set、list" class="headerlink" title="数组转set、list"></a>数组转set、list</h1><h2 id="转set"><a href="#转set" class="headerlink" title="转set"></a>转set</h2><pre><code>  Set&lt;String&gt; set = new HashSet&lt;&gt;(Arrays.asList(s2));
+        System.out.println(&quot;集合set是否包含:&quot; + set.contains(&quot;wyy&quot;));</code></pre><h2 id="转list"><a href="#转list" class="headerlink" title="转list"></a>转list</h2><pre><code>  List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(s2));
+  list.add(&quot;whh&quot;);
+ System.out.println(&quot;ArrayList是否包含:&quot; + list.contains(&quot;whh&quot;));</code></pre><p>特别注意，将整形数组转为集合，必须用原始类型。不能直接将int[]转化为集合、因为asList()方法的参数必须是对象。应该先把int[]转化为Integer[]。</p>
+<pre><code>
+Integer[] integerArray = new Integer[s5.length];
+        for (int i = 0; i &lt; integerArray.length; i++) &#123;
+            integerArray[i] = s5[i];
+        &#125;
+</code></pre>
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>
