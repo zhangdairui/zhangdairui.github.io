@@ -121,7 +121,7 @@
     <div id="container">
 
         
-            <section class="main slideDownMin">
+            <section class="main">  
           
 
           
@@ -129,124 +129,83 @@
 <link rel="stylesheet" href="/css/post.css">
 
 
-<section class="archive slideDownMin">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
 
-    <div class="scroll-article">
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#No-104"><span class="toc-text">No.104</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li></ol>
 
 
-    
-    
-
-    
-
-      
-
-        
+    </div>
 
 
-          
-          <div class="archive-part">
-              <span class="archive-part-item">
-                <span>2022</span>
-              </span>
-          </div>
-          
-      
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2022年03月31日</span>
-          <a class="post_title" href="/2022/03/31/【Leetcode日记5】/">【Leetcode日记5】对链表的理解No.19</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
 
-          <p><p>No.19这道题是删除链表倒数第n个节点，因为这道题我对链表有了一个更正确的理解（感谢DK的耐心讲解），记录一下。</p></p>
-        </div>
-      </div>
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>【Leetcode日记4】Java二叉树最大深度（No.104）</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2022年03月29日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a></span>
+			      
+			    </div>
 
-    
+		     </div>
 
-      
+			    <!-- 正文 -->
+			    <h1 id="No-104"><a href="#No-104" class="headerlink" title="No.104"></a>No.104</h1><p><img src="https://s2.loli.net/2022/03/29/t9bOi5T4zSCZIoE.png" alt="t9bOi5T4zSCZIoE"></p>
+<pre><code>/**
+ * Definition for a binary tree node.
+ * public class TreeNode &#123;
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() &#123;&#125;
+ *     TreeNode(int val) &#123; this.val = val; &#125;
+ *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     &#125;
+ * &#125;
+ */
+class Solution &#123;
+  public int maxDepth(TreeNode root) &#123;
 
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2022年03月29日</span>
-          <a class="post_title" href="/2022/03/29/【Leetcode日记4】/">【Leetcode日记4】Java二叉树最大深度（No.104）</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
+    if (root == null) &#123;//递归出口
+      return 0;
+    &#125; else &#123;
 
-          <p></p>
-        </div>
-      </div>
+      int left_height = maxDepth(root.left);//查看左子树深度
+      int right_height = maxDepth(root.right);//查看右子树深度
+      return java.lang.Math.max(left_height, right_height) + 1; //比较，找出最深的并且+1；
+    &#125;
+  &#125;
+&#125;</code></pre><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>这道题要注意最大深度指的是点的个数，不是边的个数。所以要记得+1。<br>核心思路就是比较左子树和右子树哪个拥有最大深度。</p>
 
-    
+			</div>
+    </div>
 
-      
+</div>
 
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2022年03月21日</span>
-          <a class="post_title" href="/2022/03/21/【Leetcode日记3】/">【Leetcode日记(3)】通过Arrays类操作数组</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
 
-          <p></p>
-        </div>
-      </div>
-
-    
-
-      
-
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2022年03月20日</span>
-          <a class="post_title" href="/2022/03/20/【Leetcode日记2】java十进制二进制转换/">【Leetcode日记(2)】java十进制二进制转换 No.191</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
-
-          <p></p>
-        </div>
-      </div>
-
-    
-
-      
-
-        
-      <div class="card_list">
-        <div class="card">
-          <span class="post_date">2022年03月19日</span>
-          <a class="post_title" href="/2022/03/19/【Leetcode日记】二分查找/">【Leetcode日记(1)】二分查找和No.69</a>  
-          <span id="post_tag">
-              <i class="fa fa-tag"></i>
-              <a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a>
-          </span>
-
-          <p></p>
-        </div>
-      </div>
-
-    
-  </div>
-
-<div class="pageChange">
-  
-
- </div>
-  
-</section>
 
 
           </section> 

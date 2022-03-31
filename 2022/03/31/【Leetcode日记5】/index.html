@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#No-19-Remove-Nth-Node-From-End-of-List"><span class="toc-text">No.19. Remove Nth Node From End of List</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text">题目</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%AD%E7%9A%84%E8%A6%81%E7%82%B9%EF%BC%9A"><span class="toc-text">代码中的要点：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E9%93%BE%E8%A1%A8%E7%9A%84%E5%8A%A0%E6%B7%B1%E7%90%86%E8%A7%A3"><span class="toc-text">对链表的加深理解</span></a></li></ol></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>【Leetcode日记5】对链表的理解No.19</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2022年03月31日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/leetcode/" rel="tag">leetcode</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <p>No.19这道题是删除链表倒数第n个节点，因为这道题我对链表有了一个更正确的理解（感谢DK的耐心讲解），记录一下。</p>
+<a id="more"></a>
+
+<h1 id="No-19-Remove-Nth-Node-From-End-of-List"><a href="#No-19-Remove-Nth-Node-From-End-of-List" class="headerlink" title="No.19. Remove Nth Node From End of List"></a>No.19. Remove Nth Node From End of List</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><img src="https://s2.loli.net/2022/03/31/bUorpLqjzsXlJO5.png" alt="bUorpLqjzsXlJO5"></p>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>（官方solution）</p>
+<pre><code>/**
+ * Definition for singly-linked list.
+ * public class ListNode &#123;
+ *     int val;
+ *     ListNode next;
+ *     ListNode() &#123;&#125;
+ *     ListNode(int val) &#123; this.val = val; &#125;
+ *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;
+ * &#125;
+ */
+
+
+
+class Solution &#123;
+    public ListNode removeNthFromEnd(ListNode head, int n) &#123;
+
+    //新建一个dummy节点，使之与head相连。
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+
+    //计算出head链表的长度，为了操作链表，新建一个first指向head的头部
+
+    int length  = 0;
+    ListNode first = head;
+    while (first != null) &#123;
+        length++;
+        first = first.next; //循环向后移动first，直到末尾。此时已经获得length。
+    //此时first也处于链表末尾。
+    &#125;
+
+
+    length -= n;
+    first = dummy; //使first再指向dummy
+
+    while (length &gt; 0) &#123;
+        length--;
+        first = first.next;
+    &#125;//此时first指向了需要删除的节点的前驱节点 下一步只要改变next就可以
+
+    first.next = first.next.next; //改变锁链
+
+    return dummy.next; //返回从原来head位置开始的链表
+&#125;
+
+
+    &#125;</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="代码中的要点："><a href="#代码中的要点：" class="headerlink" title="代码中的要点："></a>代码中的要点：</h2><ul>
+<li><p>dummy的存在意义：如果没有dummy的话，当我们需要删除的点就是head的时候就会出现问题。除非额外做一些判断。归根结底是因为我们想要删除链表中的某一个点，需要该点的前面的点，而head是没有前面的点的，所以我们要给他创造一个前面的点。从而把head节点变成一个有前有后的普通节点。最后也要return dummy.next而不是head。</p>
+</li>
+<li><p>first的存在意义：我们为了获得length，是不能直接操作head头部指针的，因为我们得留着“最初的锁链”，让他从中间断开，不能从头全都改变。另外，first更像是一个游标，改变first本身是无所谓的，随时可以再改回来，但是一旦改变first.next，就相当于改变了节点之间的连接，head也好dummy也好会一起更改。</p>
+</li>
+</ul>
+<h2 id="对链表的加深理解"><a href="#对链表的加深理解" class="headerlink" title="对链表的加深理解"></a>对链表的加深理解</h2><ul>
+<li>链表是一种链式表达，关键就在于【链】。一个链表有val和next。val代表当前指针指向的节点的值，next代表下一个节点（一个指针）。无论是val还是next其实都是指针。当修改了链（当前元素的下一个元素的指向），才是真正意义上的修改了链表。</li>
+</ul>
+<ul>
+<li>在上面的代码中： <code>ListNode dummy = new ListNode(0);</code>这是最常用的初始化链表节点的方式，指针指向了dummy。然后使用<code>dummy.next = head;</code>就可以将dummy与head连上。而<code>ListNode first = head;</code>就是不一样的，first这里只是一个指针！只是创建了一个first链表指针！没有使用first.next将其与任何节点相连。这句代码的意思只是把first指针指向了head的位置。 <strong>相当于在head上面新建了一个游标！</strong></li>
+</ul>
+
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>
