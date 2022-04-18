@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F-Quick-Sort"><span class="toc-text">快速排序 Quick Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="toc-text">核心思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">代码实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%85%B3%E9%94%AE%E7%82%B9"><span class="toc-text">需要注意的关键点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F-Selection-Sort"><span class="toc-text">选择排序 Selection Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3-1"><span class="toc-text">核心思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>Java各类排序算法</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2022年04月17日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/java/" rel="tag">java</a>,<a class="tag-link-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <h1 id="快速排序-Quick-Sort"><a href="#快速排序-Quick-Sort" class="headerlink" title="快速排序 Quick Sort"></a>快速排序 Quick Sort</h1><h2 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h2><p>最核心的目的就是在确定基准点之后，将小于基准点的数字放在它的左侧，大于的放在右侧。最后递归整个过程。每一轮排序结束的标志就是，将基准点安顿在“中间”的正确位置。</p>
+<p>具体的操作是：</p>
+<ol>
+<li>选择一个key(或者叫pivot)，当做整个数列的基准。一般是数列的起点元素。</li>
+<li>准备一头一尾两个指针：x和y。</li>
+<li>x其实是负责从前往后，找到比key大的值，因为它不应该在左边。反之，y负责从后往前，找到本不应该在右边的，比key小的值。*这里所说的该不该在左或右，是根据key点在正中间去想象的，至于如何把key点放在所谓的“正中间”，这正是一次遍历结束后我们要做的事情。</li>
+<li>先操作y，向前找，找到比key小的小的值。停住。</li>
+<li>再操作x，向后找，找到比key大的值，停住。</li>
+<li>交换x和y指针指向的数组的值</li>
+<li>最终x和y指针相遇，证明这一圈的操作结束，此时把key安放到x或者y的位置。</li>
+<li>递归上述步骤。注意3-5，还可以轮流洗掉（下文方法二。）</li>
+</ol>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>代码实现其实可以选择两种方式：</p>
+<ul>
+<li><p>第一种方式，指针停下后交换。</p>
+<p>移动完y就移动x，指针都停住之后，交换x处和y处的数值。注意此方式，x的起始位置是head+1，也就是第二个元素。因为第一个元素就是key本身，比较也没有意义。最终，直至x和y相遇时，我们要讲相遇处的值，与从未动过的head交换。这也等于，是让身为key的head提前等待，等着我们把smaller的数和larger的数都挑出来，最后再把head放到中间。</p>
+</li>
+<li><p>第二种方式，x和y互相洗掉。</p>
+<p>移动完y，y停住之后，将y处的值赋给x处。把x处的值洗掉。再去动x指针，x停住之后，把x处的值赋给y。注意此方法，x的起始位置就是head，因为，我们需要head处值被洗掉，空出来位置。只有head值被洗掉了没关系，因为key替我们保存着head值。直至最后，从key里把保存的值拿出来，放到x和y相遇的位置。就可以结束。</p>
+</li>
+</ul>
+<pre><code>
+class Solution &#123;
+
+//快速排序 方法1️⃣
+//     public static void quickSort(int[] nums, int left, int right)&#123;
+//             //快速排序✨一定要从后往前！！！！
+//             //快速排序的每一轮结束标志：把key安顿好。
+
+//             //要点：准备x和y两个盒子，一左一右，既可以轮流动，也可以同时动最后交换。
+//             //轮流动的话，要轮流洗去对应的值， 包括key在内  →方法2️⃣
+//             //这里选择同时移动x和y，找到【不应该在这里】的点之后交换
+
+//             if(left&gt;=right) return;
+//             int x = left+1;
+//             int y = right;
+
+
+
+//             int key = nums[left];
+
+//             //两头开始检查
+//             while( x &lt;= y )&#123;
+//                 //挪y盒子，直到找到【不应该在右边的】
+//                 while( y &gt; left &amp;&amp; nums[y] &gt; key)&#123;
+//                     y--;
+//                 &#125;
+//                 //挪x盒子，直到找到【不应该在左边的】
+//                 while( x&lt;= right &amp;&amp; nums[x] &lt;= key)&#123;
+//                     x++;            
+//                 &#125;
+
+//                 //此时x盒子和y盒子都停下了，他们指向的都是【不应该在这里的点】可以进行交换
+//                 if(x &lt; y)&#123;
+//                     int temp = nums[x];
+//                     nums[x] = nums[y];
+//                     nums[y] = temp;
+//                 &#125;
+
+//             &#125;
+
+//             //一轮初步检查完毕，此时x = y; 我们要把盒子的点nums[x]和key交换，这样key才能到中间。
+
+//             int temp = nums[left];
+//             nums[left] = nums[y];
+//             nums[y] = temp;
+
+
+//             //input[15,9,6,45,13],第一轮结束之后[13,9,6,15,45]。可以看到，6作为key在结果数组的中间。左边是small数组，右边是large数组。
+
+//             //递归左右
+//           quickSort(nums , left , y-1);
+//           quickSort(nums , y+1 , right);
+
+//         &#125;
+
+//快速排序 方法2️⃣
+    public static void quickSort(int[] nums, int left, int right)&#123;
+            //快速排序✨一定要从后往前！！！！
+            //快速排序的每一轮结束标志：把key安顿好。
+
+            //要点： 先动y。y负责从后往前找到一个比key小的值，赋给x指针的位置。
+            //再动x。把x往后找， x负责找到一个比key大的值，赋给y的位置。 
+            //x和y轮流当盒子。
+
+            if(left&gt;=right) return;
+            int x = left;
+            int y = right;
+
+            int key = nums[left];
+
+            //两头开始检查
+            while( x &lt; y )&#123;
+                //挪y盒子，直到找到【不应该在右边的】
+                while( y &gt; left &amp;&amp; nums[y] &gt; key)&#123;
+                    if(y&lt;=x) break;
+                    y--;
+                &#125;
+                //找到了之后，赋给x指针位置
+                //(y&lt;=x) break;
+                nums[x] = nums[y];
+                           //挪x盒子，直到找到【不应该在左边的】
+                while( x&lt;= right &amp;&amp; nums[x] &lt;= key)&#123;
+                    if(y&lt;=x) break;
+                    x++;            
+                &#125;
+                //找到了，赋给y指针的位置
+                //if(y&lt;=x) break;
+                nums[y] = nums[x];
+
+            &#125;
+
+            //一轮初步检查完毕，此时x = y; 我们要把盒子的点nums[x]和key交换，这样key才能到中间。
+            nums[y] = key;
+
+            //递归左右
+          quickSort(nums , left , y-1);
+          quickSort(nums , y+1 , right);
+
+        &#125;    
+
+// Driver！！！！
+    public int[] sortArray(int[] nums) &#123;
+
+        quickSort(nums , 0 , nums.length-1);
+
+        return nums;
+
+
+    &#125;
+&#125;
+</code></pre><h2 id="需要注意的关键点"><a href="#需要注意的关键点" class="headerlink" title="需要注意的关键点"></a>需要注意的关键点</h2><ul>
+<li><p>快速排序，我设定的key在head处（数组头部），是一定要先挪y的，从后面开始找。这个原因，忘了的话看dk的视频。在电脑桌面上的【重要视频】文件夹里。</p>
+<p>  原因如下： </p>
+<p>  方法一：如果先挪x，最终x和y交汇的点肯定是：不应该在左边的、数值很大的点。因为这就是x的使命！这样的点，再去和head交换，最大的点反而占据了最前面的位置。没有意义。</p>
+</li>
+</ul>
+<pre><code>方法二：如果先挪x，会导致后面的值在第一次洗的时候就洗掉了，没有保存。先挪y，第一次洗x值时候，x的值被保存在key里，后面可以拿回来。</code></pre><ul>
+<li><p>x指针的起始位置，两种方法是不同的。轮流洗掉需要先让head被key保存，空出位置。同时交换需要head不要动，等到最后去交换。</p>
+</li>
+<li><p>每次在挪x或y指针之前，都要判断一下，此时x是不是等于y了，如果是的话，随时退出循环。因为指针相遇了这一圈就遍历结束了。不然挪过头了，遇到与key相等的值，就会出现错误。</p>
+</li>
+</ul>
+<h1 id="选择排序-Selection-Sort"><a href="#选择排序-Selection-Sort" class="headerlink" title="选择排序 Selection Sort"></a>选择排序 Selection Sort</h1><h2 id="核心思想-1"><a href="#核心思想-1" class="headerlink" title="核心思想"></a>核心思想</h2><p>每一次都找到剩余未排序数组中最小的数放进去。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>class Solution &#123;
+//Selection sort 选择排序。
+//每次都选择当前数列中最小的元素。
+    public static void selectionSort(int[] nums, int curr)&#123;
+
+        if(curr &gt;= nums.length - 1) return;
+
+        int min = nums[curr];
+        int minCurr = curr;
+        for(int i = curr+1 ; i&lt;nums.length ; i++)&#123;
+            if(nums[i] &lt; min)&#123;
+                min = nums[i];
+                minCurr = i;
+            &#125;
+
+        &#125;
+
+        //已经找出最小值min
+        //将min和curr位的数组交换。
+        nums[minCurr] = nums[curr];
+        nums[curr] = min;
+
+
+        curr++;
+        selectionSort(nums, curr);
+    &#125;
+
+
+// Driver！！！！
+    public int[] sortArray(int[] nums) &#123;
+
+        selectionSort(nums , 0);
+
+        return nums;
+
+    &#125;
+&#125;</code></pre>
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>
