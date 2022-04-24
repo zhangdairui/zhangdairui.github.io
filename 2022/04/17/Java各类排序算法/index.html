@@ -375,7 +375,9 @@ class Solution &#123;
         return nums;
 
     &#125;
-&#125;</code></pre><h1 id="归并排序-Merge-Sort"><a href="#归并排序-Merge-Sort" class="headerlink" title="归并排序 Merge Sort"></a>归并排序 Merge Sort</h1><h2 id="核心思想-3"><a href="#核心思想-3" class="headerlink" title="核心思想"></a>核心思想</h2>
+&#125;</code></pre><h1 id="归并排序-Merge-Sort"><a href="#归并排序-Merge-Sort" class="headerlink" title="归并排序 Merge Sort"></a>归并排序 Merge Sort</h1><h2 id="核心思想-3"><a href="#核心思想-3" class="headerlink" title="核心思想"></a>核心思想</h2><p>把一个数组不断二分，一直到只有一个元素<br>向上合并的同时排序。<br>排序的具体方法是使用双指针，在两个小数组里移动，比较，将小的排进去。</p>
+<p>*注意归并排序没办法in-place 必须消耗额外的空间</p>
+
 			</div>
     </div>
 
