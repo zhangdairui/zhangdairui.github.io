@@ -6,7 +6,7 @@
   <link href="https://anywheredoor.fun/atom.xml" rel="self"/>
   
   <link href="https://anywheredoor.fun/"/>
-  <updated>2022-04-30T18:20:35.549Z</updated>
+  <updated>2022-05-14T09:46:16.007Z</updated>
   <id>https://anywheredoor.fun/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Leetcode日记7】LRU算法-HashMap+DoubleLinkedList</title>
+    <link href="https://anywheredoor.fun/2022/05/14/%E3%80%90Leetcode%E6%97%A5%E8%AE%B07%E3%80%91LRU%E7%AE%97%E6%B3%95-HashMap-DoubleLinkedList/"/>
+    <id>https://anywheredoor.fun/2022/05/14/%E3%80%90Leetcode%E6%97%A5%E8%AE%B07%E3%80%91LRU%E7%AE%97%E6%B3%95-HashMap-DoubleLinkedList/</id>
+    <published>2022-05-14T07:39:05.000Z</published>
+    <updated>2022-05-14T09:46:16.007Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;使用HashMap + Double Linked List实现LRU算法的原理&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="java" scheme="https://anywheredoor.fun/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>【Leetcode日记6】有环链表的判断、长度和起点</title>
@@ -44,7 +61,7 @@
     <link href="https://anywheredoor.fun/2022/04/17/Java%E5%90%84%E7%B1%BB%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     <id>https://anywheredoor.fun/2022/04/17/Java%E5%90%84%E7%B1%BB%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</id>
     <published>2022-04-17T10:36:19.000Z</published>
-    <updated>2022-05-01T15:13:40.257Z</updated>
+    <updated>2022-05-05T09:10:56.322Z</updated>
     
     
       
@@ -424,23 +441,6 @@
     
     
     <category term="前端" scheme="https://anywheredoor.fun/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java各种数据类型互相转换笔记</title>
-    <link href="https://anywheredoor.fun/2021/06/17/Java%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2%E7%AC%94%E8%AE%B0/"/>
-    <id>https://anywheredoor.fun/2021/06/17/Java%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2%E7%AC%94%E8%AE%B0/</id>
-    <published>2021-06-17T05:01:20.000Z</published>
-    <updated>2021-06-17T08:38:47.737Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;总结一下常用的java的各种变量类型之间的转换。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="java" scheme="https://anywheredoor.fun/tags/java/"/>
     
   </entry>
   

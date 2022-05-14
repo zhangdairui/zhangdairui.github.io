@@ -464,7 +464,70 @@ class Solution &#123;
 <li>重复第二步及以后，直至堆消失。</li>
 </ol>
 <p><img src="https://s2.loli.net/2022/05/01/I8SukQ1OWrAbLjd.jpg" alt="I8SukQ1OWrAbLjd"></p>
-<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><h1 id="各算法时间复杂度"><a href="#各算法时间复杂度" class="headerlink" title="各算法时间复杂度"></a>各算法时间复杂度</h1><h1 id="各算法稳定性"><a href="#各算法稳定性" class="headerlink" title="各算法稳定性"></a>各算法稳定性</h1>
+<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><pre><code>class Solution &#123;
+//Heap sort 堆排序。
+
+//核心思想： 
+//第一步 把数组想象成一个大顶堆（排升序的时候）。从最后一个有叶子的节点从下向上构造堆
+//首先把根节点拿出来保存
+//然后看左右孩子。如果不满足根&gt;左右的话，就记录下来谁最大。
+//最后把最大的点和根节点的数值交换。
+
+//第二步  交换堆顶最大元素与末尾 + 重新调整堆结构
+
+    public static void heap(int[] nums,int index,int length)&#123;
+        //保存 
+        int temp = nums[index];
+
+        for (int leftIndex = 2 * index + 1; leftIndex &lt; length; leftIndex = 2 * leftIndex + 1)&#123;
+            //左&lt;右
+            if (leftIndex+1 &lt; length &amp;&amp; nums[leftIndex] &lt; nums[leftIndex+1])&#123;
+                //将指针移至较大节点- 右
+                leftIndex++;
+            &#125;
+
+            // &gt; 父节点
+            if (nums[leftIndex] &gt; temp)&#123;
+                //让父节点保持最大（原父节点被洗掉了 但是不要紧 temp值里还有保存。
+                nums[index] = nums[leftIndex];
+
+                //指针移向大的那个节点  因为我们要知道是哪个点被移动走了
+                index = leftIndex;
+            &#125;
+            else&#123;
+                break;
+            &#125;
+        &#125;
+
+        //temp值补位
+        nums[index] = temp;
+     &#125;
+
+    private static void swap(int[] nums, int start, int end)&#123;
+        int temp = nums[start];
+        nums[start] = nums[end];
+        nums[end] = temp;
+    &#125;
+
+    public static int[] sortArray(int[] nums)&#123;
+
+        //构造堆 - 从倒数第一个非叶子节点开始
+        for (int i = nums.length/2 - 1; i&gt;=0; i--)&#123;
+            heap(nums,i, nums.length);
+        &#125;
+
+        //Sort - 交换堆顶最大元素与末尾 + 重新调整堆结构 + 断尾(i--) 
+        for (int i = nums.length - 1; i &gt; 0 ; i--)&#123;
+            //交换堆顶元素和末尾元素
+            swap(nums,0,i);
+            //重新调整堆结构
+            heap(nums,0,i);
+        &#125;
+        return nums;
+    &#125;
+
+
+&#125;</code></pre><h1 id="各算法时间复杂度"><a href="#各算法时间复杂度" class="headerlink" title="各算法时间复杂度"></a>各算法时间复杂度</h1><h1 id="各算法稳定性"><a href="#各算法稳定性" class="headerlink" title="各算法稳定性"></a>各算法稳定性</h1>
 			</div>
     </div>
 

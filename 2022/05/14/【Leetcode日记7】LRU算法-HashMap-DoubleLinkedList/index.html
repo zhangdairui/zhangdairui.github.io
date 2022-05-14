@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnywhereDoor</title>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+
+
+
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- 代码高亮库 -->
+    
+<link rel="stylesheet" href="/css/default.min.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+<link rel="stylesheet" href="/css/post.css">
+
+    <!-- 引入JQ js -->
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Anywheredoor" type="application/atom+xml">
+</head>
+
+
+<body>
+
+
+<!-- 强制横屏div -->
+<div id="warning-message">
+    <div class="Wgifgif">
+        <!-- <img src="img/a.gif" style="width: 8em; display:block;"> -->
+        <img src="/img/a.gif">
+    </div>
+    
+    <p id="eng">This website is only viewable in landscape mode. Please change your mobile to landscape mode.</p>
+    <p id="jap">こちらのウェブページはランドスケープモードのみ対応しており、お端末を回転し、横画面モードで御覧ください。</p>
+    <p id="chi">该网页仅可在横屏模式下浏览，<br>请旋转您的设备至横屏模式。<br><br> >_< </p>
+</div>
+
+<!-- loading div -->
+<div id="loading">
+    <div class="loadingIMG">
+        <img src="/img/loading.png" width="8em">
+    </div>
+</div>
+
+
+
+<!-- 主要布局开始 -->
+<div class="column" id="left">
+    <div id="light" onclick="switchLight()" class="dayTime">
+
+        <svg>
+             <g>
+              <title>Switch</title>
+              <line id="swicth-line" y2="200" x2="48" x1="48"/>
+              <ellipse id="swicth-round" ry="5" rx="5" cy="200" cx="48"/>
+             </g>
+        </svg>
+        <span class="tooltiptext">点击开灯/关灯</span>
+    </div>
+    <div class="copyright"><p>©2021 Anywheredoor</p></div>
+</div>
+
+
+<div class="column" id="medium">
+    
+    <div id="nav">
+         
+<link rel="stylesheet" href="/css/main.css">
+
+
+<ul id="menu">
+            
+            <li class="menu-item">
+                <a href="/">|HOME</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">|BLOGS</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/">|CATEGORY</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about">|ABOUT</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/comment">|COMMENT</a>
+            </li>
+            
+</ul>
+
+<!-- 点击高亮js -->
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("a");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+</script>
+
+    </div>
+    
+    <div id="container">
+
+        
+            <section class="main">  
+          
+
+          
+
+<link rel="stylesheet" href="/css/post.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+<div class="row" id="postPage">
+	<!-- 侧边栏 -->
+	<div class="aside">
+       
+
+<!-- 侧边目录栏 -->
+
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LRU%E7%AE%97%E6%B3%95%E5%AE%9A%E4%B9%89"><span class="toc-text">LRU算法定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E8%A7%A3HashMap-LinkedList%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">图解HashMap+LinkedList数据结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Leetcode-No-146"><span class="toc-text">Leetcode No. 146</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></li></ol>
+
+
+    </div>
+
+
+    <!-- 文章内容 -->
+    <div class="postContent">
+    	    
+
+            
+			<div class="article_content">
+				<!-- 文章信息 -->
+			<div class="post_info">
+			    
+				<div class="post_title" id="postTitle">
+			      <span>【Leetcode日记7】LRU算法-HashMap+DoubleLinkedList</span>
+			    </div>
+			    
+			    <div class="post_auther_date_tag">
+			      <span id="post-author">emo</span>
+			      |
+			      <span id="post-date">2022年05月14日</span>
+			      |
+			      <span class="fa fa-tag" id="text-tag"><a class="tag-link-link" href="/tags/java/" rel="tag">java</a></span>
+			      
+			    </div>
+
+		     </div>
+
+			    <!-- 正文 -->
+			    <p>使用HashMap + Double Linked List实现LRU算法的原理</p>
+ <a id="more"></a>
+
+<h1 id="LRU算法定义"><a href="#LRU算法定义" class="headerlink" title="LRU算法定义"></a>LRU算法定义</h1><blockquote>
+<p>LRU是Least Recently Used 近期最少使用算法。 内存管理的一种页面置换算法，对于在内存中但又不用的数据块（内存块）叫做LRU，操作系统会根据哪些数据属于LRU而将其移出内存而腾出空间来加载另外的数据。</p>
+</blockquote>
+<h1 id="图解HashMap-LinkedList数据结构"><a href="#图解HashMap-LinkedList数据结构" class="headerlink" title="图解HashMap+LinkedList数据结构"></a>图解HashMap+LinkedList数据结构</h1><p><img src="https://s2.loli.net/2022/05/14/WORgoy2IVXeH8jf.jpg" alt="WORgoy2IVXeH8jf"></p>
+<h1 id="Leetcode-No-146"><a href="#Leetcode-No-146" class="headerlink" title="Leetcode No. 146"></a>Leetcode No. 146</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.</p>
+<p>Implement the LRUCache class:</p>
+<ul>
+<li>LRUCache(int capacity) Initialize the LRU cache with positive size capacity.</li>
+<li>int get(int key) Return the value of the key if the key exists, otherwise return -1.</li>
+<li>void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.</li>
+</ul>
+<p>The functions get and put must each run in O(1) average time complexity.</p>
+<pre><code>Example 1:
+
+**Input**
+
+[&quot;LRUCache&quot;, &quot;put&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;get&quot;, &quot;get&quot;]
+[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
+
+
+**Output**
+[null, null, null, 1, null, -1, null, -1, 3, 4]
+
+**Explanation**
+
+LRUCache lRUCache = new LRUCache(2);
+lRUCache.put(1, 1); // cache is &#123;1=1&#125;
+lRUCache.put(2, 2); // cache is &#123;1=1, 2=2&#125;
+lRUCache.get(1);    // return 1
+lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is &#123;1=1, 3=3&#125;
+lRUCache.get(2);    // returns -1 (not found)
+lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is &#123;4=4, 3=3&#125;
+lRUCache.get(1);    // return -1 (not found)
+lRUCache.get(3);    // return 3
+lRUCache.get(4);    // return 4</code></pre><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>//LRU: 如果数据被访问过，那么将来被访问的几率就更好。反之，一个数据很久都没有被访问过，就说明它不是很重要可以被洗掉
+
+//重要：
+//1. HashMap只要有key就可以访问到value，所以使用它查询快。但是它在内存中是无序的，不方便添加和删除
+//2.双向链表使得本来无序的hashmap链接起来，让我们可以访问最初或者最后一个node，使整个数据结构中的内容变得有序。
+//3. 为什么链表节点也要有key？因为当我们从链表中删除node的时候，也要通知HashMap，通过key去梦幻联动。
+//4. 为什么要用双向链表？因为双向链表方便删除（移动）一个节点。只需要把prev指向next。如果是单向的链表，还需要从头遍历。这样就会又慢了。
+
+public class LRUCache &#123;
+
+  //STEP ONE----------------------先制作双向链表
+
+  //1. 所用的节点。每个节点包括：&lt;key, value&gt;,next和prev
+  class DLinkedNode &#123;
+    int key,value;
+    DLinkedNode prev;
+    DLinkedNode next;
+  &#125;
+
+  //2. 向链表中添加节点： 添加到head的下一个。head的下一个节点永远是最新被访问过的节点。
+  private void addNode(DLinkedNode node) &#123;
+    node.prev = head;
+    node.next = head.next;
+
+    head.next.prev = node;
+    head.next = node;
+  &#125;
+
+
+  //3. 删除（可以理解为拿走）链表中的某个节点
+  private void removeNode(DLinkedNode node)&#123;
+
+    DLinkedNode prev = node.prev;
+    DLinkedNode next = node.next;
+
+    prev.next = next;
+    next.prev = prev;
+  &#125;
+
+
+  //4. 将一个指定的节点移动到head的下一个（这个节点是最近被使用的节点）
+  private void moveToHead(DLinkedNode node)&#123;
+    removeNode(node);
+    addNode(node);
+  &#125;
+
+
+  //5. 将链表的尾部节点删除。（最不常访问的落灰了的节点）
+  private DLinkedNode popTail() &#123;
+    DLinkedNode res = tail.prev;
+    removeNode(res);
+    return res;
+  &#125;
+
+
+  //STEP TWO----------------------制作HashMap+LinkedList
+  private Map&lt;Integer, DLinkedNode&gt; cache = new HashMap&lt;&gt;();
+  private int size; //目前储存的数据长度
+  private int capacity; //整个内存的限制容量
+  private DLinkedNode head, tail;//准备head和tail
+
+
+
+  //STEP THREE-----------------制作LRU算法
+  public LRUCache(int capacity) &#123;
+    //初始化LRU结构
+    this.size = 0;
+    this.capacity = capacity;
+
+    head = new DLinkedNode();
+    // head.prev = null;
+
+    tail = new DLinkedNode();
+    // tail.next = null;
+
+    head.next = tail;
+    tail.prev = head;
+  &#125;
+
+//========================查找方法========================
+  public int get(int key) &#123;
+    //当访问某个点时，（通过key查找）访问到了之后返回对应value并且别忘了将这个点更新到链表的头部。
+    DLinkedNode node = cache.get(key);
+    if (node == null) return -1;
+
+    moveToHead(node);
+
+    return node.value;
+  &#125;
+
+//========================添加（删除）方法=======================
+
+  public void put(int key, int value) &#123;
+    //当放置新的点（put）的时候，要看看已有的key对应的数据在内存中是个什么状态
+    DLinkedNode node = cache.get(key);
+
+    //如果说还没有这个点的话，那么我们可以把它new出来，就用传入的key和value
+    if(node == null) &#123;
+
+      DLinkedNode newNode = new DLinkedNode();
+      newNode.key = key;
+      newNode.value = value;
+
+      cache.put(key, newNode);
+      addNode(newNode);
+
+      ++size;
+
+      if(size &gt; capacity) &#123;
+
+        // 如果说在添加了之后size已经超出了内存，需要把尾部的节点删除掉
+        DLinkedNode tail = popTail();
+        cache.remove(tail.key);
+
+
+        --size;
+
+      &#125;
+
+    &#125; else &#123; 
+      // 如果说这个点已经存在了，那更新一下value（代表使用过了）
+      node.value = value;
+      moveToHead(node);//再把它挪到最新的地方
+    &#125;
+  &#125;
+&#125;</code></pre>
+			</div>
+    </div>
+
+</div>
+
+
+
+
+          </section> 
+    </div>
+    
+</div>
+
+
+<div class="column" id="right">
+    <div id="links">
+        <ul>
+            <li><a href="mailto:464042992@qq.com" class="fa fa-envelope fa-fw"></a></li>
+            <li><a target="_blank" rel="noopener" href="https://github.com/zhangdairui" class="fa fa-github fa-fw"></a></li>
+            <li><a href="https://anywheredoor.fun/atom.xml" class="fa fa-heart fa-fw"></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- 切换白天黑夜模式-->
+<script>
+
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        }
+
+    
+    // 深色模式设置
+    function switchLight() {
+        var body = document.body;
+        if(body.classList.contains('dark')){
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark','0');
+        $('html').css("cursor","default");
+        } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark','1');
+        }
+    }
+
+</script>
+
+
+<!-- loading用js -->
+<script>
+   window.onload = function() {
+    //0.感应白天黑夜
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark'); //开启黑暗模式
+        
+    }else if(localStorage.getItem('dark') === '0'){
+        document.body.classList.remove('dark');
+        $('html').css("cursor","default");
+    }
+
+
+    // 1. loading图案
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    
+
+    // 2. 排列tags 不写在这里到时候会冲突
+          var obox=document.getElementById("all_tags");
+          var obj=obox.getElementsByClassName("tag-link-link");
+
+          //获取标签可活动区域
+          var windowW = obox.getBoundingClientRect().width - 800;
+          var windowH = obox.getBoundingClientRect().height -200;
+
+          //随机方法
+          function rand(num){
+           return parseInt(Math.random()*num+1);
+          }
+
+          //循环
+          for( len=obj.length,i=len;i--;){
+
+            obj[i].style.position="relative";
+            obj[i].style.zIndex=rand(5);
+            obj[i].style.fontSize=rand(12)+6+"px";
+            
+          //随机获取位置
+          obj[i].style.left = parseInt(Math.random() * windowW) + 'px';
+          obj[i].style.top = parseInt(Math.random() * windowH) + 'px';
+          }
+    }
+</script>
+
+
+<!-- 引入代码高亮的 js -->
+
+<script src="/js/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+
+</body>
+
+</html>
